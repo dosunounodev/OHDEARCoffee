@@ -58,16 +58,20 @@ Navbar
   display: none;
 }
 
-.nav__menu {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  // background-color: red;
-}
+
 
 
 
 // NAVBAR -- MENU-BURGER
+
+.nav__menu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  @include laptop {
+    display: none;
+  }
+}
 
 .menu-btn {
   position: absolute;

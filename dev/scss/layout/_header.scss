@@ -20,4 +20,7 @@ Header
   min-height: calc(100vh - 20px);
   padding: 20px 0px 0px;
   background-color: $color-bg-primary;
+  @include tablet {
+    min-height: initial;
+  }
 }

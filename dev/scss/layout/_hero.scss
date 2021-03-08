@@ -15,6 +15,16 @@ Hero
   height: calc(100vh - 90px);
   margin-top: 20px;
   overflow: hidden;
+  @include landscape {
+    flex-direction: row;
+    overflow: initial;
+  }
+  @include tablet {
+    height: initial;
+  }
+  @include laptop {
+    justify-content: space-evenly;
+  }
 }
 
 
@@ -27,21 +37,34 @@ Hero
   flex-direction: column;
   align-items: center;
   max-width: 340px;
+  @include tablet {
+    width: calc(100% - 300px);
+    max-width: 500px;
+    padding-right: 20px;
+  }
 }
 
 
 
 
 .hero__title {
+  width: 100%;
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  @include tablet {
+    text-align: start;
+    font-size: 4.8rem;
+  }
+  @include laptop {
+    font-size: 6.4rem;
+  }
 
   .hero__title--em {
     display: block;
-    font-size: 3.6rem;
+    font-size: inherit;
     font-weight: 600;
   }
 
@@ -49,6 +72,12 @@ Hero
     display: block;
     font-size: 2.0rem;
     font-weight: 600;
+    @include tablet {
+      font-size: 2.4rem;
+    }
+    @include laptop {
+      font-size: 3.6rem;
+    }
   }
 }
 
@@ -59,6 +88,11 @@ Hero
   font-weight: 400;
   line-height: 1.4;
   text-align: center;
+  @include tablet {
+    text-align: start;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
 
   .hero__text--em {
   font-weight: 600;
@@ -79,7 +113,6 @@ Hero
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
-  // width: 280px;
 }
 
 .hero__cta--guias,
@@ -105,6 +138,10 @@ Hero
     text-align: center;
     text-transform: uppercase;
     color: white;
+    @include tablet {
+      max-width: initial;
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -134,10 +171,16 @@ Hero
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    width: 300px;
+  }
 }
 
 .hero__picture-container {
   width: 180px;
+  @include tablet {
+    width: 300px;
+  }
 }
 
 .hero__picture-img {

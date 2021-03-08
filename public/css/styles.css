@@ -20,6 +20,16 @@ h1, h2, h3, h4, p {
   margin-bottom: 20px;
   padding: 0;
 }
+@media screen and (min-width: 540px) {
+  h1, h2, h3, h4, p {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1, h2, h3, h4, p {
+    margin-bottom: 40px;
+  }
+}
 
 /*! -------------------------
 Typo
@@ -82,6 +92,11 @@ Header
   padding: 20px 0px 0px;
   background-color: #deebe3;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    min-height: initial;
+  }
+}
 
 /*! -------------------------
 Navbar
@@ -124,6 +139,12 @@ Navbar
   position: relative;
   width: 30px;
   height: 30px;
+  background-color: red;
+}
+@media screen and (min-width: 1024px) {
+  .nav__menu {
+    display: none;
+  }
 }
 
 .menu-btn {
@@ -165,6 +186,22 @@ Hero
   margin-top: 20px;
   overflow: hidden;
 }
+@media screen and (min-width: 540px) {
+  .hero {
+    flex-direction: row;
+    overflow: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: initial;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    justify-content: space-evenly;
+  }
+}
 
 .hero__content {
   display: flex;
@@ -172,17 +209,36 @@ Hero
   align-items: center;
   max-width: 340px;
 }
+@media screen and (min-width: 768px) {
+  .hero__content {
+    width: calc(100% - 300px);
+    max-width: 500px;
+    padding-right: 20px;
+  }
+}
 
 .hero__title {
+  width: 100%;
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    text-align: start;
+    font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 6.4rem;
+  }
+}
 .hero__title .hero__title--em {
   display: block;
-  font-size: 3.6rem;
+  font-size: inherit;
   font-weight: 600;
 }
 .hero__title .hero__title-span {
@@ -190,12 +246,29 @@ Hero
   font-size: 2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .hero__title .hero__title-span {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title .hero__title-span {
+    font-size: 3.6rem;
+  }
+}
 
 .hero__text {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__text {
+    text-align: start;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
 }
 .hero__text .hero__text--em {
   font-weight: 600;
@@ -240,6 +313,13 @@ Hero
   text-transform: uppercase;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  .hero__cta--guias span,
+.hero__cta--cursos span {
+    max-width: initial;
+    font-size: 1.6rem;
+  }
+}
 
 .hero__cta--guias {
   margin-right: 5px;
@@ -264,9 +344,19 @@ Hero
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .hero__picture {
+    width: 300px;
+  }
+}
 
 .hero__picture-container {
   width: 180px;
+}
+@media screen and (min-width: 768px) {
+  .hero__picture-container {
+    width: 300px;
+  }
 }
 
 .hero__picture-img {
