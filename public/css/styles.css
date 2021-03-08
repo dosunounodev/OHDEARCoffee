@@ -78,8 +78,8 @@ Header
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: calc(100vh - 40px);
-  padding: 20px 0px;
+  min-height: calc(100vh - 20px);
+  padding: 20px 0px 0px;
   background-color: #deebe3;
 }
 
@@ -161,7 +161,7 @@ Hero
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 90px);
   margin-top: 20px;
   overflow: hidden;
 }
