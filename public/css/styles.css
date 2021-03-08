@@ -74,7 +74,7 @@ Layout
 .nav__container,
 .hero {
   width: calc(100% - 40px);
-  max-width: 1440px;
+  max-width: 1200px;
 }
 
 /*! -------------------------
@@ -139,7 +139,6 @@ Navbar
   position: relative;
   width: 30px;
   height: 30px;
-  background-color: red;
 }
 @media screen and (min-width: 1024px) {
   .nav__menu {
@@ -197,12 +196,6 @@ Hero
     height: initial;
   }
 }
-@media screen and (min-width: 1024px) {
-  .hero {
-    justify-content: space-evenly;
-  }
-}
-
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -244,7 +237,7 @@ Hero
 .hero__title .hero__title-span {
   display: block;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .hero__title .hero__title-span {
@@ -255,6 +248,9 @@ Hero
   .hero__title .hero__title-span {
     font-size: 3.6rem;
   }
+}
+.hero__title .hero__title-span span {
+  font-weight: 600;
 }
 
 .hero__text {
