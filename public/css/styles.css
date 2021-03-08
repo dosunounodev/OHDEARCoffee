@@ -212,6 +212,8 @@ Hero
 }
 
 .hero__title {
+  padding-top: 5px;
+  background-color: red;
   width: 100%;
   font-size: 3.6rem;
   font-weight: 400;
