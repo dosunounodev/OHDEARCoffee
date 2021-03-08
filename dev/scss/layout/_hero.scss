@@ -79,6 +79,7 @@ Hero
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
+  // width: 280px;
 }
 
 .hero__cta--guias,
@@ -87,22 +88,28 @@ Hero
   flex: 1;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  height: 30px;
+  margin: 0;
   padding: 10px 10px;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
-  color: white;
   border-radius: 10px;
   transition-property: background-color;
   transition-duration: .3s;
   transition-timing-function: linear;
   will-change: background-color;
+  span {
+    max-width: 7ch;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
 }
 
 .hero__cta--guias {
+  margin-right: 5px;
   background-color: $color-secondary;
   &:hover {
     background-color: $color-extra;
@@ -111,6 +118,7 @@ Hero
 }
 
 .hero__cta--cursos {
+  margin-left: 5px;
   background-color: $color-extra;
   &:hover {
     background-color: $color-secondary;
