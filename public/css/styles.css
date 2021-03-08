@@ -212,9 +212,8 @@ Hero
 }
 
 .hero__title {
-  padding-top: 5px;
-  background-color: red;
   width: 100%;
+  padding-top: 5px;
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 1;
