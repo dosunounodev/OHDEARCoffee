@@ -8,11 +8,13 @@ Hero
 // HERO
 
 .hero {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 90px);
+  align-items: center;
+  height: calc(100vh - 110px);
+  margin-top: 20px;
+  overflow: hidden;
 }
 
 
@@ -21,7 +23,10 @@ Hero
 // HERO -- CONTENT /TEXT /CTAS
 
 .hero__content {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 340px;
 }
 
 
@@ -33,6 +38,12 @@ Hero
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+
+  .hero__title--em {
+    display: block;
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
 
   .hero__title-span {
     display: block;
@@ -65,16 +76,22 @@ Hero
 
 .hero__ctas {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hero__cta--guias,
 .hero__cta--cursos {
-  padding: 10px;
-  font-size: 1.3rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px 10px;
+  font-size: 1.4rem;
   font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
