@@ -6,11 +6,12 @@ Header
 @use "../base" as *;
 
 
-// HEADER con 100% de vh
-// Padding top y bottom de 20px
+// HEADER con 100vh de minheight
+// Menos 20px que son mtop del nav
 // El width tiene 100% - 40px (en layout)
 // La alineacion vertical del contenido es top
 // ** En el hero (mobile) la ilustracion ocupa el resto de pantalla
+
 
 .header {
   display: flex;
@@ -18,7 +19,7 @@ Header
   justify-content: flex-start;
   align-items: center;
   min-height: calc(100vh - 20px);
-  padding: 20px 0px 0px;
+  padding: 0;
   background-color: $color-bg-primary;
   @include tablet {
     min-height: initial;
