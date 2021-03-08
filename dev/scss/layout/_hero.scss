@@ -6,11 +6,11 @@ Hero
 @use "../base" as *;
 
 
-// HERO con 100vh de height para hacer pleno vertical
-// Menos 90px (50 navbar, 20 mtop navbar, 20 mtop hero)
-
 
 // HERO
+
+// HERO con 100vh de height para hacer pleno vertical
+// Menos 90px (50 navbar, 20 mtop navbar, 20 mtop hero)
 
 .hero {
   display: flex;
@@ -30,8 +30,11 @@ Hero
 
 
 
-
 // HERO -- CONTENT (TEXTOS Y CTAS)
+
+// El maxwidth es para contener los textos en displays grandes
+// El width es de 100% - el tamaño del hero__picture
+// Tiene padding right para alejar el texto en tablet++
 
 .hero__content {
   display: flex;
@@ -46,6 +49,11 @@ Hero
 }
 
 
+
+// HERO -- TITLE
+
+// Encabezado del hero
+// Tamaño de fuente aumenta segun display
 
 
 .hero__title {
@@ -87,6 +95,13 @@ Hero
 
 
 
+// HERO -- TEXT
+
+// Parrafo del hero
+// Tamaño de fuente aumenta segun display
+// Tiene palabras destacadas en bold/colores
+
+
 .hero__text {
   font-size: 1.6rem;
   font-weight: 400;
@@ -110,6 +125,13 @@ Hero
   }
 }
 
+
+
+// HERO -- CALL TO ACTIONS
+
+// Ctas del Hero
+// Tamaño ajustable con flex
+// Text lenght acotado segun dispositivo
 
 
 .hero__ctas {
@@ -159,7 +181,6 @@ Hero
     color: $color-extra;
     border-color: $color-extra;
   }
-
 }
 
 .hero__cta--cursos {
@@ -175,7 +196,13 @@ Hero
 }
 
 
+
 // HERO -- PICTURE
+
+// Div para la imagen
+// Visible abajo en dispositivos pequeños 
+// y a la derecha en landscape++ (ajustado en hero)
+
 
 .hero__picture {
   width: 100%;
