@@ -1,0 +1,257 @@
+/*! -------------------------
+Base
+-------------------------- */
+body, header, main, footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+/*! -------------------------
+Typo
+-------------------------- */
+@font-face {
+  src: url("../assets/fonts/paulsignature/odc-paulsignature.ttf");
+  font-family: "odc-paulsignature";
+}
+@font-face {
+  src: url("../assets/fonts/avenir/odc-avenir-400.otf");
+  font-family: "odc-avenir-400";
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "odc-avenir-400";
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #252422;
+}
+
+/*! -------------------------
+Animations
+-------------------------- */
+/*! -------------------------
+Buttons
+-------------------------- */
+/*! -------------------------
+Carrousels
+-------------------------- */
+/*! -------------------------
+Forms
+-------------------------- */
+/*! -------------------------
+Menus
+-------------------------- */
+/*! -------------------------
+Layout
+-------------------------- */
+/*! -------------------------
+Grid
+-------------------------- */
+/*! -------------------------
+Header
+-------------------------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 20px);
+  padding: 10px;
+  background-color: #deebe3;
+}
+
+/*! -------------------------
+Navbar
+-------------------------- */
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+.nav__logo-container {
+  display: flex;
+  align-items: flex-start;
+  width: 240px;
+}
+
+.nav__logo-cup {
+  width: 40px;
+}
+
+.nav__logo-text {
+  width: 200px;
+}
+
+.nav__logo-img {
+  display: block;
+  width: 100%;
+}
+
+.nav__menu-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__links-container {
+  display: none;
+}
+
+.nav__menu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-btn {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 4px;
+  background-color: #f6954c;
+}
+
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 4px;
+  background-color: #88a896;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 4px;
+  background-color: #a63519;
+}
+
+/*! -------------------------
+Hero
+-------------------------- */
+.hero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 90px);
+}
+
+.hero__title {
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero__title .hero__title-span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero__text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+.hero__text .hero__text--em {
+  font-weight: 600;
+}
+.hero__text .hero__text--em:nth-child(1) {
+  color: #f6954c;
+}
+.hero__text .hero__text--em:nth-child(2) {
+  color: #a63519;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.hero__cta--guias,
+.hero__cta--cursos {
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  will-change: background-color;
+}
+
+.hero__cta--guias {
+  background-color: #f6954c;
+}
+.hero__cta--guias:hover {
+  background-color: #a63519;
+}
+
+.hero__cta--cursos {
+  background-color: #a63519;
+}
+.hero__cta--cursos:hover {
+  background-color: #f6954c;
+}
+
+.hero__picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__picture-container {
+  width: 180px;
+}
+
+.hero__picture-img {
+  display: block;
+  width: 100%;
+}
+
+/*! -------------------------
+Sidebar
+-------------------------- */
+/*! -------------------------
+Footer
+-------------------------- */
+/*! -------------------------
+Index
+-------------------------- */
+/*! -------------------------
+Admin
+-------------------------- */
+/*! -------------------------
+Default
+-------------------------- */

@@ -1,0 +1,65 @@
+// /*! -------------------------
+// Main
+// -------------------------- */
+
+
+// A B S T R A C T
+//
+// Helpers y utilidades abstractos
+// (no generan código)
+
+@use './abstract';
+
+
+
+// B A S E
+//
+// Resets y estilos globales
+// (de etiquetas, sin clases o id)
+
+@use './base';
+
+
+
+// C O M P O N E N T S
+//
+// Componentes reutilizables
+// (son independientes)
+
+@use './components';
+
+
+
+// INDEX -- L A Y O U T
+//
+// Bloques del layout
+// (son independientes)
+
+@use './layout';
+
+
+
+// INDEX -- P A G E S
+//
+// Estilos de cada vista
+// (son independientes)
+
+@use './pages';
+
+
+
+// INDEX -- T H E M E S
+//
+// Temas para cada usuario
+// (son independientes)
+
+@use './themes';
+
+
+
+// INDEX -- V E E D O R S
+//
+// 3rd party cfgs
+// (bs5, jquery, animatecss, etc)
+
+@use './veedors';

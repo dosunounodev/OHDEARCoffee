@@ -1,0 +1,27 @@
+/*! -------------------------
+Typo
+-------------------------- */
+
+@use "../abstract" as *;
+
+@font-face {
+  src: url('../assets/fonts/paulsignature/odc-paulsignature.ttf');
+  font-family: 'odc-paulsignature';
+}
+
+@font-face {
+  src: url('../assets/fonts/avenir/odc-avenir-400.otf');
+  font-family: 'odc-avenir-400';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'odc-avenir-400';
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-text;
+}
+

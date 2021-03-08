@@ -1,0 +1,24 @@
+/*! -------------------------
+Base
+-------------------------- */
+
+@use "../abstract" as *;
+
+body, header, main, footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
