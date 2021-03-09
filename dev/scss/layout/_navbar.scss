@@ -71,7 +71,8 @@ Navbar
 // NAVBAR -- MENU-BURGER
 
 // Boton animado para desplegar menu
-// Solo visible en dispositivos pequeños
+// ** Opcional display none
+// ** Solo visible hasta tablet inclusive
 
 .nav__menu-btn {
   position: relative;
@@ -79,6 +80,6 @@ Navbar
   height: 30px;
   cursor: pointer;
   @include laptop {
-    display: none;
+    // display: none;
   }
 }

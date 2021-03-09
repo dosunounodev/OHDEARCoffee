@@ -14,12 +14,14 @@ nav.nav
       .nav__menu-lists.hide#nav__menu-lists
         ul.nav__links-container
           each link, nombre in navLinks 
-            a(href=""+link).nav__links-item
+            a(href="#"+link id="btn"+link).nav__links-item
               li #{nombre}
         ul.nav__socials-container
           each url, icon in navSocials
             li.nav__socials-item
               a(href=""+url target="_blank")
                 i(class="fab fa-"+icon)
+          li.nav__socials-item
+            a(href="#newslatter")#btnnewslatter Suscribirse
       .nav__menu-btn#nav__menu-btn
         .menu-btn

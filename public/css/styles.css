@@ -501,7 +501,7 @@ Menus
   flex-direction: row;
   justify-content: space-around;
   align-items: initial;
-  width: 150px;
+  width: 250px;
 }
 .nav__socials-container .nav__socials-item {
   display: flex;
@@ -523,6 +523,17 @@ Menus
 }
 .nav__socials-container .nav__socials-item a:hover {
   color: #f6954c;
+}
+.nav__socials-container .nav__socials-item:last-child {
+  width: initial;
+  height: initial;
+}
+.nav__socials-container .nav__socials-item:last-child a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /*! -------------------------
@@ -610,12 +621,6 @@ Navbar
   height: 30px;
   cursor: pointer;
 }
-@media screen and (min-width: 1024px) {
-  .nav__menu-btn {
-    display: none;
-  }
-}
-
 /*! -------------------------
 Hero
 -------------------------- */

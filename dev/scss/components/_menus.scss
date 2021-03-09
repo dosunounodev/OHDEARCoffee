@@ -81,7 +81,7 @@ Menus
     @include flex(row, space-around);
     // display: flex;
     // justify-content: space-around;
-    width: 150px;
+    width: 250px;
     
     .nav__socials-item {
       @include flex-center();
@@ -96,6 +96,18 @@ Menus
 
         &:hover {
           color: $color-secondary;
+        }
+      }
+
+      &:last-child {
+        width: initial;
+        height: initial;
+        a {
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 1.6;
+          text-decoration: none;
+          text-transform: uppercase;
         }
       }
     }
