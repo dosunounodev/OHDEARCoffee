@@ -16,7 +16,7 @@ Menus
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100vh - 105px);
+  height: calc(100vh - 70px);
   padding: 20px;
   background-color: $color-bg-primary;
   @include transition(0.7s, 0, linear, opacity);
@@ -29,7 +29,7 @@ Menus
     @include flex(column, space-between);
     width: 100%;
     max-width: $max-width;
-    height: calc(100vh - 195px);
+    height: calc(100vh - 160px);
     
     .nav__links-item {
       flex: 1;

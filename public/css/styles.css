@@ -432,7 +432,7 @@ Menus
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   padding: 20px;
   background-color: #deebe3;
   will-change: opacity;
@@ -448,7 +448,7 @@ Menus
   align-items: initial;
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 160px);
 }
 .nav__menu-lists .nav__links-container .nav__links-item {
   flex: 1;
