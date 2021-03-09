@@ -365,7 +365,7 @@ Navbar
   right: 0;
   height: calc(100vh - 70px);
   padding: 20px;
-  background-color: #fbd8b9;
+  background-color: #deebe3;
 }
 .nav__menu-lists .nav__links-container {
   display: flex;
