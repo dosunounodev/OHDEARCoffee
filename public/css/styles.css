@@ -479,7 +479,7 @@ Menus
   background-color: #f6954c;
   font-size: 2rem;
 }
-@media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px) {
+@media screen and (orientation: landscape) and (max-height: 550px) and (max-width: 900px) {
   .nav__menu-lists .nav__links-container {
     flex-direction: row;
   }
