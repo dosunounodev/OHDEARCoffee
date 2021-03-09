@@ -16,7 +16,7 @@ Menus
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 100px);
   padding: 20px;
   background-color: $color-bg-primary;
   @include transition(0.7s, 0, linear, opacity);
@@ -29,7 +29,7 @@ Menus
     @include flex(column, space-between);
     width: 100%;
     max-width: $max-width;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 190px);
     
     .nav__links-item {
       flex: 1;
@@ -56,7 +56,7 @@ Menus
       }
     }
 
-    @media screen and (orientation: landscape) and (max-height: 550px) and (max-width: 900px){
+    @media screen and (orientation: landscape) and (max-height: 530px) and (max-width: 900px){
       flex-direction: row;
       .nav__links-item {
         writing-mode: vertical-rl;
@@ -64,6 +64,10 @@ Menus
         height: 100%;
         margin-right: 10px ;
         margin-bottom: 0;
+        &:hover {
+          background-color: $color-secondary;
+          font-size: inherit;
+        }
 
         &:last-child {
           margin-right: 0;
