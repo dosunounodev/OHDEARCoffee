@@ -338,7 +338,11 @@ Buttons
   transform: translateY(-10px);
 }
 
-.nav__menu-btn.menu-active:hover .menu-btn, .nav__menu-btn.menu-active:hover .menu-btn::after {
+.nav__menu-btn.menu-active:hover .menu-btn {
+  background-color: #f6954c;
+  transform: rotate(45deg) scale(1.2);
+}
+.nav__menu-btn.menu-active:hover .menu-btn::after {
   background-color: #f6954c;
 }
 

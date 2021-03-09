@@ -73,7 +73,12 @@ Buttons
 // ** Cruz se vuelve naranja
 
 .nav__menu-btn.menu-active:hover {
-  .menu-btn, .menu-btn::after {
+  .menu-btn {
+    background-color: $color-secondary;
+    transform: rotate(45deg) scale(1.2)
+  }
+
+  .menu-btn::after {
     background-color: $color-secondary;
   }
 }
