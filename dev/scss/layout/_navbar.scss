@@ -106,21 +106,17 @@ Navbar
       align-items: center;
       padding: 10px;
       margin-bottom: 10px;
-      // border: 2px solid $color-bg;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.6rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-bg;
       border-radius: 10px;
       background-color: $color-primary;
 
       &:last-child {
         margin-bottom: 0;
-      }
-
-      a {
-        font-size: 1.6rem;
-        font-weight: 600;
-        line-height: 1.6rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $color-bg
       }
     }
 
@@ -132,13 +128,14 @@ Navbar
         height: 100%;
         margin-right: 10px ;
         margin-bottom: 0;
-        
+
         &:last-child {
           margin-right: 0;
         }
       }
     }
   }
+}
 
 
   // NAVBAR -- MENU LIST -- SOCIALS
@@ -163,7 +160,6 @@ Navbar
       }
     }
   }
-}
 
 
 // NAVBAR -- MENU-BURGER

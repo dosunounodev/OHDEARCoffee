@@ -382,19 +382,17 @@ Navbar
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: #88a896;
-}
-.nav__menu-lists .nav__links-container .nav__links-item:last-child {
-  margin-bottom: 0;
-}
-.nav__menu-lists .nav__links-container .nav__links-item a {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
   color: #F9F8F6;
+  border-radius: 10px;
+  background-color: #88a896;
+}
+.nav__menu-lists .nav__links-container .nav__links-item:last-child {
+  margin-bottom: 0;
 }
 @media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px) {
   .nav__menu-lists .nav__links-container {
@@ -412,19 +410,20 @@ Navbar
     margin-right: 0;
   }
 }
-.nav__menu-lists .nav__socials-container {
+
+.nav__socials-container {
   display: flex;
   justify-content: space-around;
   width: 150px;
 }
-.nav__menu-lists .nav__socials-container .nav__socials-item {
+.nav__socials-container .nav__socials-item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
 }
-.nav__menu-lists .nav__socials-container .nav__socials-item a {
+.nav__socials-container .nav__socials-item a {
   font-size: 2.6rem;
   line-height: 2.6rem;
   color: #a63519;

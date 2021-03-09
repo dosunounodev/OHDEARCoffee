@@ -14,8 +14,8 @@ nav.nav
       .nav__menu-lists
         ul.nav__links-container
           each link, nombre in navLinks 
-            li.nav__links-item
-              a(href=""+link) #{nombre}
+            a(href=""+link).nav__links-item
+              li #{nombre}
         ul.nav__socials-container
           each url, icon in navSocials
             li.nav__socials-item
