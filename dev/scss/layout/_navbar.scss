@@ -5,18 +5,17 @@ Navbar
 @use "../abstract" as *;
 @use "../base" as *;
 
+
 // NAVBAR
 
 // Navbar visible en todos los dispositivos
 // Ajustable segun vw
-
 
 .nav__container {
   display: flex;
   justify-content: space-between;
   height: 50px;
 }
-
 
 
 // NAVBAR -- LOGOS
@@ -44,13 +43,11 @@ Navbar
 }
 
 
-
 // NAVBAR -- MENUS
 
 // Contenedor de menu
 // FULL DISPLAY: Links y Redes
 // Ajustable segun vw (hamburger)
-
 
 .nav__menu-container {
   display: flex;
@@ -58,17 +55,22 @@ Navbar
 }
 
 
-
 // NAVBAR -- LINKS
 
 // Links a secciones, visible en laptop++
 // Menu fullscreen en dispositivos pequeños
 
-
 .nav__links-container {
   display: none;
+  overflow: hidden;
+  background-color: $color-bg-secondary;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // padding: ;
 }
-
 
 
 // NAVBAR -- MENU-BURGER

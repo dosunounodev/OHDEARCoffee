@@ -4,7 +4,9 @@ Layout
 
 @use "../abstract" as *;
 
+
 // TODAS LAS SECCIONES TIENEN 20PX DE MARGIN HORIZONTAL
+
 // Se establece con WIDTH = calc 100% - 40px
 // El max width de las secciones es 1200px (*en variables)
 // Hay 20px de margin top entre secciones
@@ -14,5 +16,4 @@ Layout
 .hero {
   width: calc(100% - 40px);
   max-width: $max-width;
-  margin-top: 20px;
 }

@@ -6,28 +6,24 @@ Hero
 @use "../base" as *;
 
 
-
 // HERO
 
 // HERO con 100vh de height para hacer pleno vertical
-// Menos 90px (50 navbar, 20 mtop navbar, 20 mtop hero)
+// Menos 70px (50 navbar, 20 mtop)
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 90px);
-  overflow: hidden;
+  height: calc(100vh - 70px);
   @include landscape {
     flex-direction: row;
-    overflow: initial;
   }
   @include tablet {
     height: initial;
   }
 }
-
 
 
 // HERO -- CONTENT (TEXTOS Y CTAS)
@@ -42,19 +38,20 @@ Hero
   align-items: center;
   max-width: 340px;
   @include tablet {
+    width: calc(100% - 240px);
+    max-width: 400px;
+  }
+  @include laptop {
     width: calc(100% - 300px);
     max-width: 500px;
-    padding-right: 20px;
   }
 }
-
 
 
 // HERO -- TITLE
 
 // Encabezado del hero
 // Tamaño de fuente aumenta segun display
-
 
 .hero__title {
   width: 100%;
@@ -95,23 +92,16 @@ Hero
 }
 
 
-
 // HERO -- TEXT
 
 // Parrafo del hero
 // Tamaño de fuente aumenta segun display
 // Tiene palabras destacadas en bold/colores
 
-
 .hero__text {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.4;
   text-align: center;
   @include tablet {
     text-align: start;
-    font-size: 1.8rem;
-    line-height: 1.6;
   }
 
   .hero__text--em {
@@ -127,13 +117,11 @@ Hero
 }
 
 
-
 // HERO -- CALL TO ACTIONS
 
 // Ctas del Hero
 // Tamaño ajustable con flex
 // Text lenght acotado segun dispositivo
-
 
 .hero__ctas {
   display: flex;
@@ -148,7 +136,7 @@ Hero
   flex: 1;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 40px;
   margin: 0;
   padding: 10px 10px;
   text-decoration: none;
@@ -171,7 +159,6 @@ Hero
 }
 
 .hero__cta--guias {
-  height: 26px;
   margin-right: 5px;
   color: $color-secondary;
   border: 2px solid $color-secondary;
@@ -197,13 +184,11 @@ Hero
 }
 
 
-
 // HERO -- PICTURE
 
 // Div para la imagen
 // Visible abajo en dispositivos pequeños 
 // y a la derecha en landscape++ (ajustado en hero)
-
 
 .hero__picture {
   width: 100%;
@@ -212,14 +197,17 @@ Hero
   justify-content: center;
   align-items: center;
   @include tablet {
+    width: 240px;
+  }
+  @include laptop {
     width: 300px;
   }
 }
 
 .hero__picture-container {
-  width: 180px;
+  width: 150px;
   @include tablet {
-    width: 300px;
+    width: 100%;
   }
 }
 
