@@ -13,7 +13,7 @@ Hero
 
 .hero {
   @include flex(column, space-between, center);
-  height: calc(100vh - 70px);
+  height: calc(100vh - 105px);
   margin-top: 70px;
   @include landscape {
     flex-direction: row;
