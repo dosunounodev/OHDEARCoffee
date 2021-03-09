@@ -9,7 +9,18 @@ Navbar
 // NAVBAR
 
 // Navbar visible en todos los dispositivos
-// Ajustable segun vw
+// Position fixed
+// Incluye un nav__container con max-width: 100% -40px
+
+.nav {
+  background-color: $color-bg-primary;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 70px;
+}
 
 .nav__container {
   display: flex;
@@ -31,6 +42,7 @@ Navbar
 
 .nav__logo-cup {
   width: 40px;
+  height: 30px;
 }
 
 .nav__logo-text {
@@ -46,8 +58,9 @@ Navbar
 // NAVBAR -- MENUS
 
 // Contenedor de menu
-// FULL DISPLAY: Links y Redes
-// Ajustable segun vw (hamburger)
+// Incluye:
+// ** menu-lists (con links y socials)
+// ** menu-btn (con boton animable)
 
 .nav__menu-container {
   display: flex;
@@ -55,21 +68,100 @@ Navbar
 }
 
 
-// NAVBAR -- LINKS
+// NAVBAR -- MENU LIST
 
-// Links a secciones, visible en laptop++
-// Menu fullscreen en dispositivos pequeños
+// Incluye links (secciones) y socials (rrss)
+// Menu fullscreen hasta tablet -inclusive-
 
-.nav__links-container {
-  display: none;
-  overflow: hidden;
-  background-color: $color-bg-secondary;
-  position: absolute;
+.nav__menu-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
   top: 70px;
   bottom: 0;
   left: 0;
   right: 0;
-  // padding: ;
+  height: calc(100vh - 70px);
+  padding: 20px;
+  background-color: $color-bg-secondary;
+  
+
+
+// NAVBAR -- MENU LIST -- LINKS
+// Lista de Secciones
+
+  .nav__links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 160px);
+    
+    .nav__links-item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid $color-bg;
+      background-color: $color-secondary-off;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-extra
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+      .nav__links-item {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        height: 100%;
+        margin-right: 10px ;
+        margin-bottom: 0;
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+
+  // NAVBAR -- MENU LIST -- SOCIALS
+  // Lista de Redes sociales
+
+  .nav__socials-container {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    
+    .nav__socials-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      
+      a {
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+        color: $color-extra;
+      }
+    }
+  }
 }
 
 
@@ -78,7 +170,7 @@ Navbar
 // Boton animado para desplegar menu
 // Solo visible en dispositivos pequeños
 
-.nav__menu {
+.nav__menu-btn {
   position: relative;
   width: 30px;
   height: 30px;

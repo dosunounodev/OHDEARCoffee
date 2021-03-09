@@ -17,6 +17,7 @@ Hero
   justify-content: space-between;
   align-items: center;
   height: calc(100vh - 70px);
+  margin-top: 70px;
   @include landscape {
     flex-direction: row;
   }

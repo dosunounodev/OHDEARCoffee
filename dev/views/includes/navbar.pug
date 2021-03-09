@@ -1,19 +1,25 @@
 //- CONTENEDOR NAVBAR
     LADO IZQUIERDO: LOGOS (logo-container > cup & text)
     LADO DERECHO: MENUS -//
-
-nav.nav__container
-  .nav__logo-container
-    .nav__logo-cup
-      a(href="#header")
-        img(src="./assets/icons/cup-only.png", alt="Logo de OHDEARCoffee taza naranja").nav__logo-img
-    .nav__logo-text
-      a(href="#header")
-        img(src="./assets/logos/horiz-black.png", alt="Logo de OHDEARCoffee en texto").nav__logo-img
-  .nav__menu-container
-    ul.nav__links-container
-      each link, seccion in navLinks 
-        li.nav__links-item
-          a(href=""+link) #{seccion}
-    .nav__menu
-      .menu-btn
+nav.nav
+  .nav__container
+    .nav__logo-container
+      .nav__logo-cup
+        a(href="#header")
+          img(src="./assets/icons/cup-only.png", alt="Logo de OHDEARCoffee taza naranja").nav__logo-img
+      .nav__logo-text
+        a(href="#header")
+          img(src="./assets/logos/horiz-black.png", alt="Logo de OHDEARCoffee en texto").nav__logo-img
+    .nav__menu-container
+      .nav__menu-lists
+        ul.nav__links-container
+          each link, nombre in navLinks 
+            li.nav__links-item
+              a(href=""+link) #{nombre}
+        ul.nav__socials-container
+          each url, icon in navSocials
+            li.nav__socials-item
+              a(href=""+url)
+                i(class="fab fa-"+icon)
+      .nav__menu-btn
+        .menu-btn
