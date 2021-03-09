@@ -29,7 +29,7 @@ Menus
     @include flex(column, space-between);
     width: 100%;
     max-width: $max-width;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 200px);
     
     .nav__links-item {
       flex: 1;
@@ -83,9 +83,8 @@ Menus
 
   .nav__socials-container {
     @include flex(row, space-around);
-    // display: flex;
-    // justify-content: space-around;
     width: 250px;
+    margin-bottom: 40px;
     
     .nav__socials-item {
       @include flex-center();

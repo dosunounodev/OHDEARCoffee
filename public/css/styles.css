@@ -448,7 +448,7 @@ Menus
   align-items: initial;
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 200px);
 }
 .nav__menu-lists .nav__links-container .nav__links-item {
   flex: 1;
@@ -506,6 +506,7 @@ Menus
   justify-content: space-around;
   align-items: initial;
   width: 250px;
+  margin-bottom: 40px;
 }
 .nav__socials-container .nav__socials-item {
   display: flex;
