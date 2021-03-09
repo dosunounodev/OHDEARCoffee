@@ -372,6 +372,7 @@ Navbar
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 1200px;
   height: calc(100vh - 160px);
 }
 .nav__menu-lists .nav__links-container .nav__links-item {
@@ -382,20 +383,20 @@ Navbar
   padding: 10px;
   margin-bottom: 10px;
   border: 2px solid #F9F8F6;
-  background-color: #F9BD88;
+  background-color: #efa290;
 }
 .nav__menu-lists .nav__links-container .nav__links-item:last-child {
   margin-bottom: 0;
 }
 .nav__menu-lists .nav__links-container .nav__links-item a {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: #a63519;
+  color: #F9F8F6;
 }
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-height: 512px) {
   .nav__menu-lists .nav__links-container {
     flex-direction: row;
   }
@@ -426,7 +427,7 @@ Navbar
 .nav__menu-lists .nav__socials-container .nav__socials-item a {
   font-size: 2.6rem;
   line-height: 2.6rem;
-  color: #a63519;
+  color: #efa290;
 }
 
 .nav__menu-btn {
