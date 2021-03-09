@@ -284,6 +284,10 @@ Buttons
   transition-delay: 0;
   transition-timing-function: linear;
 }
+.nav__menu-btn:hover .menu-btn {
+  background-color: #a63519;
+  transform: scale(1.2);
+}
 
 .menu-btn::after {
   content: "";
@@ -335,6 +339,73 @@ Buttons
 }
 
 .nav__menu-btn.menu-active:hover .menu-btn, .nav__menu-btn.menu-active:hover .menu-btn::after {
+  background-color: #f6954c;
+}
+
+.hero__cta--guias,
+.hero__cta--cursos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 50px;
+  margin: 0;
+  text-decoration: none;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .hero__cta--guias,
+.hero__cta--cursos {
+    height: 60px;
+  }
+}
+.hero__cta--guias span,
+.hero__cta--cursos span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+}
+@media screen and (max-width: 420px) {
+  .hero__cta--guias span,
+.hero__cta--cursos span {
+    max-width: 7ch;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}
+
+.hero__cta--guias {
+  margin-right: 5px;
+  color: #f6954c;
+  border: 2px solid #f6954c;
+  background-color: transparent;
+  will-change: color, border-color;
+  transition-property: color, border-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.hero__cta--guias:hover {
+  color: #a63519;
+  border-color: #a63519;
+}
+
+.hero__cta--cursos {
+  margin-left: 5px;
+  color: white;
+  background-color: #a63519;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.hero__cta--cursos:hover {
+  color: #a63519;
   background-color: #f6954c;
 }
 
@@ -391,8 +462,8 @@ Menus
   color: #F9F8F6;
   border-radius: 10px;
   background-color: #88a896;
-  will-change: background-color;
-  transition-property: background-color;
+  will-change: background-color, font-size;
+  transition-property: background-color, font-size;
   transition-duration: 0.3s;
   transition-delay: 0;
   transition-timing-function: linear;
@@ -402,6 +473,7 @@ Menus
 }
 .nav__menu-lists .nav__links-container .nav__links-item:hover {
   background-color: #f6954c;
+  font-size: 2rem;
 }
 @media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px) {
   .nav__menu-lists .nav__links-container {
@@ -565,6 +637,7 @@ Hero
 .hero__content {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
   align-items: center;
   max-width: 340px;
 }
@@ -645,70 +718,11 @@ Hero
 
 .hero__ctas {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: initial;
   width: 100%;
   margin-bottom: 20px;
-}
-
-.hero__cta--guias,
-.hero__cta--cursos {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  margin: 0;
-  padding: 10px 10px;
-  text-decoration: none;
-  border-radius: 10px;
-}
-.hero__cta--guias span,
-.hero__cta--cursos span {
-  max-width: 7ch;
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
-  color: inherit;
-}
-@media screen and (min-width: 768px) {
-  .hero__cta--guias span,
-.hero__cta--cursos span {
-    max-width: initial;
-    font-size: 1.6rem;
-  }
-}
-
-.hero__cta--guias {
-  margin-right: 5px;
-  color: #f6954c;
-  border: 2px solid #f6954c;
-  background-color: transparent;
-  will-change: color, border-color;
-  transition-property: color, border-color;
-  transition-duration: 0.3s;
-  transition-delay: 0;
-  transition-timing-function: linear;
-}
-.hero__cta--guias:hover {
-  color: #a63519;
-  border-color: #a63519;
-}
-
-.hero__cta--cursos {
-  margin-left: 5px;
-  color: white;
-  background-color: #a63519;
-  will-change: color, background-color;
-  transition-property: color, background-color;
-  transition-duration: 0.3s;
-  transition-delay: 0;
-  transition-timing-function: linear;
-}
-.hero__cta--cursos:hover {
-  color: #a63519;
-  background-color: #f6954c;
 }
 
 .hero__picture {

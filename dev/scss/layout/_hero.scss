@@ -12,10 +12,7 @@ Hero
 // Menos 70px (50 navbar, 20 mtop)
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(column, space-between, center);
   height: calc(100vh - 70px);
   margin-top: 70px;
   @include landscape {
@@ -34,9 +31,7 @@ Hero
 // Tiene padding right para alejar el texto en tablet++
 
 .hero__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(column, initial, center);
   max-width: 340px;
   @include tablet {
     width: calc(100% - 240px);
@@ -125,59 +120,9 @@ Hero
 // Text lenght acotado segun dispositivo
 
 .hero__ctas {
-  display: flex;
-  justify-content: space-between;
+  @include flex(row, space-between);
   width: 100%;
   margin-bottom: 20px;
-}
-
-.hero__cta--guias,
-.hero__cta--cursos {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  margin: 0;
-  padding: 10px 10px;
-  text-decoration: none;
-  border-radius: 10px;
-  span {
-    max-width: 7ch;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-    text-transform: uppercase;
-    color: inherit;
-    @include tablet {
-      max-width: initial;
-      font-size: 1.6rem;
-    }
-  }
-}
-
-.hero__cta--guias {
-  margin-right: 5px;
-  color: $color-secondary;
-  border: 2px solid $color-secondary;
-  background-color: transparent;
-  @include transition(0.3s, 0, linear, color, border-color);
-  &:hover {
-    color: $color-extra;
-    border-color: $color-extra;
-  }
-}
-
-.hero__cta--cursos {
-  margin-left: 5px;
-  color: white;
-  background-color: $color-extra;
-  @include transition(0.3s, 0, linear, color, background-color);
-  &:hover {
-    color: $color-extra;
-    background-color: $color-secondary;
-  }
 }
 
 

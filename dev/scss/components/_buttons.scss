@@ -16,6 +16,10 @@ Buttons
   height: 4px;
   background-color: $color-secondary;
   @include transition(0.3s, 0, linear, transform, background-color);
+  .nav__menu-btn:hover & {
+    background-color: $color-extra;
+    transform: scale(1.2);
+  }
 }
 
 .menu-btn::after {
@@ -65,12 +69,70 @@ Buttons
   transform: translateY(-10px);
 }
 
-
 // Efecto hover cuando esta activo
 // ** Cruz se vuelve naranja
 
 .nav__menu-btn.menu-active:hover {
   .menu-btn, .menu-btn::after {
+    background-color: $color-secondary;
+  }
+}
+
+
+
+
+// HERO -- CALL TO ACTIONS
+
+// Ctas del Hero
+// Tamaño ajustable con flex 1
+// Text lenght acotado segun dispositivo
+// Height variable segun dispositivo
+
+.hero__cta--guias,
+.hero__cta--cursos {
+  @include flex(row, center, center);
+  flex: 1;
+  height: 50px;
+  margin: 0;
+  text-decoration: none;
+  border-radius: 10px;
+  @include tablet {
+    height: 60px;
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    color: inherit;
+    @include portrait{
+      max-width: 7ch;
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.hero__cta--guias {
+  margin-right: 5px;
+  color: $color-secondary;
+  border: 2px solid $color-secondary;
+  background-color: transparent;
+  @include transition(0.3s, 0, linear, color, border-color);
+  &:hover {
+    color: $color-extra;
+    border-color: $color-extra;
+  }
+}
+
+.hero__cta--cursos {
+  margin-left: 5px;
+  color: white;
+  background-color: $color-extra;
+  @include transition(0.3s, 0, linear, color, background-color);
+  &:hover {
+    color: $color-extra;
     background-color: $color-secondary;
   }
 }

@@ -44,7 +44,7 @@ Menus
       color: $color-bg;
       border-radius: 10px;
       background-color: $color-primary;
-      @include transition(0.3s, 0, linear, background-color);
+      @include transition(0.3s, 0, linear, background-color, font-size);
 
       &:last-child {
         margin-bottom: 0;
@@ -52,6 +52,7 @@ Menus
 
       &:hover {
         background-color: $color-secondary;
+        font-size: 2.0rem;
       }
     }
 
