@@ -19,7 +19,7 @@ Menus
   height: calc(100vh - 70px);
   padding: 20px;
   background-color: $color-bg-primary;
-  @include transition(0.7s, 0, linear, opacity);
+  @include transition(0.8s, 0.2s, linear, opacity);
   
 
 // NAVBAR -- MENU LIST -- LINKS
@@ -44,7 +44,7 @@ Menus
       color: $color-bg;
       border-radius: 10px;
       background-color: $color-primary;
-      @include transition(0.3s, 0, linear, background-color, font-size);
+      @include transition(0.4s, 0, linear, background-color, font-size);
 
       &:last-child {
         margin-bottom: 0;
@@ -52,7 +52,7 @@ Menus
 
       &:hover {
         background-color: $color-secondary;
-        font-size: 2.0rem;
+        font-size: 2.2rem;
       }
     }
 
@@ -66,7 +66,7 @@ Menus
         margin-bottom: 0;
         &:hover {
           background-color: $color-secondary;
-          font-size: inherit;
+          font-size: 1.6rem;
         }
 
         &:last-child {
