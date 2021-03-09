@@ -17,3 +17,7 @@ Layout
   width: calc(100% - 40px);
   max-width: $max-width;
 }
+
+.hide {
+  opacity: 0;
+}

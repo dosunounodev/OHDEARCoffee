@@ -59,107 +59,13 @@ Navbar
 
 // Contenedor de menu
 // Incluye:
-// ** menu-lists (con links y socials)
-// ** menu-btn (con boton animable)
+// menu-lists (con links y socials)
+// menu-btn (con boton animable)
 
 .nav__menu-container {
   display: flex;
   justify-content: flex-end;
 }
-
-
-// NAVBAR -- MENU LIST
-
-// Incluye links (secciones) y socials (rrss)
-// Menu fullscreen hasta tablet -inclusive-
-
-.nav__menu-lists {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 70px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: calc(100vh - 70px);
-  padding: 20px;
-  background-color: $color-bg-primary;
-  
-
-// NAVBAR -- MENU LIST -- LINKS
-// Lista de Secciones
-
-  .nav__links-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    max-width: $max-width;
-    height: calc(100vh - 160px);
-    
-    .nav__links-item {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 1.6rem;
-      font-weight: 600;
-      line-height: 1.6rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $color-bg;
-      border-radius: 10px;
-      background-color: $color-primary;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    @media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px){
-      flex-direction: row;
-      .nav__links-item {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        height: 100%;
-        margin-right: 10px ;
-        margin-bottom: 0;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-
-
-  // NAVBAR -- MENU LIST -- SOCIALS
-  // Lista de Redes sociales
-
-  .nav__socials-container {
-    display: flex;
-    justify-content: space-around;
-    width: 150px;
-    
-    .nav__socials-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      height: 30px;
-      
-      a {
-        font-size: 2.6rem;
-        line-height: 2.6rem;
-        color: $color-extra;
-      }
-    }
-  }
 
 
 // NAVBAR -- MENU-BURGER
@@ -171,6 +77,7 @@ Navbar
   position: relative;
   width: 30px;
   height: 30px;
+  cursor: pointer;
   @include laptop {
     display: none;
   }
@@ -183,6 +90,10 @@ Navbar
   width: 30px;
   height: 4px;
   background-color: $color-secondary;
+  will-change: background-color, transform;
+  transition-property: background-color, transform;
+  transition-duration: .3s;
+  transition-timing-function: linear;
 }
 
 .menu-btn::after {
@@ -192,6 +103,10 @@ Navbar
   width: 30px;
   height: 4px;
   background-color: $color-primary;
+  will-change: background-color, transform;
+  transition-property: background-color, transform;
+  transition-duration: .3s;
+  transition-timing-function: linear;
 }
 
 .menu-btn::before {
@@ -201,4 +116,23 @@ Navbar
   width: 30px;
   height: 4px;
   background-color: $color-extra;
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+}
+
+.nav__menu-btn.menu-active .menu-btn {
+  background-color: $color-extra;
+  transform: rotate(45deg) scale(0.85);
+}
+
+.nav__menu-btn.menu-active .menu-btn::after {
+  background-color: $color-extra;
+  transform: rotate(-90deg) translateX(-10px);
+}
+
+.nav__menu-btn.menu-active .menu-btn::before {
+  opacity: 0;
+  transform: translateY(-10px);
 }

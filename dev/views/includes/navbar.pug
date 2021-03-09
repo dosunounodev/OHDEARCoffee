@@ -11,7 +11,7 @@ nav.nav
         a(href="#header")
           img(src="./assets/logos/horiz-black.png", alt="Logo de OHDEARCoffee en texto").nav__logo-img
     .nav__menu-container
-      .nav__menu-lists
+      .nav__menu-lists.hide#nav__menu-lists
         ul.nav__links-container
           each link, nombre in navLinks 
             a(href=""+link).nav__links-item
@@ -21,5 +21,5 @@ nav.nav
             li.nav__socials-item
               a(href=""+url)
                 i(class="fab fa-"+icon)
-      .nav__menu-btn
+      .nav__menu-btn#nav__menu-btn
         .menu-btn
