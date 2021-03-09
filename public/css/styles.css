@@ -213,9 +213,10 @@ body, header, main, footer {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: initial;
+  align-items: initial;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto auto;
   background-color: #F9F8F6;
 }
 
@@ -270,6 +271,73 @@ Animations
 /*! -------------------------
 Buttons
 -------------------------- */
+.menu-btn {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 4px;
+  background-color: #f6954c;
+  will-change: transform, background-color;
+  transition-property: transform, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 4px;
+  background-color: #88a896;
+  will-change: transform, background-color;
+  transition-property: transform, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.nav__menu-btn:hover .menu-btn::after {
+  background-color: #f6954c;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 4px;
+  background-color: #a63519;
+  will-change: transform, opacity, background-color;
+  transition-property: transform, opacity, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.nav__menu-btn:hover .menu-btn::before {
+  background-color: #f6954c;
+}
+
+.nav__menu-btn.menu-active .menu-btn {
+  background-color: #a63519;
+  transform: rotate(45deg) scale(0.85);
+}
+
+.nav__menu-btn.menu-active .menu-btn::after {
+  background-color: #a63519;
+  transform: rotate(-90deg) translateX(-10px);
+}
+
+.nav__menu-btn.menu-active .menu-btn::before {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.nav__menu-btn.menu-active:hover .menu-btn, .nav__menu-btn.menu-active:hover .menu-btn::after {
+  background-color: #f6954c;
+}
+
 /*! -------------------------
 Carrousels
 -------------------------- */
@@ -295,12 +363,14 @@ Menus
   will-change: opacity;
   transition-property: opacity;
   transition-duration: 0.7s;
+  transition-delay: 0;
   transition-timing-function: linear;
 }
 .nav__menu-lists .nav__links-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: initial;
   width: 100%;
   max-width: 1200px;
   height: calc(100vh - 160px);
@@ -308,6 +378,7 @@ Menus
 .nav__menu-lists .nav__links-container .nav__links-item {
   flex: 1;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -323,6 +394,7 @@ Menus
   will-change: background-color;
   transition-property: background-color;
   transition-duration: 0.3s;
+  transition-delay: 0;
   transition-timing-function: linear;
 }
 .nav__menu-lists .nav__links-container .nav__links-item:last-child {
@@ -355,6 +427,7 @@ Menus
 }
 .nav__socials-container .nav__socials-item {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 30px;
@@ -367,6 +440,7 @@ Menus
   will-change: color;
   transition-property: color;
   transition-duration: 0.3s;
+  transition-delay: 0;
   transition-timing-function: linear;
 }
 .nav__socials-container .nav__socials-item a:hover {
@@ -384,6 +458,7 @@ Layout
 
 .hide {
   opacity: 0;
+  pointer-events: none;
 }
 
 /*! -------------------------
@@ -461,60 +536,6 @@ Navbar
   .nav__menu-btn {
     display: none;
   }
-}
-
-.menu-btn {
-  position: absolute;
-  top: calc(50% - 2px);
-  left: calc(50% - 15px);
-  width: 30px;
-  height: 4px;
-  background-color: #f6954c;
-  will-change: background-color, transform;
-  transition-property: background-color, transform;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
-}
-
-.menu-btn::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  width: 30px;
-  height: 4px;
-  background-color: #88a896;
-  will-change: background-color, transform;
-  transition-property: background-color, transform;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
-}
-
-.menu-btn::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  width: 30px;
-  height: 4px;
-  background-color: #a63519;
-  will-change: transform, opacity;
-  transition-property: transform, opacity;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
-}
-
-.nav__menu-btn.menu-active .menu-btn {
-  background-color: #a63519;
-  transform: rotate(45deg) scale(0.85);
-}
-
-.nav__menu-btn.menu-active .menu-btn::after {
-  background-color: #a63519;
-  transform: rotate(-90deg) translateX(-10px);
-}
-
-.nav__menu-btn.menu-active .menu-btn::before {
-  opacity: 0;
-  transform: translateY(-10px);
 }
 
 /*! -------------------------
@@ -638,8 +659,6 @@ Hero
   padding: 10px 10px;
   text-decoration: none;
   border-radius: 10px;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
 }
 .hero__cta--guias span,
 .hero__cta--cursos span {
@@ -664,8 +683,11 @@ Hero
   color: #f6954c;
   border: 2px solid #f6954c;
   background-color: transparent;
-  transition-property: color, border-color;
   will-change: color, border-color;
+  transition-property: color, border-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
 }
 .hero__cta--guias:hover {
   color: #a63519;
@@ -676,8 +698,11 @@ Hero
   margin-left: 5px;
   color: white;
   background-color: #a63519;
-  transition-property: color, background-color;
   will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
 }
 .hero__cta--cursos:hover {
   color: #a63519;

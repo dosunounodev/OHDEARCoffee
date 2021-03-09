@@ -6,15 +6,11 @@ Menus
 
 
 // NAVBAR -- MENU LISTS
-
 // Incluye links (secciones) y socials (rrss)
 // Menu fullscreen hasta tablet -inclusive-
 
 .nav__menu-lists {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(column, space-between, center);
   position: fixed;
   top: 70px;
   bottom: 0;
@@ -23,28 +19,21 @@ Menus
   height: calc(100vh - 70px);
   padding: 20px;
   background-color: $color-bg-primary;
-  will-change: opacity;
-  transition-property: opacity;
-  transition-duration: 0.7s;
-  transition-timing-function: linear;
+  @include transition(0.7s, 0, linear, opacity);
   
 
 // NAVBAR -- MENU LIST -- LINKS
 // Lista de Secciones
 
   .nav__links-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(column, space-between);
     width: 100%;
     max-width: $max-width;
     height: calc(100vh - 160px);
     
     .nav__links-item {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       padding: 10px;
       margin-bottom: 10px;
       font-size: 1.6rem;
@@ -55,10 +44,7 @@ Menus
       color: $color-bg;
       border-radius: 10px;
       background-color: $color-primary;
-      will-change: background-color;
-      transition-property: background-color;
-      transition-duration: .3s;
-      transition-timing-function: linear;
+      @include transition(0.3s, 0, linear, background-color);
 
       &:last-child {
         margin-bottom: 0;
@@ -96,9 +82,7 @@ Menus
     width: 150px;
     
     .nav__socials-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       width: 30px;
       height: 30px;
       
@@ -106,10 +90,7 @@ Menus
         font-size: 2.6rem;
         line-height: 2.6rem;
         color: $color-extra;
-        will-change: color;
-        transition-property: color;
-        transition-duration: .3s;
-        transition-timing-function: linear;
+        @include transition(0.3s, 0, linear, color);
 
         &:hover {
           color: $color-secondary;

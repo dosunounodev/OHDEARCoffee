@@ -142,8 +142,6 @@ Hero
   padding: 10px 10px;
   text-decoration: none;
   border-radius: 10px;
-  transition-duration: .3s;
-  transition-timing-function: linear;
   span {
     max-width: 7ch;
     font-size: 1.4rem;
@@ -164,8 +162,7 @@ Hero
   color: $color-secondary;
   border: 2px solid $color-secondary;
   background-color: transparent;
-  transition-property: color, border-color;
-  will-change: color, border-color;
+  @include transition(0.3s, 0, linear, color, border-color);
   &:hover {
     color: $color-extra;
     border-color: $color-extra;
@@ -176,8 +173,7 @@ Hero
   margin-left: 5px;
   color: white;
   background-color: $color-extra;
-  transition-property: color, background-color;
-  will-change: color, background-color;
+  @include transition(0.3s, 0, linear, color, background-color);
   &:hover {
     color: $color-extra;
     background-color: $color-secondary;

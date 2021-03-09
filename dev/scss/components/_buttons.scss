@@ -3,3 +3,73 @@ Buttons
 -------------------------- */
 
 @use "../abstract" as *;
+
+
+// NAVBAR -- MENU BURGER BUTTON
+// Visible hasta tablet -inclusive-
+
+.menu-btn {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 4px;
+  background-color: $color-secondary;
+  @include transition(0.3s, 0, linear, transform, background-color);
+}
+
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 4px;
+  background-color: $color-primary;
+  @include transition(0.3s, 0, linear, transform, background-color);
+
+  .nav__menu-btn:hover & {
+    background-color: $color-secondary;
+  }
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 4px;
+  background-color: $color-extra;
+  @include transition(0.3s, 0, linear, transform, opacity, background-color);
+
+  .nav__menu-btn:hover & {
+    background-color: $color-secondary;
+  }
+}
+
+// ** Referencia al boton (contenedor)
+// ** nav__menu-btn
+// ** menu-active se agrega con js
+
+.nav__menu-btn.menu-active .menu-btn {
+  background-color: $color-extra;
+  transform: rotate(45deg) scale(0.85);
+}
+
+.nav__menu-btn.menu-active .menu-btn::after {
+  background-color: $color-extra;
+  transform: rotate(-90deg) translateX(-10px);
+}
+
+.nav__menu-btn.menu-active .menu-btn::before {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+
+// Efecto hover cuando esta activo
+
+.nav__menu-btn.menu-active:hover {
+  .menu-btn, .menu-btn::after {
+    background-color: $color-secondary;
+  }
+}

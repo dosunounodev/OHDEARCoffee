@@ -18,6 +18,13 @@ Layout
   max-width: $max-width;
 }
 
+
+// HIDE 
+// Helper para esconder con fade
+// No acepta eventos de puntero
+// opacity 0 - no afecta al display
+
 .hide {
   opacity: 0;
+  pointer-events: none;
 }
