@@ -382,8 +382,8 @@ Navbar
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  border: 2px solid #F9F8F6;
-  background-color: #efa290;
+  border-radius: 10px;
+  background-color: #88a896;
 }
 .nav__menu-lists .nav__links-container .nav__links-item:last-child {
   margin-bottom: 0;
@@ -427,7 +427,7 @@ Navbar
 .nav__menu-lists .nav__socials-container .nav__socials-item a {
   font-size: 2.6rem;
   line-height: 2.6rem;
-  color: #efa290;
+  color: #a63519;
 }
 
 .nav__menu-btn {
