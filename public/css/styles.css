@@ -321,7 +321,7 @@ Buttons
 
 .nav__menu-btn.menu-active .menu-btn {
   background-color: #a63519;
-  transform: rotate(45deg) scale(0.85);
+  transform: rotate(45deg) scale(0.65);
 }
 
 .nav__menu-btn.menu-active .menu-btn::after {
@@ -422,7 +422,9 @@ Menus
 
 .nav__socials-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: initial;
   width: 150px;
 }
 .nav__socials-container .nav__socials-item {
