@@ -124,7 +124,7 @@ Navbar
       }
     }
 
-    @media screen and (orientation: landscape) and (max-height: 512px){
+    @media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px){
       flex-direction: row;
       .nav__links-item {
         writing-mode: vertical-rl;

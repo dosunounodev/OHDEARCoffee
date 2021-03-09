@@ -396,7 +396,7 @@ Navbar
   text-decoration: none;
   color: #F9F8F6;
 }
-@media screen and (orientation: landscape) and (max-height: 512px) {
+@media screen and (orientation: landscape) and (max-height: 512px) and (max-width: 768px) {
   .nav__menu-lists .nav__links-container {
     flex-direction: row;
   }
