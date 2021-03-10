@@ -413,7 +413,7 @@ Buttons
   transition-timing-function: linear;
 }
 .hero__cta--cursos:hover {
-  color: #a63519;
+  color: white;
   background-color: #f6954c;
 }
 
@@ -734,11 +734,21 @@ Hero
 .hero__text .hero__text--em {
   font-weight: 600;
 }
+.hero__text .hero__text--em a {
+  color: inherit;
+  text-decoration: none;
+}
 .hero__text .hero__text--em:nth-child(1) {
   color: #f6954c;
 }
+.hero__text .hero__text--em:nth-child(1):hover {
+  color: #a63519;
+}
 .hero__text .hero__text--em:nth-child(2) {
   color: #a63519;
+}
+.hero__text .hero__text--em:nth-child(2):hover {
+  color: #f6954c;
 }
 
 .hero__ctas {

@@ -137,7 +137,7 @@ Buttons
   background-color: $color-extra;
   @include transition(0.3s, 0, linear, color, background-color);
   &:hover {
-    color: $color-extra;
+    color: white;
     background-color: $color-secondary;
   }
 }
