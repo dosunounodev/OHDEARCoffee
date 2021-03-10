@@ -5,19 +5,32 @@ Layout
 @use "../abstract" as *;
 
 
-// TODAS LAS SECCIONES TIENEN 20PX DE MARGIN HORIZONTAL
-
+// SECCIONES CON 20PX DE MARGIN HORIZONTAL
 // Se establece con WIDTH = calc 100% - 40px
-// El max width de las secciones es 1200px (*en variables)
-// Hay 20px de margin top entre secciones
-// *** Esto ultimo puede cambiar
+// El max width es 1200px (*en variables)
 
 .nav__container,
-.hero {
+.hero,
+main section {
   width: calc(100% - 40px);
   max-width: $max-width;
 }
 
+// SECCIONES FLUID (100% width)
+
+// SECCIONNAME {
+//   width: 100%;
+// }
+
+
+// SETUP GENERAL DE SECCIONES (no header)
+// Todas las secciones estan centradas
+// Todas tienen margen para scroll de 70px
+// ** el height del navbar
+main section {
+  margin: 0 auto;
+  scroll-margin: 70px;
+}
 
 // HIDE 
 // Helper para esconder con fade

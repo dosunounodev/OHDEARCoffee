@@ -10,6 +10,10 @@ Base
 // Todos tienen margin y padding reseteado
 // Width de 100% para usar bgs full width
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, header, main, footer {
   width: 100%;
   margin: 0;

@@ -21,6 +21,10 @@ Hero
   @include tablet {
     height: initial;
   }
+  background-image: url('../assets/bgs/desktop-60.png');
+  // background-size: cover;
+  // background-position-y: -100px ;
+  // background-position-x: 130px;
 }
 
 

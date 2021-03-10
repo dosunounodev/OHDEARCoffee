@@ -204,6 +204,10 @@ textarea {
 /*! -------------------------
 Base
 -------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body, header, main, footer {
   width: 100%;
   margin: 0;
@@ -545,9 +549,15 @@ Menus
 Layout
 -------------------------- */
 .nav__container,
-.hero {
+.hero,
+main section {
   width: calc(100% - 40px);
   max-width: 1200px;
+}
+
+main section {
+  margin: 0 auto;
+  scroll-margin: 70px;
 }
 
 .hide {
@@ -636,6 +646,7 @@ Hero
   align-items: center;
   height: calc(100vh - 70px);
   margin-top: 70px;
+  background-image: url("../assets/bgs/desktop-60.png");
 }
 @media screen and (min-width: 540px) {
   .hero {
@@ -780,6 +791,10 @@ Footer
 /*! -------------------------
 Index
 -------------------------- */
+main section {
+  height: 100vh;
+}
+
 /*! -------------------------
 Admin
 -------------------------- */
