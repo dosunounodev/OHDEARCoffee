@@ -21,10 +21,19 @@ Hero
   @include tablet {
     height: initial;
   }
-  background-image: url('../assets/bgs/desktop-60.png');
-  // background-size: cover;
-  // background-position-y: -100px ;
-  // background-position-x: 130px;
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../assets/bgs/tabletplus.png');
+    background-size: cover;
+    background-position-y: 20px;
+    // background-repeat: no-repeat;
+  }
+
+  @include laptop {
+    // background-image: url('../assets/bgs/desktop-60.png');
+    background-size: initial;
+    background-position: initial;
+  }
 }
 
 
