@@ -28,7 +28,7 @@ Hero
 }
 
 
-// HERO -- CONTENT (TEXTOS Y CTAS)
+// HERO -- CONTENT (TITLE, TEXTS Y CTAS)
 
 // El maxwidth es para contener los textos en displays grandes
 // El width es de 100% - el tamaño del hero__picture
@@ -106,12 +106,22 @@ Hero
 
   .hero__text--em {
   font-weight: 600;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   &:nth-child(1) {
     color: $color-secondary;
+    &:hover {
+      color: $color-extra;
+    }
   }
   &:nth-child(2) {
     color: $color-extra;
+    &:hover {
+      color: $color-secondary;
+    } 
   }
   }
 }
