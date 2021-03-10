@@ -21,12 +21,17 @@ body, header, main, footer {
 }
 
 // Body centrado con margin 0 auto
+// Selections con bg verde y color bg (casi white)
 
 body {
   @include flex(column);
   min-height: 100vh;
   margin: 0 auto auto;
   background-color: $color-bg;
+  & ::selection {
+    color: $color-primary;
+    background-color: $color-bg;
+  }
 }
 
 
