@@ -522,7 +522,7 @@ Menus
     display: none;
   }
 }
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 450px) {
   .bar__socials-container {
     margin-right: 20px;
   }
@@ -534,7 +534,7 @@ Menus
 }
 @media screen and (min-width: 880px) {
   .bar__socials-container {
-    display: initial;
+    display: flex;
   }
 }
 @media screen and (min-width: 1120px) {
@@ -641,6 +641,14 @@ Menus
   }
   .list__links-container .list__links-item:last-child {
     margin-right: 0;
+  }
+}
+@media screen and (max-height: 350px) {
+  .list__links-container .list__links-item {
+    font-size: 1.2rem;
+  }
+  .list__links-container .list__links-item:hover {
+    font-size: 1.2rem;
   }
 }
 
