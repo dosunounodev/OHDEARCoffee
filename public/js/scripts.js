@@ -1,33 +1,36 @@
 console.log('hola')
 
 const navMenuBtn = document.getElementById('nav__menu-btn')
+const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
 
-const inicioBtn = document.getElementById('btnheader')
-const bioBtn = document.getElementById('btnbio')
-const blogBtn = document.getElementById('btnblog')
-const recetasBtn = document.getElementById('btnrecetas')
-const cursosBtn = document.getElementById('btncursos')
-const guiasBtn = document.getElementById('btnguias')
-const contactoBtn = document.getElementById('btncontacto')
-const newslatterBtn = document.getElementById('btnnewslatter')
+const inicioBtn = document.getElementById('btn-list-header')
+const bioBtn = document.getElementById('btn-list-bio')
+const blogBtn = document.getElementById('btn-list-blog')
+const recetasBtn = document.getElementById('btn-list-recetas')
+const cursosBtn = document.getElementById('btn-list-cursos')
+const guiasBtn = document.getElementById('btn-list-guias')
+const contactoBtn = document.getElementById('btn-list-contacto')
+const newslatterBtn = document.getElementById('btn-list-newslatter')
 
-navMenuBtn.addEventListener('click', hideShow)
-inicioBtn.addEventListener('click', hideShow)
-bioBtn.addEventListener('click', hideShow)
-blogBtn.addEventListener('click', hideShow)
-recetasBtn.addEventListener('click', hideShow)
-cursosBtn.addEventListener('click', hideShow)
-guiasBtn.addEventListener('click', hideShow)
-contactoBtn.addEventListener('click', hideShow)
-newslatterBtn.addEventListener('click', hideShow)
+navMenuBtn.addEventListener('click', togleMenuList)
+inicioBtn.addEventListener('click', togleMenuList)
+bioBtn.addEventListener('click', togleMenuList)
+blogBtn.addEventListener('click', togleMenuList)
+recetasBtn.addEventListener('click', togleMenuList)
+cursosBtn.addEventListener('click', togleMenuList)
+guiasBtn.addEventListener('click', togleMenuList)
+contactoBtn.addEventListener('click', togleMenuList)
+newslatterBtn.addEventListener('click', togleMenuList)
 
-function hideShow() {
+function togleMenuList() {
   if(navMenuBtn.classList.contains('menu-active')) {
     navMenuBtn.classList.remove('menu-active')
     navMenuList.classList.add('hide')
+    navMenuBar.classList.remove('hide')
   } else {
     navMenuBtn.classList.add('menu-active')
     navMenuList.classList.remove('hide')
+    navMenuBar.classList.add('hide')
   }
 }

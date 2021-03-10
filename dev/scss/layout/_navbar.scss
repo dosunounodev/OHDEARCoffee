@@ -11,6 +11,8 @@ Navbar
 // Navbar visible en todos los dispositivos
 // Position fixed
 // Incluye un nav__container con max-width: 100% -40px
+// NAV LOGO CONTAINER (tiene 2 logos)
+// NAV MENU CONTAINER (tiene bar . list - btn)
 
 .nav {
   background-color: $color-bg-primary;
@@ -57,14 +59,15 @@ Navbar
 
 // NAVBAR -- MENUS
 
-// Contenedor de menu
+// Contenedor de menus
 // Incluye:
+// menu-bar (con links y socials)
 // menu-lists (con links y socials)
 // menu-btn (con boton animable)
 
 .nav__menu-container {
-  display: flex;
-  justify-content: flex-end;
+  @include flex(row, flex-end);
+  width: 100%;
 }
 
 
