@@ -33,7 +33,7 @@ Menus
   }
   
   .bar__links-item {
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
@@ -44,14 +44,15 @@ Menus
     
     &:first-child {
       display: none;
-      @media screen and (min-width: 950px) {
+      @include desktop {
         display: initial;
       }
     }
-    
+
     &:last-child {
       margin-right: 0;
     }
+
     &:active, &:focus {
       color: $color-extra
     }
@@ -61,24 +62,23 @@ Menus
         transform: scale(1.2);
       }
     }
+
+    @include laptop {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      margin-right: 20px;
+      }
+    @include desktop {
+      margin-right: 30px;
+    }
   }
 
   display: none;
   @include tablet {
       display: flex;
   }
-  @include laptop {
-    .bar__links-item {
-      margin-right: 20px;
-      font-size: 1.6rem;
-      line-height: 1.6;
-    }
-  }
-  @media screen and (min-width: 1120px) {
+  @include desktop {
     margin-right: 30px;
-    .bar__links-item {
-      margin-right: 30px;
-    }
   }
 }
 
@@ -100,7 +100,7 @@ Menus
   @include tablet {
     display: none;
   }
-  @media screen and (min-width: 880px) {
+  @media screen and (min-width: 900px) {
     display: flex;
   }
   @media screen and (min-width: 1120px) {
