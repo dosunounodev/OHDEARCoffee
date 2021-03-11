@@ -17,7 +17,7 @@ Hero
   height: calc(100vh - 70px);
   margin-top: 70px;
   @include landscape {
-    @include flex(row, center, center);
+    @include flex(row, space-between, center);
   }
   @include tablet {
     height: initial;
@@ -68,8 +68,12 @@ Hero
   margin-top: 15px;
   text-align: center;
   text-transform: uppercase;
+  @include landscape {
+    margin-bottom: 10px;
+  }
   @include tablet {
     text-align: start;
+    margin-bottom: 20px;
   }
 
   .hero__title--em {
@@ -104,8 +108,12 @@ Hero
 
 .hero__text {
   text-align: center;
+  @include landscape {
+    margin-bottom: 10px;
+  }
   @include tablet {
     text-align: start;
+    margin-bottom: 20px;
   }
 
   .hero__text--hide {

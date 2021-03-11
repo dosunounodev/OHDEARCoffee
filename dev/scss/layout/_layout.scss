@@ -30,6 +30,10 @@ main section {
 main section {
   margin: 0 auto;
   scroll-margin: 70px;
+  padding-top: 20px;
+  @include laptop {
+    padding-top: 40px;
+  }
 }
 
 // HIDE 
