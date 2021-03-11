@@ -17,8 +17,10 @@ Buttons
   background-color: $color-secondary;
   @include transition(0.3s, 0, linear, transform, background-color);
   .nav__menu-btn:hover & {
-    background-color: $color-extra;
-    transform: scale(1.2);
+    @media (hover: hover) and (pointer: fine) {
+      background-color: $color-extra;
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -32,7 +34,9 @@ Buttons
   @include transition(0.3s, 0, linear, transform, background-color);
 
   .nav__menu-btn:hover & {
-    background-color: $color-secondary;
+    @media (hover: hover) and (pointer: fine) {
+      background-color: $color-secondary;
+    }
   }
 }
 
@@ -46,7 +50,9 @@ Buttons
   @include transition(0.3s, 0, linear, transform, opacity, background-color);
 
   .nav__menu-btn:hover & {
-    background-color: $color-secondary;
+    @media (hover: hover) and (pointer: fine) {
+      background-color: $color-secondary;      
+    }
   }
 }
 
@@ -75,13 +81,15 @@ Buttons
 // ** Cruz se vuelve naranja y crece
 
 .nav__menu-btn.menu-active:hover {
-  .menu-btn {
-    background-color: $color-secondary;
-    transform: rotate(45deg) scale(1.2)
-  }
-
-  .menu-btn::after {
-    background-color: $color-secondary;
+  @media (hover: hover) and (pointer: fine) {
+    .menu-btn {
+      background-color: $color-secondary;
+      transform: rotate(45deg) scale(1.2)
+    }
+  
+    .menu-btn::after {
+      background-color: $color-secondary;
+    }
   }
 }
 

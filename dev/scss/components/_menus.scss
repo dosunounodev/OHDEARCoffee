@@ -25,9 +25,11 @@ Menus
   @include flex(row, flex-end);
   margin-right: 20px;  
   
-  &:hover > .bar__links-item {
-    color: $color-primary;
-    transform: scale(0.8);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover > .bar__links-item {
+      color: $color-primary;
+      transform: scale(0.8);
+    }
   }
   
   .bar__links-item {
@@ -50,10 +52,14 @@ Menus
     &:last-child {
       margin-right: 0;
     }
-    
-    &:hover {
-      color: $color-extra;
-      transform: scale(1.2);
+    &:active, &:focus {
+      color: $color-extra
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $color-extra;
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -66,9 +72,6 @@ Menus
       margin-right: 20px;
       font-size: 1.6rem;
       line-height: 1.6;
-      &:hover {
-        transform: scale(1.3);
-      }
     }
   }
   @media screen and (min-width: 1120px) {
@@ -115,8 +118,10 @@ Menus
       @include transition(0.3s, 0, linear, color, transform);
       
       &:hover {
-        color: $color-secondary;
-        transform: scale(1.4)
+        @media (hover: hover) and (pointer: fine) {
+          color: $color-secondary;
+          transform: scale(1.4)      
+        }
       }
     }
   }
@@ -226,7 +231,9 @@ Menus
       @include transition(0.3s, 0, linear, color);
 
       &:hover {
-        color: $color-secondary;
+        @media (hover: hover) and (pointer: fine) {
+          color: $color-secondary;      
+        }
       }
     }
 
