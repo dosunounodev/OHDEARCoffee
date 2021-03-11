@@ -39,7 +39,8 @@ body {
 
 // 20px de margin bottom en mobile
 // 10px de margin bottom en landscape
-// 40px de margin bottom en tablet++
+// 20px de margin bottom en tablet
+// 40px de margin bottom en laptop++
 
 h1, h2, h3, h4, p {
   margin: 0;
@@ -49,6 +50,9 @@ h1, h2, h3, h4, p {
     margin-bottom: 10px;
   }
   @include tablet {
+    margin-bottom: 20px;
+  }
+  @include laptop {
     margin-bottom: 40px;
   }
 }

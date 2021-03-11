@@ -6,7 +6,7 @@ Buttons
 
 
 // NAVBAR -- MENU BURGER BUTTON
-// Visible hasta tablet -inclusive-
+// Visible en todos los dispositivos
 
 .menu-btn {
   position: absolute;
@@ -50,7 +50,8 @@ Buttons
   }
 }
 
-// ** Estado cuando esta activo
+
+// Estado cuando esta activo
 // ** nav__menu-btn es referencia al boton (contenedor)
 // ** menu-active se agrega con js
 
@@ -69,8 +70,9 @@ Buttons
   transform: translateY(-10px);
 }
 
+
 // Efecto hover cuando esta activo
-// ** Cruz se vuelve naranja
+// ** Cruz se vuelve naranja y crece
 
 .nav__menu-btn.menu-active:hover {
   .menu-btn {
@@ -96,14 +98,12 @@ Buttons
 .hero__cta--guias,
 .hero__cta--cursos {
   @include flex(row, center, center);
-  flex: 1;
-  height: 50px;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 40px;
   margin: 0;
   text-decoration: none;
   border-radius: 10px;
-  @include tablet {
-    height: 60px;
-  }
   span {
     font-size: 1.6rem;
     font-weight: 600;
@@ -111,16 +111,18 @@ Buttons
     text-align: center;
     text-transform: uppercase;
     color: inherit;
-    @include portrait{
-      max-width: 7ch;
-      font-size: 1.4rem;
-      line-height: 1.4;
+    @include tablet{
+      font-size: 1.8rem;
+      line-height: 1.8;
     }
+  }
+  @include tablet {
+    height: 50px;
   }
 }
 
 .hero__cta--guias {
-  margin-right: 5px;
+  margin-top: 0;
   color: $color-secondary;
   border: 2px solid $color-secondary;
   background-color: transparent;
@@ -129,15 +131,22 @@ Buttons
     color: $color-extra;
     border-color: $color-extra;
   }
+  @include landscape {
+    margin-right: 5px;
+  }
 }
 
 .hero__cta--cursos {
-  margin-left: 5px;
+  margin-top: 10px;
   color: white;
   background-color: $color-extra;
   @include transition(0.3s, 0, linear, color, background-color);
   &:hover {
     color: white;
     background-color: $color-secondary;
+  }
+  @include landscape {
+    margin-top: 0;
+    margin-left: 5px;
   }
 }

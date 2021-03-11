@@ -37,8 +37,7 @@ Navbar
 // Siempre a la izquierda
 
 .nav__logo-container {
-  display: flex;
-  align-items: flex-start;
+  @include flex(row, initial, flex-start);
   width: 240px;
 }
 
@@ -71,13 +70,13 @@ Navbar
 }
 
 
-// NAVBAR -- MENU-BURGER
+// NAVBAR -- BTN Container
 
 // Boton animado para desplegar menu
-// ** Opcional display none
-// ** Solo visible hasta tablet inclusive
+// ** Incluye menu-btn 
 
 .nav__menu-btn {
+  flex: 0 0 auto;
   position: relative;
   width: 30px;
   height: 30px;

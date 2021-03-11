@@ -12,11 +12,12 @@ Hero
 // Menos 70px (50 navbar, 20 mtop)
 
 .hero {
-  @include flex(column, space-between, center);
+  overflow: hidden;
+  @include flex(column, flex-start, center);
   height: calc(100vh - 70px);
   margin-top: 70px;
   @include landscape {
-    flex-direction: row;
+    @include flex(row, center, center);
   }
   @include tablet {
     height: initial;
@@ -64,7 +65,7 @@ Hero
 
 .hero__title {
   width: 100%;
-  padding-top: 5px;
+  margin-top: 15px;
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 1;
@@ -86,13 +87,14 @@ Hero
 
   .hero__title-span {
     display: block;
-    font-size: 2.0rem;
+    margin-top: 5px;
+    font-size: 1.8rem;
     font-weight: 400;
     @include tablet {
       font-size: 2.4rem;
     }
     @include laptop {
-      font-size: 3.6rem;
+      font-size: 3.2rem;
     }
     span {
       font-weight: 600;
@@ -108,30 +110,41 @@ Hero
 // Tiene palabras destacadas en bold/colores
 
 .hero__text {
+  font-size: 1.6rem;
+  line-height: 1.6;
   text-align: center;
   @include tablet {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
     text-align: start;
   }
 
+  .hero__text--hide {
+    display: none;
+    @media screen and (min-width: 327px) {
+      display: initial;
+    }
+  } 
+
   .hero__text--em {
   font-weight: 600;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  &:nth-child(1) {
-    color: $color-secondary;
-    &:hover {
-      color: $color-extra;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-  }
-  &:nth-child(2) {
-    color: $color-extra;
-    &:hover {
+    &:nth-child(1) {
       color: $color-secondary;
-    } 
-  }
+      &:hover {
+        color: $color-extra;
+      }
+    }
+    &:nth-child(2) {
+      color: $color-extra;
+      &:hover {
+        color: $color-secondary;
+      } 
+    }
   }
 }
 
@@ -143,9 +156,15 @@ Hero
 // Text lenght acotado segun dispositivo
 
 .hero__ctas {
-  @include flex(row, space-between);
+  @include flex(column, space-between);
   width: 100%;
   margin-bottom: 20px;
+  @include landscape {
+    flex-direction: row;
+  }
+  @include tablet {
+    padding-right: 20px;
+  }
 }
 
 
@@ -158,9 +177,7 @@ Hero
 .hero__picture {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   @include tablet {
     width: 240px;
   }
@@ -171,6 +188,9 @@ Hero
 
 .hero__picture-container {
   width: 150px;
+  @media screen and (min-width: 420px) {
+    width: 170px;
+  }
   @include tablet {
     width: 100%;
   }

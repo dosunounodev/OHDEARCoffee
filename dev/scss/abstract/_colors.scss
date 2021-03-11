@@ -5,7 +5,6 @@
 @use "./variables" as *;
 
 // Branding
-
 $color-primary: #88a896;
 $color-secondary: #f6954c;
 $color-extra:  #a63519;
@@ -16,7 +15,6 @@ $color-extra-off:  #E97D63;
 
 
 // Bg
-
 $color-bg: #F9F8F6;
 $color-bg-primary: lighten($color-primary-off, 10%);
 $color-bg-secondary: lighten($color-secondary-off, 10%);
@@ -24,7 +22,6 @@ $color-bg-extra: lighten($color-extra-off, 10%);
 
 
 // Texts
-
 $color-text: #252422;
 $color-label: #B4B3B3;
 

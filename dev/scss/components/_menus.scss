@@ -17,6 +17,7 @@ Menus
   @include transition(0.8s, 0.2s, linear, opacity);
 }
 
+
 // NAVMENU - BAR -- LINKS
 // Lista de Secciones
 
@@ -124,23 +125,6 @@ Menus
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // NAVMENU - LISTS
 // Lista fullscreen para todos dispositivos
 // Incluye links (secciones) y socials (rrss)
@@ -171,8 +155,8 @@ Menus
   .list__links-item {
     flex: 1;
     @include flex-center();
-    padding: 10px;
     margin-bottom: 10px;
+    padding: 10px;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 1.6rem;
@@ -188,22 +172,22 @@ Menus
     }
 
     &:hover {
-      background-color: $color-secondary;
       font-size: 2.2rem;
+      background-color: $color-secondary;
     }
   }
 
   @media screen and (orientation: landscape) and (max-height: 530px) and (max-width: 900px){
     flex-direction: row;
     .list__links-item {
-      writing-mode: vertical-rl;
-      text-orientation: upright;
       height: 100%;
       margin-right: 10px ;
       margin-bottom: 0;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
       &:hover {
-        background-color: $color-secondary;
         font-size: 1.6rem;
+        background-color: $color-secondary;
       }
       
       &:last-child {

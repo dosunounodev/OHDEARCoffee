@@ -240,6 +240,11 @@ h1, h2, h3, h4, p {
 }
 @media screen and (min-width: 768px) {
   h1, h2, h3, h4, p {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1, h2, h3, h4, p {
     margin-bottom: 40px;
   }
 }
@@ -261,16 +266,10 @@ html {
 
 body, p {
   font-family: "odc-avenir-400";
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #252422;
-}
-@media screen and (min-width: 768px) {
-  body, p {
-    font-size: 1.8rem;
-    line-height: 1.6;
-  }
 }
 
 /*! -------------------------
@@ -360,17 +359,12 @@ Buttons
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  height: 50px;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 40px;
   margin: 0;
   text-decoration: none;
   border-radius: 10px;
-}
-@media screen and (min-width: 768px) {
-  .hero__cta--guias,
-.hero__cta--cursos {
-    height: 60px;
-  }
 }
 .hero__cta--guias span,
 .hero__cta--cursos span {
@@ -381,17 +375,22 @@ Buttons
   text-transform: uppercase;
   color: inherit;
 }
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 768px) {
   .hero__cta--guias span,
 .hero__cta--cursos span {
-    max-width: 7ch;
-    font-size: 1.4rem;
-    line-height: 1.4;
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__cta--guias,
+.hero__cta--cursos {
+    height: 50px;
   }
 }
 
 .hero__cta--guias {
-  margin-right: 5px;
+  margin-top: 0;
   color: #f6954c;
   border: 2px solid #f6954c;
   background-color: transparent;
@@ -405,9 +404,14 @@ Buttons
   color: #a63519;
   border-color: #a63519;
 }
+@media screen and (min-width: 540px) {
+  .hero__cta--guias {
+    margin-right: 5px;
+  }
+}
 
 .hero__cta--cursos {
-  margin-left: 5px;
+  margin-top: 10px;
   color: white;
   background-color: #a63519;
   will-change: color, background-color;
@@ -419,6 +423,12 @@ Buttons
 .hero__cta--cursos:hover {
   color: white;
   background-color: #f6954c;
+}
+@media screen and (min-width: 540px) {
+  .hero__cta--cursos {
+    margin-top: 0;
+    margin-left: 5px;
+  }
 }
 
 /*! -------------------------
@@ -600,8 +610,8 @@ Menus
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   margin-bottom: 10px;
+  padding: 10px;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6rem;
@@ -620,24 +630,24 @@ Menus
   margin-bottom: 0;
 }
 .list__links-container .list__links-item:hover {
-  background-color: #f6954c;
   font-size: 2.2rem;
+  background-color: #f6954c;
 }
 @media screen and (orientation: landscape) and (max-height: 530px) and (max-width: 900px) {
   .list__links-container {
     flex-direction: row;
   }
   .list__links-container .list__links-item {
-    writing-mode: vertical-rl;
-    -webkit-text-orientation: upright;
-            text-orientation: upright;
     height: 100%;
     margin-right: 10px;
     margin-bottom: 0;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
+            text-orientation: upright;
   }
   .list__links-container .list__links-item:hover {
-    background-color: #f6954c;
     font-size: 1.6rem;
+    background-color: #f6954c;
   }
   .list__links-container .list__links-item:last-child {
     margin-right: 0;
@@ -755,6 +765,8 @@ Navbar
 
 .nav__logo-container {
   display: flex;
+  flex-direction: row;
+  justify-content: initial;
   align-items: flex-start;
   width: 240px;
 }
@@ -782,6 +794,7 @@ Navbar
 }
 
 .nav__menu-btn {
+  flex: 0 0 auto;
   position: relative;
   width: 30px;
   height: 30px;
@@ -791,16 +804,20 @@ Navbar
 Hero
 -------------------------- */
 .hero {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
 @media screen and (min-width: 540px) {
   .hero {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -844,7 +861,7 @@ Hero
 
 .hero__title {
   width: 100%;
-  padding-top: 5px;
+  margin-top: 15px;
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 1;
@@ -869,7 +886,8 @@ Hero
 }
 .hero__title .hero__title-span {
   display: block;
-  font-size: 2rem;
+  margin-top: 5px;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
@@ -879,7 +897,7 @@ Hero
 }
 @media screen and (min-width: 1024px) {
   .hero__title .hero__title-span {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 }
 .hero__title .hero__title-span span {
@@ -887,11 +905,24 @@ Hero
 }
 
 .hero__text {
+  font-size: 1.6rem;
+  line-height: 1.6;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .hero__text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
     text-align: start;
+  }
+}
+.hero__text .hero__text--hide {
+  display: none;
+}
+@media screen and (min-width: 327px) {
+  .hero__text .hero__text--hide {
+    display: initial;
   }
 }
 .hero__text .hero__text--em {
@@ -916,17 +947,28 @@ Hero
 
 .hero__ctas {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: initial;
   width: 100%;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 540px) {
+  .hero__ctas {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__ctas {
+    padding-right: 20px;
+  }
 }
 
 .hero__picture {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -943,6 +985,11 @@ Hero
 
 .hero__picture-container {
   width: 150px;
+}
+@media screen and (min-width: 420px) {
+  .hero__picture-container {
+    width: 170px;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero__picture-container {
