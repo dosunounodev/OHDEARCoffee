@@ -1,8 +1,15 @@
-console.log('hola')
+// MENUS
 
-const navMenuBtn = document.getElementById('nav__menu-btn')
 const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
+
+// BOTONES
+
+const navMenuBtn = document.getElementById('nav__menu-btn')
+const navLogoCup = document.getElementById('nav__logo-cup')
+const navLogoText = document.getElementById('nav__logo-text')
+
+// LINKS MENU
 
 const inicioBtn = document.getElementById('btn-list-header')
 const bioBtn = document.getElementById('btn-list-bio')
@@ -12,6 +19,27 @@ const cursosBtn = document.getElementById('btn-list-cursos')
 const guiasBtn = document.getElementById('btn-list-guias')
 const contactoBtn = document.getElementById('btn-list-contacto')
 const newslatterBtn = document.getElementById('btn-list-newslatter')
+
+
+// TOGLE MENU
+// Si el menu esta cerrado lo abren
+// Si esta abierto lo cierran
+
+let menuActivo = false
+
+function esconderMenuList() {
+  navMenuBtn.classList.remove('menu-active')
+  navMenuBar.classList.remove('hide')
+  navMenuList.classList.add('hide')
+  menuActivo = false
+}
+
+function mostrarMenuList() {
+  navMenuBtn.classList.add('menu-active')
+  navMenuBar.classList.add('hide')
+  navMenuList.classList.remove('hide')
+  menuActivo = true
+}
 
 navMenuBtn.addEventListener('click', togleMenuList)
 inicioBtn.addEventListener('click', togleMenuList)
@@ -24,13 +52,22 @@ contactoBtn.addEventListener('click', togleMenuList)
 newslatterBtn.addEventListener('click', togleMenuList)
 
 function togleMenuList() {
-  if(navMenuBtn.classList.contains('menu-active')) {
-    navMenuBtn.classList.remove('menu-active')
-    navMenuList.classList.add('hide')
-    navMenuBar.classList.remove('hide')
+  if(menuActivo) {
+    esconderMenuList()
   } else {
-    navMenuBtn.classList.add('menu-active')
-    navMenuList.classList.remove('hide')
-    navMenuBar.classList.add('hide')
+    mostrarMenuList()
+  }
+}
+
+// CERRAR MENU
+// ** Si se clickean los iconos con el menu abierto
+// ** No pueden abrirlo sino lo abririan siempre
+
+navLogoCup.addEventListener('click', closeMenuList)
+navLogoText.addEventListener('click', closeMenuList)
+
+function closeMenuList() {
+  if(menuActivo) {
+    esconderMenuList()
   }
 }
