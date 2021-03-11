@@ -15,18 +15,16 @@ Navbar
 // NAV MENU CONTAINER (tiene bar . list - btn)
 
 .nav {
-  background-color: $color-bg-primary;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  @include flex(row, center, flex-end);
   width: 100%;
   height: 70px;
+  background-color: $color-bg-primary;
+  background-color: red
 }
 
 .nav__container {
-  display: flex;
-  justify-content: space-between;
+  @include flex(row, space-between);
   height: 50px;
 }
 

@@ -215,12 +215,6 @@ body, header, main, footer {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  min-height: 100vh;
-  margin: 0 auto auto;
   background-color: #F9F8F6;
 }
 body ::selection {
@@ -235,7 +229,7 @@ h1, h2, h3, p, h2 + small, h2 + strong {
 }
 @media screen and (min-width: 1024px) {
   h1, h2, h3, p, h2 + small, h2 + strong {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -813,6 +807,7 @@ Layout
 -------------------------- */
 .nav__container,
 .hero,
+.footer__container,
 main section {
   width: calc(100% - 40px);
   max-width: 1200px;
@@ -822,11 +817,6 @@ main section {
   margin: 0 auto;
   scroll-margin: 70px;
   padding-top: 20px;
-}
-@media screen and (min-width: 1024px) {
-  main section {
-    padding-top: 40px;
-  }
 }
 
 .hide {
@@ -859,18 +849,22 @@ Header
 Navbar
 -------------------------- */
 .nav {
-  background-color: #deebe3;
   position: fixed;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
   height: 70px;
+  background-color: #deebe3;
+  background-color: red;
 }
 
 .nav__container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: initial;
   height: 50px;
 }
 
@@ -1112,18 +1106,42 @@ Hero
 }
 
 /*! -------------------------
-Sidebar
--------------------------- */
-/*! -------------------------
 Footer
 -------------------------- */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  color: #F9F8F6;
+  background-color: #252422;
+}
+
+.footer__container {
+  background-color: red;
+}
+
 /*! -------------------------
 Index
 -------------------------- */
-main section {
-  height: 100vh;
-}
-
+/*! -------------------------
+Bio
+-------------------------- */
+/*! -------------------------
+Blog
+-------------------------- */
+/*! -------------------------
+Recetas
+-------------------------- */
+/*! -------------------------
+Cursos
+-------------------------- */
+/*! -------------------------
+Guias
+-------------------------- */
+/*! -------------------------
+Contacto
+-------------------------- */
 /*! -------------------------
 Admin
 -------------------------- */

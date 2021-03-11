@@ -4,7 +4,9 @@
 // (son independientes)
 
 @forward './page-index';
-
-main section {
-  height: 100vh;
-}
+@forward './bio';
+@forward './blog';
+@forward './recetas';
+@forward './cursos';
+@forward './guias';
+@forward './contacto';
