@@ -5,7 +5,6 @@ Footer
 @use "../abstract" as *;
 
 .footer {
-  @include flex(column, initial, center);
   color: $color-bg;
   background-color: $color-text;
 }

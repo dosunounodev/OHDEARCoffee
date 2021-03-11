@@ -13,8 +13,10 @@ html {
 
 // Todos tienen margin y padding reseteado
 // Width de 100% para usar bgs full width
+// Flex column centrado horizontal
 
-body, header, main, footer {
+body, header, header nav, main, footer {
+  @include flex(column, flex-start, center);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -24,9 +26,6 @@ body, header, main, footer {
 // Selections con bg verde y color bg (casi white)
 
 body {
-  // @include flex(column);
-  // min-height: 100vh;
-  // margin: 0 auto;
   background-color: $color-bg;
   & ::selection {
     color: $color-primary;
@@ -41,9 +40,6 @@ h1, h2, h3, p, h2 + small, h2 + strong {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  @include laptop {
-    margin-bottom: 30px;
-  }
 }
 h2 + small {
   display: inline-block;

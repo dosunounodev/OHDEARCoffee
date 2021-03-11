@@ -13,9 +13,7 @@ Header
 // ** En el hero (mobile) la ilustracion ocupa el resto de pantalla
 
 .header {
-  @include flex(column, flex-start, center);
   min-height: 100vh;
-  padding: 0;
   background-color: $color-bg-primary;
   @include tablet {
     min-height: initial;

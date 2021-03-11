@@ -208,7 +208,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body, header, main, footer {
+body, header, header nav, main, footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -226,11 +230,6 @@ h1, h2, h3, p, h2 + small, h2 + strong {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-}
-@media screen and (min-width: 1024px) {
-  h1, h2, h3, p, h2 + small, h2 + strong {
-    margin-bottom: 30px;
-  }
 }
 
 h2 + small {
@@ -805,7 +804,7 @@ Menus
 /*! -------------------------
 Layout
 -------------------------- */
-.nav__container,
+.nav-container,
 .hero,
 .footer__container,
 main section {
@@ -831,12 +830,7 @@ Grid
 Header
 -------------------------- */
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   min-height: 100vh;
-  padding: 0;
   background-color: #deebe3;
 }
 @media screen and (min-width: 768px) {
@@ -848,24 +842,18 @@ Header
 /*! -------------------------
 Navbar
 -------------------------- */
-.nav {
+header nav {
   position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 70px;
   background-color: #deebe3;
-  background-color: red;
 }
 
-.nav__container {
+.nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: initial;
-  height: 50px;
+  align-items: flex-start;
+  height: 70px;
+  padding-top: 20px;
 }
 
 .nav__logo-container {
@@ -883,6 +871,7 @@ Navbar
 
 .nav__logo-text {
   width: 200px;
+  height: 40px;
 }
 
 .nav__logo-img {
@@ -905,6 +894,7 @@ Navbar
   height: 30px;
   cursor: pointer;
 }
+
 /*! -------------------------
 Hero
 -------------------------- */
@@ -1109,10 +1099,6 @@ Hero
 Footer
 -------------------------- */
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: center;
   color: #F9F8F6;
   background-color: #252422;
 }
