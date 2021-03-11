@@ -1,28 +1,10 @@
 extend ../templates/template.pug
 block content
-  section#bio
-    +sectionTitle('Sobre mi', 'Te cuento quien soy')
-    h3 Esto es un h3
-    p Lorem ipsum dolor sit, 
-      small amet consectetur
-      |  adipisicing elit. Assumenda 
-      strong reiciendis obcaecati
-      |  sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!
-  section#blog
-    h2 BLOG
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis obcaecati sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-  section#recetas
-    h2 RECETAS
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis obcaecati sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-  section#cursos
-    h2 CURSOS
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis obcaecati sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-  section#guias
-    h2 GUIAS
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis obcaecati sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-  section#contacto
-    h2 CONTACTO
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis obcaecati sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
+  include ../includes/secciones/bio.pug
+  include ../includes/secciones/blog.pug
+  include ../includes/secciones/recetas.pug
+  include ../includes/secciones/cursos.pug
+  include ../includes/secciones/guias.pug
+  include ../includes/secciones/contacto.pug
 block scripts
   script(src="./js/scripts.js") 
