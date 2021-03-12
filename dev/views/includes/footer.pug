@@ -1,9 +1,29 @@
 footer.footer#footer
   .footer__container
-      .footer-items
-        .footer__picture
-          .footer__picture-container
-            img(src="./assets/images/ilus-full.png", alt="Ilustración de OHDEARCoffee con un café en mano").footer__picture-img
-        nav.footer__links
-        .footer__newsletter
-      .footer-copy
+    ul.footer__socials
+      each url, icon in navSocials
+        li.bar__socials-item
+          a(href=""+url target="_blank")
+            i(class="fab fa-"+icon)
+    .footer__picture-container
+      img(src="./assets/images/ilus-full.png", alt="Ilustración de OHDEARCoffee con un café en mano").footer__picture-img
+    nav.footer__links
+      each link, nombre in navLinks 
+        li.footer__links-item
+          a(href="#"+link) #{nombre}
+    .footer__newsletter
+      h2 Suscribite al newsletter
+      p Y recibí todas las novedades
+      form(action="" id="footer-newsletter")
+        .form__field
+          input(type="text" placeholder="Tu Nombre" id="footer-nombre").form__input
+        .form__field
+          input(type="email" placeholder="Tu Mail" id="footer-mail").form__input
+        .form__field 
+          input(type="submit" value="Enviar" id="footer-enviar" class="form__submit")
+  .footer-copy
+    p C 2021 - 
+      span OHDEARCoffee
+    p Desarrollo web: 
+      span
+        a(href="http://dosunouno.dev") dosunouno.dev 
