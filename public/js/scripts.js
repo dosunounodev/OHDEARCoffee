@@ -38,12 +38,12 @@ const hidersBtnsListeners = hidersBtns.map(item => item.addEventListener('click'
 // Si el menu esta inactivo (cerrado) lo muestra
 
 function toggleMenuList() {
-  if(menuActivo) {
-    esconderMenuList()
-  } else {
-    mostrarMenuList()
-  }
+  (menuActivo) ? esconderMenuList() : mostrarMenuList()
 }
+
+// function toggleMenuList() {
+//   (menuActivo) ? esconderMenuList() : mostrarMenuList()
+// }
 
 // ** Menu inactivo x default (escondido al abrir el website)
 let menuActivo = false
