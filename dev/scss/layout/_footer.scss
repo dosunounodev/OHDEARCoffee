@@ -38,9 +38,16 @@ Footer
 
 .footer__socials {
   order: 4;
+  @include flex-center(row);
+  padding-left: 10px;
+  @media screen and (min-width:700px) {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 0;
+  }
   width: 220px;
   height: 50px;
-  background-color: $color-bg-extra;
+  background-color: $color-primary;
   border-radius: 10px;
 
   @media screen and (min-width:700px) {
@@ -48,6 +55,39 @@ Footer
     width: 50px;
     height: 220px;
     margin-bottom: 0px;
+  }
+}
+
+.footer__socials-item {
+  @include flex-center(column);
+  width: 40px;
+  height: 40px;
+  a {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    color: $color-extra;
+    @include transition(0.3s, 0, linear, color, transform);
+    
+    &:hover {
+      @media (hover: hover) and (pointer: fine) {
+        color: $color-secondary;
+        transform: scale(1.4)      
+      }
+    }
+  }
+  &:first-child span {
+    @include flex-center(row);
+    margin-right: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-extra;
+    
+    @media screen and (min-width:700px) {
+      margin-right: 0;
+      margin-bottom: 50px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
   }
 }
 

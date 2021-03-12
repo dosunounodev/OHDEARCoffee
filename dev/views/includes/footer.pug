@@ -3,8 +3,10 @@ footer.footer#footer
     .footer__picture-container
       img(src="./assets/images/ilus-full.png", alt="Ilustración de OHDEARCoffee con un café en mano").footer__picture-img
     ul.footer__socials
+      li.footer__socials-item
+        span Redes 
       each url, icon in navSocials
-        li.bar__socials-item
+        li.footer__socials-item
           a(href=""+url target="_blank")
             i(class="fab fa-"+icon)
     nav.footer__links
