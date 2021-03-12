@@ -2,6 +2,7 @@
 
 const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
+const footersocials = document.getElementById('footersocials')
 
 // BOTONES
 
@@ -30,6 +31,7 @@ let menuActivo = false
 function esconderMenuList() {
   navMenuBtn.classList.remove('menu-active')
   navMenuBar.classList.remove('hide')
+  footersocials.classList.remove('hide')
   navMenuList.classList.add('hide')
   menuActivo = false
 }
@@ -37,6 +39,7 @@ function esconderMenuList() {
 function mostrarMenuList() {
   navMenuBtn.classList.add('menu-active')
   navMenuBar.classList.add('hide')
+  footersocials.classList.add('hide')
   navMenuList.classList.remove('hide')
   menuActivo = true
 }

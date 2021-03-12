@@ -40,6 +40,7 @@ Footer
   order: 4;
   @include flex-center(row);
   padding-left: 10px;
+  @include transition(0.8s, 0.2s, linear, opacity);
   @media screen and (min-width:700px) {
     flex-direction: column;
     padding-top: 40px;
