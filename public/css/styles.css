@@ -1280,19 +1280,6 @@ Footer
   font-size: 1.4rem;
   font-weight: 400;
 }
-.footer-copy p span {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #f6954c;
-}
-.footer-copy p span a {
-  text-decoration: none;
-  color: #88a896;
-}
-.footer-copy p span a:hover {
-  color: #a63519;
-  text-decoration: underline;
-}
 .footer-copy p:last-child {
   margin-top: 10px;
 }
@@ -1300,6 +1287,22 @@ Footer
   .footer-copy p:last-child {
     margin-top: 0;
   }
+}
+.footer-copy p:last-child span a {
+  color: #88a896;
+}
+.footer-copy p span {
+  color: #f6954c;
+}
+.footer-copy p span a {
+  color: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-copy p span a:hover {
+  color: #a63519;
+  text-decoration: underline;
 }
 
 main {
