@@ -1249,6 +1249,7 @@ Footer
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
   margin-right: 10px;
   font-size: 1.4rem;
   font-weight: 600;

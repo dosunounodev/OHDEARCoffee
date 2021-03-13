@@ -79,6 +79,7 @@ Footer
   }
   &:first-child span {
     @include flex-center(row);
+    pointer-events: none;
     margin-right: 10px;
     font-size: 1.4rem;
     font-weight: 600;
