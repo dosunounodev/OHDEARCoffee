@@ -207,6 +207,56 @@ Base
 html {
   scroll-behavior: smooth;
 }
+html ::-webkit-scrollbar {
+  width: 16px;
+}
+html ::-webkit-scrollbar-thumb {
+  background: #88a896;
+  border: 3px solid #deebe3;
+  border-radius: 10px;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: #f6954c;
+}
+html ::-webkit-scrollbar-thumb:active {
+  background: #a63519;
+}
+html ::-webkit-scrollbar-track {
+  background: #deebe3;
+}
+html ::-webkit-scrollbar-track:hover {
+  background: #deebe3;
+}
+html ::-webkit-scrollbar-track:active {
+  background: #deebe3;
+}
+html ::-webkit-scrollbar-button:single-button {
+  background-color: #deebe3;
+  display: block;
+  border-style: solid;
+  height: 12px;
+  width: 16px;
+}
+html ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #88a896 transparent;
+}
+html ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #f6954c transparent;
+}
+html ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  border-color: transparent transparent #a63519 transparent;
+}
+html ::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #88a896 transparent transparent transparent;
+}
+html ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #f6954c transparent transparent transparent;
+}
+html ::-webkit-scrollbar-button:vertical:single-button:increment:active {
+  border-color: #a63519 transparent transparent transparent;
+}
 
 body, header, header nav, main, footer {
   display: flex;
