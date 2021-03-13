@@ -1149,6 +1149,7 @@ Footer
   transition-delay: 0.2s;
   transition-timing-function: linear;
   width: 100%;
+  max-width: 276px;
   height: 50px;
   background-color: #88a896;
   border-radius: 10px;
@@ -1206,7 +1207,7 @@ Footer
 @media screen and (min-width: 700px) {
   .footer__socials-item:first-child span {
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright;
             text-orientation: upright;

@@ -1,36 +1,30 @@
-// MENUS A MOSTRAR/ESCONDER
+// ********* MOSTRAR / OCULTAR MENUS
 
+// MENUS A MOSTRAR/ESCONDER
 const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
 const footersocials = document.getElementById('footersocials')
 
 // ICONOS (** los 3 del navbar)
-
 const navMenuBtn = document.getElementById('nav__menu-btn')
-const navLogoCup = document.getElementById('nav__logo-cup')
-const navLogoText = document.getElementById('nav__logo-text')
+const navLogoContainer = document.getElementById('nav__logo-container')
 
-// LINKS MENU (los de menu list)
+// Toggle Menu -> Para links de menu list
+navMenuList.addEventListener('click', (e) => {
+  if((e.target.nodeName === 'LI') || (e.target.classList.contains('list__links-item'))){
+    toggleMenuList()
+  }
+})
 
-const inicioBtn = document.getElementById('btn-list-header')
-const bioBtn = document.getElementById('btn-list-bio')
-const blogBtn = document.getElementById('btn-list-blog')
-const recetasBtn = document.getElementById('btn-list-recetas')
-const cursosBtn = document.getElementById('btn-list-cursos')
-const guiasBtn = document.getElementById('btn-list-guias')
-const contactoBtn = document.getElementById('btn-list-contacto')
-const newsletterBtn = document.getElementById('btn-list-newsletter')
+// Toggle Menu -> Para el boton hamburguesa
+navMenuBtn.addEventListener('click', toggleMenuList)
 
-
-// Togglers Btns (Array con todos los togglers, agrega a todos evento click = toggleMenuList)
-
-const togglersBtns = [navMenuBtn, inicioBtn, bioBtn, blogBtn, recetasBtn, cursosBtn, guiasBtn, contactoBtn, newsletterBtn]
-const togglersBtnsListeners = togglersBtns.map(item => item.addEventListener('click', toggleMenuList))
-
-// Hiders Btns (Array con los iconos que solo esconden el menu)
-
-const hidersBtns = [navLogoCup, navLogoText]
-const hidersBtnsListeners = hidersBtns.map(item => item.addEventListener('click', closeMenuList))
+// Esconder el menu al tocar iconos/logos de la parte superior izquierda
+navLogoContainer.addEventListener('click', (e) => {
+  if(e.target.classList.contains('nav__logo-img')) {
+    closeMenuList()
+  }
+})
 
 
 // TOGGLE MENU
@@ -40,10 +34,6 @@ const hidersBtnsListeners = hidersBtns.map(item => item.addEventListener('click'
 function toggleMenuList() {
   (menuActivo) ? esconderMenuList() : mostrarMenuList()
 }
-
-// function toggleMenuList() {
-//   (menuActivo) ? esconderMenuList() : mostrarMenuList()
-// }
 
 // ** Menu inactivo x default (escondido al abrir el website)
 let menuActivo = false
