@@ -17,6 +17,7 @@ Navbar
 header nav {
   position: fixed;
   background-color: $color-bg-primary;
+  z-index: 100;
 }
 .nav-container {
   @include flex(row, space-between, flex-start);
