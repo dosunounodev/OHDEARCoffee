@@ -967,6 +967,8 @@ Hero
   align-items: center;
   height: calc(100vh - 70px);
   margin-top: 70px;
+  background-image: url("../assets/bgs/mobile.png");
+  background-size: cover;
 }
 @media screen and (min-width: 540px) {
   .hero {
@@ -1483,7 +1485,7 @@ Bio
   .bio__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px 100px auto auto 40px 300px 40px 250px auto 40px auto auto 40px 120px 40px 150px 100px 40px;
+    grid-template-rows: 40px 100px auto auto 40px 200px 40px 250px auto 40px auto auto 40px 120px 40px 150px 100px 40px;
     width: 100%;
   }
 }
@@ -1523,6 +1525,12 @@ Bio
   grid-column: 2/span 4;
   grid-row: 1/span 3;
   background-color: #f6954c;
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt1 {
+    width: 100%;
+  }
 }
 .bio__txt1 h2 {
   color: inherit;
@@ -1540,6 +1548,13 @@ Bio
   grid-row: 2/span 3;
   background-color: #a63519;
   align-items: flex-end;
+  width: 80%;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt2 {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .bio__txt2 p {
@@ -1553,6 +1568,13 @@ Bio
   grid-row: 8/span 2;
   background-color: #88a896;
   align-items: center;
+  width: 80%;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt3 {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .bio__txt3 p {
@@ -1560,11 +1582,18 @@ Bio
   }
 }
 .bio__txt4 {
-  order: 6;
+  order: 7;
   grid-column: 2/span 5;
   grid-row: 11/span 2;
   background-color: #a63519;
   z-index: 10;
+  width: 80%;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt4 {
+    width: 100%;
+  }
 }
 .bio__txt4 p {
   font-weight: 600;
@@ -1579,6 +1608,13 @@ Bio
   grid-row: 12/span 3;
   background-color: #f6954c;
   z-index: 10;
+  width: 80%;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt5 {
+    width: 100%;
+  }
 }
 
 .bio__txt6 {
@@ -1590,14 +1626,14 @@ Bio
   margin-bottom: 0;
 }
 .bio__txt6 p {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.3;
   font-style: italic;
   text-align: center;
 }
 .bio__txt6 p span {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .bio__img img {
@@ -1612,18 +1648,42 @@ Bio
   grid-column: 5/span 3;
   grid-row: 3/span 4;
   z-index: 10;
+  width: 80%;
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .bio__img1 {
+    width: 100%;
+    align-self: initial;
+  }
 }
 
 .bio__img2 {
   order: 5;
   grid-column: 9/span 4;
   grid-row: 6/span 3;
+  width: 80%;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .bio__img2 {
+    width: 100%;
+    align-self: initial;
+  }
 }
 
 .bio__img3 {
-  order: 7;
+  order: 6;
   grid-column: 1/span 4;
   grid-row: 9/span 3;
+  width: 80%;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .bio__img3 {
+    width: 100%;
+    align-self: initial;
+  }
 }
 .bio__img3 img {
   object-position: left;
@@ -1633,6 +1693,14 @@ Bio
   order: 9;
   grid-column: 5/span 4;
   grid-row: 14/span 4;
+  width: 80%;
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .bio__img4 {
+    width: 100%;
+    align-self: initial;
+  }
 }
 .bio__img4 img {
   object-position: center bottom;
