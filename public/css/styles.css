@@ -258,7 +258,7 @@ html ::-webkit-scrollbar-button:vertical:single-button:increment:active {
   border-color: #a63519 transparent transparent transparent;
 }
 
-body, header, header nav, main, footer {
+body, header, header nav, main, footer, main section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -370,7 +370,6 @@ strong {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #f6954c;
 }
 @media screen and (min-width: 768px) {
   strong {
@@ -382,7 +381,6 @@ small {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #a63519;
 }
 @media screen and (min-width: 768px) {
   small {
@@ -858,15 +856,26 @@ Layout
 .nav-container,
 .hero,
 .footer__container,
-main section {
+.bio__container,
+.blog__container,
+.recetas__container,
+.cursos__container,
+.guias__container,
+.contacto__container {
   width: calc(100% - 40px);
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 main section {
-  margin: 0 auto;
-  scroll-margin: 70px;
-  padding-top: 20px;
+  margin-top: 60px;
+  scroll-margin: 90px;
+}
+@media screen and (min-width: 768px) {
+  main section {
+    scroll-margin: 110px;
+    margin-top: 120px;
+  }
 }
 
 .hide {
@@ -1008,7 +1017,7 @@ Hero
 
 .hero__title {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1151,6 +1160,7 @@ Hero
 Footer
 -------------------------- */
 .footer {
+  margin-top: 60px;
   color: #F9F8F6;
   background-color: #deebe3;
 }
@@ -1455,27 +1465,26 @@ Index
 /*! -------------------------
 Bio
 -------------------------- */
-.bio-container {
+.bio__content {
   display: flex;
   flex-direction: column;
 }
-.bio-container div {
+.bio__content div {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .bio-container div {
+  .bio__content div {
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .bio-container {
+  .bio__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px 100px auto auto 40px 300px 40px 250px auto 40px auto auto 40px 120px 40px 150px 100px 40px;
     width: 100%;
-    margin-top: 20px;
   }
 }
 
@@ -1578,6 +1587,7 @@ Bio
   grid-row: 17/span 2;
   background-color: #88a896;
   z-index: 10;
+  margin-bottom: 0;
 }
 .bio__txt6 p {
   font-size: 2.8rem;
@@ -1634,6 +1644,11 @@ Blog
 /*! -------------------------
 Recetas
 -------------------------- */
+.section__recetas {
+  background-color: #a63519;
+  color: white;
+}
+
 /*! -------------------------
 Cursos
 -------------------------- */

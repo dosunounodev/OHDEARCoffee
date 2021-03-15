@@ -71,7 +71,6 @@ strong {
   font-size: $size-md2;
   font-weight: 600;
   line-height: 1.4;
-  color: $color-secondary;
   @include tablet {
     font-size: $size-md3;
   }
@@ -81,7 +80,6 @@ small {
   font-size: $size-sm1;
   font-weight: 600;
   line-height: 1.4;
-  color: $color-extra;
   @include tablet {
     font-size: $size-sm2;
     font-weight: 400;

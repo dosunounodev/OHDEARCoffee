@@ -5,36 +5,37 @@ Layout
 @use "../abstract" as *;
 
 
-// SECCIONES CENTRADAS
+// CONTENEDORES CENTRADAS
 // max-width 1200px (variables)
 // margin-x = 20px
 
 .nav-container,
 .hero,
 .footer__container,
-main section {
+.bio__container,
+.blog__container,
+.recetas__container,
+.cursos__container,
+.guias__container,
+.contacto__container {
   width: calc(100% - 40px);
   max-width: $max-width;
+  margin: 0 auto;
 }
 
-// SECCIONES FLUID 
-// max-width = 100%
-// margin-x = 0
-
-// SECCIONNAME {
-//   width: 100%;
-// }
-
-
 // SETUP GENERAL DE SECCIONES (no header)
-// Todas las secciones estan centradas
-// ** margin 0 auto
 // Todas tienen margen para scroll de 70px
 // ** el height del navbar
+// ** +20px en mobile y +40px en tablet++
+// Todas tienen margen top de 60px mobile y 120px tablet ++
+
 main section {
-  margin: 0 auto;
-  scroll-margin: 70px;
-  padding-top: 20px;
+  margin-top: 60px;
+  scroll-margin: 90px;
+  @include tablet {
+    scroll-margin: 110px;
+    margin-top: 120px;
+  }
 }
 
 // HIDE 

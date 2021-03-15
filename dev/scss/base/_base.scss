@@ -71,7 +71,7 @@ html {
 // Width de 100% para usar bgs full width
 // Flex column centrado horizontal
 
-body, header, header nav, main, footer {
+body, header, header nav, main, footer, main section {
   @include flex(column, flex-start, center);
   width: 100%;
   margin: 0;

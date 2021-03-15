@@ -4,3 +4,8 @@ Recetas
 
 @use "../abstract" as *;
 @use "../base" as *;
+
+.section__recetas {
+  background-color: $color-extra;
+  color: white;
+}

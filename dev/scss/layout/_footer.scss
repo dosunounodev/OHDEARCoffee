@@ -6,6 +6,7 @@ Footer
 @use "../base" as *;
 
 .footer {
+  margin-top: 60px;
   color: $color-bg;
   background-color: $color-bg-primary;
 }
