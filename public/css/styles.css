@@ -1843,7 +1843,7 @@ Recetas
   flex-wrap: wrap;
   max-width: 340px;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 660px) {
   .recetas__icons {
     max-width: 100%;
   }

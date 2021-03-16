@@ -44,7 +44,7 @@ Recetas
   justify-content: center;
   flex-wrap: wrap;
   max-width: 340px;
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 660px) {
     max-width: 100%;
   }
   @include laptop {
