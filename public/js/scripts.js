@@ -85,7 +85,8 @@ function closeMenuList() {
 
 
 
-// bio hiders
+// BIO HIDERS
+// Alterna entre texto 2 y 3 ; 4 y 5
 
 const bioContent = document.querySelector('.bio__content')
 const bioText2 = document.getElementById('bio__txt2')
@@ -95,21 +96,13 @@ const bioText5 = document.getElementById('bio__txt5')
 
 bioContent.addEventListener('click', (e) => {
   if(e.target.classList.contains('bio__more')) {
-    toggleHideText()
+    bioText2.classList.toggle('display__none')
+    bioText3.classList.toggle('display__none')
   } else if (e.target.classList.contains('bio__more2')) {
-    toggleHideText2()
+    bioText4.classList.toggle('display__none')
+    bioText5.classList.toggle('display__none')
   }
 }) 
-
-function toggleHideText() {
-  bioText2.classList.toggle('display__none')
-  bioText3.classList.toggle('display__none')
-}
-
-function toggleHideText2() {
-  bioText4.classList.toggle('display__none')
-  bioText5.classList.toggle('display__none')
-}
 
 
 // formulario

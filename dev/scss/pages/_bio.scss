@@ -55,7 +55,8 @@ Bio
 .bio__more2 {
   align-self: flex-end;
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  text-decoration: underline;
   font-weight: 600;
   @include tablet {
     display: none;
@@ -116,12 +117,6 @@ Bio
   p {
     @include tablet {
       width: 60%;
-    }
-  }
-  p:last-child {
-    @include tablet {
-      // width: 80%;
-      // align-self: flex-end;
     }
   }
 }

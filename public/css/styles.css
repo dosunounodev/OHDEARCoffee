@@ -1537,7 +1537,8 @@ Bio
 .bio__more2 {
   align-self: flex-end;
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  text-decoration: underline;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -1616,6 +1617,7 @@ Bio
     width: 60%;
   }
 }
+
 .bio__txt4 {
   order: 7;
   grid-column: 2/span 5;
