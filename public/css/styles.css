@@ -258,7 +258,7 @@ html ::-webkit-scrollbar-button:vertical:single-button:increment:active {
   border-color: #a63519 transparent transparent transparent;
 }
 
-body, header, header nav, main, footer, main section {
+body, header, header nav, main, footer, main section, .footer-copy {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -576,6 +576,27 @@ Buttons
   }
 }
 
+.recetas__cta {
+  width: 240px;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #F9F8F6;
+  background-color: #f6954c;
+  border-radius: 10px;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.recetas__cta:hover {
+  color: #a63519;
+  background-color: #88a896;
+}
+
 /*! -------------------------
 Carrousels
 -------------------------- */
@@ -869,7 +890,8 @@ Layout
 .recetas__container,
 .cursos__container,
 .guias__container,
-.contacto__container {
+.contacto__container,
+.footer-copy__container {
   width: calc(100% - 40px);
   max-width: 1200px;
   margin: 0 auto;
@@ -1417,41 +1439,39 @@ Footer
 }
 
 .footer-copy {
+  width: 100%;
+  background-color: #252422;
+}
+
+.footer-copy__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
   margin: 0;
   padding: 20px 0;
-  background-color: #252422;
 }
 @media screen and (min-width: 540px) {
-  .footer-copy {
+  .footer-copy__container {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
-.footer-copy p {
+.footer-copy__container p {
   margin: 0 20px;
   padding: 0;
   font-size: 1.4rem;
   font-weight: 400;
 }
-.footer-copy p:last-child {
-  margin-top: 10px;
-}
-@media screen and (min-width: 540px) {
-  .footer-copy p:last-child {
-    margin-top: 0;
-  }
-}
-.footer-copy p:last-child span a {
+.footer-copy__container p:nth-child(2) span a {
   color: #88a896;
 }
-.footer-copy p span {
+.footer-copy__container p span {
   color: #f6954c;
 }
-.footer-copy p span a {
+.footer-copy__container p span a {
   color: inherit;
   font-size: 1.6rem;
   font-weight: 600;
@@ -1464,7 +1484,7 @@ Footer
   transition-delay: 0s;
   transition-timing-function: linear;
 }
-.footer-copy p span a:hover {
+.footer-copy__container p span a:hover {
   color: #a63519;
   text-decoration: underline;
 }
@@ -1538,8 +1558,9 @@ Bio
   align-self: flex-end;
   margin-top: 20px;
   font-size: 1.8rem;
-  text-decoration: underline;
   font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .bio__more,
@@ -1775,6 +1796,91 @@ Recetas
 .section__recetas {
   background-color: #a63519;
   color: white;
+}
+
+.recetas__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  padding: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  .recetas__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.recetas__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recetas__title {
+  font-family: "odc-paulsignature";
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.recetas__subtitle {
+  max-width: 25ch;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .recetas__subtitle {
+    margin-bottom: 0;
+  }
+}
+
+.recetas__icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 340px;
+}
+@media screen and (min-width: 640px) {
+  .recetas__icons {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .recetas__icons {
+    max-width: 340px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .recetas__icons {
+    max-width: 100%;
+  }
+}
+.recetas__icons img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1366px) {
+  .recetas__icons img:nth-child(1), .recetas__icons img:nth-child(2), .recetas__icons img:nth-child(3) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .recetas__icons img:nth-child(4), .recetas__icons img:nth-child(5), .recetas__icons img:nth-child(6) {
+    margin-bottom: 0;
+  }
+}
+
+.recetas__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.recetas__text {
+  font-size: 1.6rem;
+  margin: 0;
 }
 
 /*! -------------------------

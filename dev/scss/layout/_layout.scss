@@ -17,7 +17,8 @@ Layout
 .recetas__container,
 .cursos__container,
 .guias__container,
-.contacto__container {
+.contacto__container,
+.footer-copy__container {
   width: calc(100% - 40px);
   max-width: $max-width;
   margin: 0 auto;

@@ -1,11 +1,16 @@
 section#recetas.section__recetas
   .recetas__container
-    +sectionTitle('Recetas', 'En diferentes metodos de filtrados: Aeropress, v60, Chemex, Clever, Prensa Francesa, Moka, Coldbrew')
-    h3 Esto es un h3
-    p Lorem ipsum dolor sit, 
-      small amet consectetur
-      |  adipisicing elit. Assumenda 
-      strong reiciendis obcaecati
-      |  sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!
-  
+    .recetas__header
+      h2.recetas__title Recetas
+      p.recetas__subtitle ¿Estas listo para hacer café con diferentes métodos y técnicas?
+    .recetas__icons
+      img(src="./assets/icons/coffee/metodo-aeropress.svg", alt="")
+      img(src="./assets/icons/coffee/metodo-filter.svg", alt="")
+      img(src="./assets/icons/coffee/metodo-chemex.svg", alt="")
+      img(src="./assets/icons/coffee/metodo-v60.svg", alt="")
+      img(src="./assets/icons/coffee/metodo-frenchpress.svg", alt="")
+      img(src="./assets/icons/coffee/metodo-siphon.svg", alt="")
+    .recetas__footer
+      p.recetas__text Acá te comparto mis favoritas:
+      a(href="#").recetas__cta 
+        span Ver recetas

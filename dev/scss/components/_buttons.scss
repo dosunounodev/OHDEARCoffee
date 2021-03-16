@@ -158,3 +158,28 @@ Buttons
     margin-left: 5px;
   }
 }
+
+
+
+
+
+// RECETAS -- CALL TO ACTION
+
+// Cta de recetas
+
+.recetas__cta {
+  width: 240px;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: $color-bg;
+  background-color: $color-secondary;
+  border-radius: 10px;
+  @include transition(0.3s, 0, linear, color, background-color);
+  &:hover {
+    color: $color-extra;
+    background-color: $color-primary;
+  }
+}
