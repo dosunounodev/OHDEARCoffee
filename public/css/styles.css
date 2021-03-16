@@ -1497,6 +1497,11 @@ Bio
   align-items: initial;
   padding: 20px;
   color: #F9F8F6;
+  will-change: opacity;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0;
+  transition-timing-function: linear;
 }
 .bio__txt p {
   margin: 0;
@@ -1504,7 +1509,7 @@ Bio
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
-.bio__txt p:last-child {
+.bio__txt p:last-of-type {
   margin-bottom: 0;
 }
 .bio__txt p span {
@@ -1517,6 +1522,20 @@ Bio
   }
   .bio__txt p span {
     font-size: 2rem;
+  }
+}
+
+.bio__more,
+.bio__more2 {
+  align-self: flex-end;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .bio__more,
+.bio__more2 {
+    display: none;
   }
 }
 
@@ -1569,7 +1588,7 @@ Bio
   background-color: #88a896;
   align-items: center;
   width: 80%;
-  align-self: flex-start;
+  align-self: flex-end;
 }
 @media screen and (min-width: 768px) {
   .bio__txt3 {
@@ -1588,7 +1607,7 @@ Bio
   background-color: #a63519;
   z-index: 10;
   width: 80%;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 @media screen and (min-width: 768px) {
   .bio__txt4 {
@@ -1636,6 +1655,17 @@ Bio
   font-size: 2rem;
 }
 
+.bio__txt.display__none {
+  display: none;
+  opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .bio__txt.display__none {
+    display: flex;
+    opacity: 1;
+  }
+}
+
 .bio__img img {
   display: block;
   width: 100%;
@@ -1659,6 +1689,7 @@ Bio
 }
 
 .bio__img2 {
+  display: none;
   order: 5;
   grid-column: 9/span 4;
   grid-row: 6/span 3;
@@ -1667,6 +1698,7 @@ Bio
 }
 @media screen and (min-width: 768px) {
   .bio__img2 {
+    display: initial;
     width: 100%;
     align-self: initial;
   }
@@ -1677,7 +1709,7 @@ Bio
   grid-column: 1/span 4;
   grid-row: 9/span 3;
   width: 80%;
-  align-self: flex-start;
+  align-self: center;
 }
 @media screen and (min-width: 768px) {
   .bio__img3 {

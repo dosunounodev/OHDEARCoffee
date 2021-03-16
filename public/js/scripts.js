@@ -82,6 +82,36 @@ function closeMenuList() {
 
 
 
+
+
+
+// bio hiders
+
+const bioContent = document.querySelector('.bio__content')
+const bioText2 = document.getElementById('bio__txt2')
+const bioText3 = document.getElementById('bio__txt3')
+const bioText4 = document.getElementById('bio__txt4')
+const bioText5 = document.getElementById('bio__txt5')
+
+bioContent.addEventListener('click', (e) => {
+  if(e.target.classList.contains('bio__more')) {
+    toggleHideText()
+  } else if (e.target.classList.contains('bio__more2')) {
+    toggleHideText2()
+  }
+}) 
+
+function toggleHideText() {
+  bioText2.classList.toggle('display__none')
+  bioText3.classList.toggle('display__none')
+}
+
+function toggleHideText2() {
+  bioText4.classList.toggle('display__none')
+  bioText5.classList.toggle('display__none')
+}
+
+
 // formulario
 
 const NEWS_FOOTER = document.getElementById('footer-newsletter')

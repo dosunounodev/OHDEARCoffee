@@ -29,12 +29,13 @@ Bio
   @include flex(column, center);
   padding: 20px;
   color: $color-bg;
+  @include transition(0.5s, 0, linear, opacity);
   p {
     margin: 0;
     padding: 0;
     font-size: 1.6rem;
     margin-bottom: 20px;
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
     span {
@@ -49,6 +50,17 @@ Bio
     }
   }
 }
+
+.bio__more,
+.bio__more2 {
+  align-self: flex-end;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  @include tablet {
+    display: none;
+    }
+  }
 
 .bio__txt1 {
   order: 1;
@@ -95,7 +107,7 @@ Bio
   background-color: $color-primary;
   align-items: center;
   width: 80%;
-  align-self: flex-start;
+  align-self: flex-end;
   @include tablet {
     width: 100%;
   }
@@ -119,7 +131,7 @@ Bio
   background-color: $color-extra;
   z-index: 10;
   width: 80%;
-  align-self: flex-end;
+  align-self: flex-start;
   @include tablet {
     width: 100%;
   }
@@ -163,6 +175,15 @@ Bio
   }
 }
 
+.bio__txt.display__none {
+  display: none;
+  opacity: 0;
+  @include tablet {
+    display: flex;
+    opacity: 1;
+  }
+}
+
 
 .bio__img {
   img {
@@ -187,12 +208,14 @@ Bio
 }
 
 .bio__img2 {
+  display: none;
   order: 5;
   grid-column: 9 / span 4;
   grid-row: 6 / span 3;
   width: 80%;
   align-self: flex-end;
   @include tablet {
+    display: initial;
     width: 100%;
     align-self: initial;
   }
@@ -203,7 +226,7 @@ Bio
   grid-column: 1 / span 4;
   grid-row: 9 / span 3;
   width: 80%;
-  align-self: flex-start;
+  align-self: center;
   @include tablet {
     width: 100%;
     align-self: initial;
