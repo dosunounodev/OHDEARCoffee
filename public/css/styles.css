@@ -404,6 +404,14 @@ small {
 /*! -------------------------
 Animations
 -------------------------- */
+@keyframes entrada {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*! -------------------------
 Buttons
 -------------------------- */
@@ -1569,6 +1577,10 @@ Bio
   align-items: flex-end;
   align-self: flex-end;
   width: 80%;
+  animation-name: entrada;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: linear;
 }
 @media screen and (min-width: 768px) {
   .bio__txt2 {
@@ -1589,6 +1601,10 @@ Bio
   align-items: center;
   align-self: flex-end;
   width: 80%;
+  animation-name: entrada;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: linear;
 }
 @media screen and (min-width: 768px) {
   .bio__txt3 {
@@ -1608,6 +1624,10 @@ Bio
   align-self: flex-start;
   z-index: 20;
   width: 80%;
+  animation-name: entrada;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: linear;
 }
 @media screen and (min-width: 768px) {
   .bio__txt4 {
@@ -1629,6 +1649,10 @@ Bio
   align-self: flex-start;
   z-index: 10;
   width: 80%;
+  animation-name: entrada;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: linear;
 }
 @media screen and (min-width: 768px) {
   .bio__txt5 {
