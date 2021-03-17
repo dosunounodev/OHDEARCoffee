@@ -15,7 +15,7 @@ Footer
   @include flex(column, flex-start, center);
   padding: 60px 0;
   @media screen and (min-width:700px) {
-    @include flex(row, space-between,flex-start);
+    @include flex(row, space-between);
   }
 }
 
