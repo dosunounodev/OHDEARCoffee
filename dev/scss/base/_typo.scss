@@ -36,6 +36,12 @@ h1 {
   }
 }
 
+main h2:not(footer, .bio__txt1 h2 ) {
+  font-family: 'odc-paulsignature';
+  font-size: 6.0rem;
+  font-weight: 400;
+}
+
 h2 {
   font-size: $size-lg2;
   font-weight: 600;
@@ -48,6 +54,7 @@ h2 {
     font-size: $size-xl2;
   }
 }
+
 
 h3 {
   font-size: $size-md3;
@@ -87,6 +94,7 @@ small {
 }
 
 h2 + small {
+    font-size: $size-sm2;
   @include tablet {
     font-size: $size-md1;
     font-weight: 400;

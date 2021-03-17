@@ -7,21 +7,62 @@ Blog
 
 .blog__container {
   @include flex(column, initial, center);
-  h2 {
-  }
-  h2 + small {
-    font-weight: 600;
-    max-width: 40ch;
-    text-align: center;
-    color: $color-extra
+  h2 { 
+    margin-bottom: 20px;
+    // font-family: 'odc-paulsignature';
+    // font-size: 6.0rem;
+    // font-weight: 400;
   }
   span {
     display: block
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .blog__more {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-primary;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 110%;
+      height: 50%;
+      background-color: $color-bg-primary;
+      z-index: -1
+    }
+  }
+
+  .blog__more--link {
+    position: relative;
+    margin: 10px 0 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-extra;
+    @include transition(0.3s, 0, linear, color);
+    &:hover {
+      color: $color-primary;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 110%;
+      height: 50%;
+      background-color: $color-bg-secondary;
+      z-index: -1
+    }
   }
 }
 
 .blog__articles-container {
   @include flex(row, center);
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -29,7 +70,7 @@ Blog
   flex: 1 1 290px;
   max-width: 100%;
   height: 100%;
-  margin: 0 15px 15px;
+  margin: 0 15px 40px;
   border: 1px solid $color-extra;
   background-color: white;
   a {
@@ -41,6 +82,7 @@ Blog
     }
   }
   &:nth-child(3) {
+    margin-bottom: 0;
     .blog__img-container {
       height: 300px;
     }
@@ -74,6 +116,10 @@ Blog
   margin-top: 10px;
   margin-left: 20px;
   color: $color-secondary;
+  @include transition(0.3s, 0, linear, color);
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .blog__resume {

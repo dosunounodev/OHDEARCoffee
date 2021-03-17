@@ -287,7 +287,7 @@ h2 + small {
 }
 
 h2, small {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 /*! -------------------------
@@ -325,6 +325,12 @@ h1 {
   h1 {
     font-size: 6.4rem;
   }
+}
+
+main h2:not(footer, .bio__txt1 h2) {
+  font-family: "odc-paulsignature";
+  font-size: 6rem;
+  font-weight: 400;
 }
 
 h2 {
@@ -389,6 +395,9 @@ small {
   }
 }
 
+h2 + small {
+  font-size: 1.4rem;
+}
 @media screen and (min-width: 768px) {
   h2 + small {
     font-size: 1.6rem;
@@ -1796,14 +1805,55 @@ Blog
   justify-content: initial;
   align-items: center;
 }
-.blog__container h2 + small {
-  font-weight: 600;
-  max-width: 40ch;
-  text-align: center;
-  color: #a63519;
+.blog__container h2 {
+  margin-bottom: 20px;
 }
 .blog__container span {
   display: block;
+}
+.blog__container a {
+  text-decoration: none;
+}
+.blog__container .blog__more {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #88a896;
+}
+.blog__container .blog__more::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 50%;
+  background-color: #deebe3;
+  z-index: -1;
+}
+.blog__container .blog__more--link {
+  position: relative;
+  margin: 10px 0 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #a63519;
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.blog__container .blog__more--link:hover {
+  color: #88a896;
+}
+.blog__container .blog__more--link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 110%;
+  height: 50%;
+  background-color: #fbd8b9;
+  z-index: -1;
 }
 
 .blog__articles-container {
@@ -1811,6 +1861,7 @@ Blog
   flex-direction: row;
   justify-content: center;
   align-items: initial;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -1818,7 +1869,7 @@ Blog
   flex: 1 1 290px;
   max-width: 100%;
   height: 100%;
-  margin: 0 15px 15px;
+  margin: 0 15px 40px;
   border: 1px solid #a63519;
   background-color: white;
 }
@@ -1827,6 +1878,9 @@ Blog
 }
 .blog__article:nth-child(2) .blog__img-container {
   height: 500px;
+}
+.blog__article:nth-child(3) {
+  margin-bottom: 0;
 }
 .blog__article:nth-child(3) .blog__img-container {
   height: 300px;
@@ -1859,6 +1913,14 @@ Blog
   margin-top: 10px;
   margin-left: 20px;
   color: #f6954c;
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.blog__title:hover {
+  color: #88a896;
 }
 
 .blog__resume {
@@ -1919,12 +1981,6 @@ Recetas
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.recetas__title {
-  font-family: "odc-paulsignature";
-  font-size: 6rem;
-  font-weight: 400;
 }
 
 .recetas__subtitle {
