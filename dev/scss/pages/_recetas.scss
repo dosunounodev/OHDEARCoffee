@@ -23,12 +23,6 @@ Recetas
   @include flex-center(column);
 }
 
-.recetas__title {
-  // font-family: 'odc-paulsignature';
-  // font-size: 6.0rem;
-  // font-weight: 400;
-}
-
 .recetas__subtitle {
   max-width: 25ch;
   font-size: 1.6rem;
@@ -44,6 +38,10 @@ Recetas
   justify-content: center;
   flex-wrap: wrap;
   max-width: 340px;
+  margin-top: 20px;
+  @include laptop {
+    margin-top: 0
+  }
   @media screen and (min-width: 660px) {
     max-width: 100%;
   }
@@ -72,6 +70,11 @@ Recetas
 .recetas__footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  @include laptop {
+    margin-top: 0
+  }
 }
 
 .recetas__text {

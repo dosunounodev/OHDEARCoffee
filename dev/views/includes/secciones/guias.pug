@@ -1,11 +1,16 @@
 section#guias.section__guias
   .guias__container
-    +sectionTitle('Guias', 'Material gratuito para descargar')
-    h3 Esto es un h3
-    p Lorem ipsum dolor sit, 
-      small amet consectetur
-      |  adipisicing elit. Assumenda 
-      strong reiciendis obcaecati
-      |  sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!
-    
+    .guias__header
+      h2.guias__title Guias
+      p.guias__subtitle ¿Preparado para aprender mucho sobre lo que encuentras detrás de la taza de café?
+    .guias__icons
+      img(src="./assets/icons/coffee/tool-kettle.svg", alt="")
+      img(src="./assets/icons/coffee/barista-01.svg", alt="")
+      img(src="./assets/icons/coffee/tool-grinder.svg", alt="")
+      img(src="./assets/icons/coffee/coffee-fruit.svg", alt="")
+      img(src="./assets/icons/coffee/coffee-bag.svg", alt="")
+      img(src="./assets/icons/coffee/art-01.svg", alt="")
+    .guias__footer
+      p.guias__text Guía gratis para amantes del café:
+      a(href="#").guias__cta 
+        span descargar guia

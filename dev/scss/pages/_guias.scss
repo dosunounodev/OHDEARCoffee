@@ -4,3 +4,37 @@ Guias
 
 @use "../abstract" as *;
 @use "../base" as *;
+@use "./recetas" as *;
+
+.section__guias {
+  background-color: $color-secondary;
+  color: white;
+}
+
+.guias__container {
+  @extend .recetas__container;
+  .guias__title {
+    color: $color-extra;
+    margin-bottom: 20px
+  }
+}
+
+.guias__header {
+  @include flex-center(column);
+}
+
+.guias__subtitle {
+  @extend .recetas__subtitle;
+}
+
+.guias__icons {
+  @extend .recetas__icons;
+}
+
+.guias__footer {
+  @extend .recetas__footer;
+}
+
+.guias__text {
+  @extend .recetas__text;
+}

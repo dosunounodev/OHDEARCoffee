@@ -164,10 +164,10 @@ Buttons
 
 
 // RECETAS -- CALL TO ACTION
-
 // Cta de recetas
 
-.recetas__cta {
+.recetas__cta,
+.guias__cta {
   width: 240px;
   padding: 15px;
   font-weight: 600;
@@ -175,11 +175,38 @@ Buttons
   text-align: center;
   text-decoration: none;
   color: $color-bg;
-  background-color: $color-secondary;
   border-radius: 10px;
   @include transition(0.3s, 0, linear, color, background-color);
   &:hover {
     color: $color-extra;
     background-color: $color-primary;
+  }
+}
+
+.recetas__cta {
+  background-color: $color-secondary;
+}
+
+.guias__cta {
+  background-color: $color-extra;
+}
+
+// BLOG -- CALL TO ACTION
+// Cta de blog
+
+.blog__link--cta {
+  margin-left: 20px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 10px;
+  color: $color-bg;
+  background-color: $color-primary;
+  @include transition(0.3s, 0, linear, background-color, transform);
+  &:hover {
+    background-color: $color-extra;
+    transform: scale(1.1);
+    transform-origin: top left;
   }
 }
