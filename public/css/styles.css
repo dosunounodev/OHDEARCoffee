@@ -1790,6 +1790,108 @@ Bio
 /*! -------------------------
 Blog
 -------------------------- */
+.blog__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+}
+.blog__container h2 + small {
+  font-weight: 600;
+  max-width: 40ch;
+  text-align: center;
+  color: #a63519;
+}
+.blog__container span {
+  display: block;
+}
+
+.blog__articles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: initial;
+  flex-wrap: wrap;
+}
+
+.blog__article {
+  flex: 1 1 290px;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 15px 15px;
+  border: 1px solid #a63519;
+  background-color: white;
+}
+.blog__article a {
+  text-decoration: none;
+}
+.blog__article:nth-child(2) .blog__img-container {
+  height: 500px;
+}
+.blog__article:nth-child(3) .blog__img-container {
+  height: 300px;
+}
+
+.blog__img-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: blue;
+}
+.blog__img-container a {
+  padding: 0;
+}
+.blog__img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog__category {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  color: #a63519;
+}
+
+.blog__title {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #f6954c;
+}
+
+.blog__resume {
+  margin: 20px;
+  font-size: 1.6rem;
+}
+
+.blog__link--cta {
+  margin-left: 20px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #F9F8F6;
+  background-color: #88a896;
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.blog__link--cta:hover {
+  background-color: #a63519;
+}
+
+.blog__date {
+  margin: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #B4B3B3;
+}
+
 /*! -------------------------
 Recetas
 -------------------------- */

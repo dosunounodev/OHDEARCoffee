@@ -1,0 +1,11 @@
+mixin artsBlog(titulo, categoria, fecha, imagen, contenido, link)
+  article.blog__article
+    .blog__img-container
+      a.blog__link(href=""+link)
+        img.blog__img(src=""+imagen, alt="")
+    span.blog__category #{categoria}
+    a.blog__link(href=""+link)
+      h3.blog__title #{titulo}
+    p.blog__resume #{contenido}
+    a.blog__link--cta(href=""+link) Leer Más
+    span.blog__date #{fecha}
