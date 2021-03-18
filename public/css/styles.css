@@ -25,7 +25,6 @@ h1 {
 }
 
 img {
-  max-width: 100%;
   display: block;
   border-style: none;
 }
@@ -615,10 +614,10 @@ Buttons
   background-color: #a63519;
 }
 
-.blog__link--cta {
-  margin-left: 20px;
+.blog__link--cta, .curso__cta {
   display: inline-block;
-  padding: 10px;
+  margin: 0 20px;
+  padding: 15px 30px;
   font-size: 1.4rem;
   font-weight: 600;
   border-radius: 10px;
@@ -630,10 +629,27 @@ Buttons
   transition-delay: 0;
   transition-timing-function: linear;
 }
-.blog__link--cta:hover {
+.blog__link--cta:hover, .curso__cta:hover {
   background-color: #a63519;
   transform: scale(1.1);
   transform-origin: top left;
+}
+
+.curso__cta {
+  width: 100%;
+  margin: auto 0 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f6954c;
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.curso__cta:hover {
+  background-color: #a63519;
+  transform: none;
 }
 
 /*! -------------------------
@@ -1844,13 +1860,14 @@ Blog
 .blog__container a {
   text-decoration: none;
 }
-.blog__container .blog__more {
+
+.blog__more, .cursos__more {
   position: relative;
   font-size: 1.6rem;
   font-weight: 600;
   color: #88a896;
 }
-.blog__container .blog__more::before {
+.blog__more::before, .cursos__more::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1860,7 +1877,8 @@ Blog
   background-color: #deebe3;
   z-index: -1;
 }
-.blog__container .blog__more--link {
+
+.blog__more--link, .cursos__more--link {
   position: relative;
   margin: 10px 0 20px;
   font-size: 1.8rem;
@@ -1872,11 +1890,11 @@ Blog
   transition-delay: 0;
   transition-timing-function: linear;
 }
-.blog__container .blog__more--link:hover {
+.blog__more--link:hover, .cursos__more--link:hover {
   color: #88a896;
   transform: scale(1.1);
 }
-.blog__container .blog__more--link::before {
+.blog__more--link::before, .cursos__more--link::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1968,6 +1986,7 @@ Blog
 }
 
 .blog__resume {
+  max-width: 40ch;
   margin: 20px;
   font-size: 1.6rem;
 }
@@ -2082,6 +2101,160 @@ Recetas
 /*! -------------------------
 Cursos
 -------------------------- */
+.cursos__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+}
+
+.cursos__more--link {
+  margin-bottom: 60px;
+}
+
+.cursos__todos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.curso__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  flex: 1 1 360px;
+  height: 100%;
+  margin: 0 20px 40px;
+  border-radius: 20px;
+  border: 2px solid #a63519;
+  overflow: hidden;
+}
+.curso__info:last-child {
+  margin-bottom: 0;
+}
+.curso__info:nth-child(even) .curso__header, .curso__info:nth-child(even) .curso__header--sec {
+  background-color: rgba(136, 168, 150, 0.8);
+}
+.curso__info:nth-child(even) .curso__header--sec {
+  background-color: rgba(246, 149, 76, 0.8);
+}
+.curso__info:nth-child(even) .curso__cta {
+  background-color: #88a896;
+}
+.curso__info:nth-child(even) .curso__cta:hover {
+  background-color: #a63519;
+}
+
+.curso__filtrados {
+  background-image: url("../assets/images/fotoscursos/aeropress.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.curso__fundamentos {
+  background-image: url("../assets/images/fotoscursos/beans.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.curso__data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.curso__header, .curso__header--sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(246, 149, 76, 0.8);
+}
+
+.curso__icon {
+  width: 50px;
+  margin-right: 20px;
+}
+.curso__icon img {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.curso__title {
+  display: inline-block;
+  margin: 0;
+  font-size: 2rem;
+  color: #F9F8F6;
+}
+@media screen and (min-width: 400px) {
+  .curso__title {
+    font-size: 3rem;
+  }
+}
+
+.curso__description {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: calc(100% - 40px);
+  margin: 20px;
+  padding: 20px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.curso__description .curso__type {
+  color: #88a896;
+}
+.curso__description .curso__length {
+  color: #a63519;
+}
+
+.curso__intro {
+  align-self: flex-start;
+  max-width: 50ch;
+  padding: 0 20px;
+}
+
+.curso__temas-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.curso__header--sec {
+  width: 100%;
+  margin: 20px 0 0;
+  background-color: rgba(136, 168, 150, 0.8);
+}
+
+.curso__title--sec {
+  color: #F9F8F6;
+}
+
+.curso__temas-list {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+.curso__temas-list .curso__temas-item {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
 /*! -------------------------
 Guias
 -------------------------- */

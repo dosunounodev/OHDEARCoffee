@@ -4,3 +4,187 @@ Cursos
 
 @use "../abstract" as *;
 @use "../base" as *;
+@use "./blog" as *;
+
+.cursos__container {
+  @include flex(column, initial, center);
+}
+
+.cursos__more {
+  @extend .blog__more;
+}
+
+.cursos__more--link {
+  @extend .blog__more--link;
+  margin-bottom: 60px;
+}
+
+.cursos__todos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+
+
+// CONTENEDOR DE CURSO INDIVIDUAL
+
+.curso__info {
+  @include flex(column, initial, center);
+  flex: 1 1 360px;
+  height: 100%;
+  margin: 0 20px 40px;
+  border-radius: 20px;
+  border: 2px solid $color-extra;
+  overflow: hidden;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(even) {
+    .curso__header {
+      background-color: rgba($color: $color-primary, $alpha: 0.8);
+    }
+    .curso__header--sec {
+      background-color: rgba($color: $color-secondary, $alpha: 0.8);
+    }
+    .curso__cta {
+      background-color: $color-primary;
+      &:hover {
+        background-color: $color-extra;
+      }
+    }
+  }
+}
+
+
+
+// BGS ESPECIFICOS DE CADA CURSO
+
+.curso__filtrados {
+  background-image: url('../assets/images/fotoscursos/aeropress.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.curso__fundamentos {
+  background-image: url('../assets/images/fotoscursos/beans.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+// CONTENEDOR INTERNO DE DATOS DEL CURSO
+
+.curso__data-container {
+  @include flex(column, initial, center);
+  width: 100%;
+  background-color: rgba($color: #fff, $alpha: 0.7);
+}
+
+
+// CABECERA DEL CURSO
+// ** ICON + TITLE
+
+.curso__header {
+  @include flex(row, flex-start, center);
+  width: calc(100% - 40px);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba($color: $color-secondary, $alpha: 0.8);
+}
+
+.curso__icon {
+  width: 50px;
+  margin-right: 20px;
+  img {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.curso__title {
+  display: inline-block;
+  margin: 0;
+  font-size: 2.0rem;
+  color: $color-bg;
+  @media screen and (min-width:400px) {
+    font-size: 3.0rem;
+  }
+}
+
+
+// INFO DE MODALIDAD Y DURACION
+
+.curso__description {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: calc(100% - 40px);
+  margin: 20px;
+  padding: 20px;
+  font-weight: 600;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  border-radius: 10px;
+  .curso__type {
+    color: $color-primary;
+  }
+  .curso__length {
+    color: $color-extra;
+  }
+}
+
+
+// RESUMEN DEL CURSO
+// ** DESCRIPCION INTRODUCTORIA
+
+.curso__intro {
+  align-self: flex-start;
+  max-width: 50ch;
+  padding: 0 20px;
+}
+
+
+// CONTENEDOR DE TEMAS "APRENDEREMOS"
+
+.curso__temas-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px 20px;
+  background-color: rgba($color: #fff, $alpha: 0.7);
+}
+
+
+// CABECERA DEL TEMARIO 
+// ** ICON + TITLE
+
+.curso__header--sec {
+  @extend .curso__header;
+  width: 100%;
+  margin: 20px 0 0;
+  background-color: rgba($color: $color-primary, $alpha: 0.8);
+}
+
+.curso__title--sec {
+  color: $color-bg;
+}
+
+
+// LISTA DE TEMAS
+
+.curso__temas-list {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+
+  .curso__temas-item {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+}

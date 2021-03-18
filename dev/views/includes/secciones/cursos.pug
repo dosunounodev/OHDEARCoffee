@@ -1,11 +1,81 @@
 section#cursos.section__cursos
   .cursos__container
-    +sectionTitle('Cursos', 'Talleres y Masterclass de café')
-    h3 Esto es un h3
-    p Lorem ipsum dolor sit, 
-      small amet consectetur
-      |  adipisicing elit. Assumenda 
-      strong reiciendis obcaecati
-      |  sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!
-    
+    h2 Cursos
+    span.cursos__more Workshops & Masterclass de Café
+    a(href="#").cursos__more--link Anotate haciendo click acá
+    .cursos__todos-container
+      article.curso__info.curso__filtrados
+        .curso__data-container
+          .curso__header
+            .curso__icon
+              img(src="./assets/icons/coffee/tool-kettle-extra.svg", alt="")
+            h3.curso__title Filtrados
+          .curso__description
+            span.curso__type Modalidad: Taller
+            span.curso__length Duración: 1 Clase de 3hs
+          p.curso__intro Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates libero ipsa veniam quam quisquam totam. Rem ut quo dignissimos nisi placeat ipsum ex, recusandae voluptate dolorem. Ut doloribus aliquid voluptate.
+        .curso__temas-container
+          .curso__header--sec
+            .curso__icon
+              img(src="./assets/icons/coffee/barista-01.svg", alt="")
+            h3.curso__title.curso__title--sec Aprenderemos
+          ul.curso__temas-list
+            li.curso__temas-item · Qué es un filtrado?
+            li.curso__temas-item · El agua y su temperatura
+            li.curso__temas-item · Molienda para cada método
+            li.curso__temas-item · Aeropress
+            li.curso__temas-item · Chemex
+            li.curso__temas-item · V60
+            li.curso__temas-item · Prensa Francesa
+            li.curso__temas-item · Y otros...
+          a(href="#").curso__cta Anotarme al Taller
+      article.curso__info.curso__fundamentos
+        .curso__data-container
+          .curso__header
+            .curso__icon
+              img(src="./assets/icons/coffee/coffee-bean.svg", alt="")
+            h3.curso__title Fundamentos del Café
+          .curso__description
+            span.curso__type Modalidad: Curso
+            span.curso__length Duración: 4 Clases de 2hs
+          p.curso__intro Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates libero ipsa veniam quam quisquam totam. Rem ut quo dignissimos nisi placeat ipsum ex, recusandae voluptate dolorem. Ut doloribus aliquid voluptate.
+        .curso__temas-container
+          .curso__header--sec
+            .curso__icon
+              img(src="./assets/icons/coffee/barista-01.svg", alt="")
+            h3.curso__title.curso__title--sec Aprenderemos
+          ul.curso__temas-list
+            li.curso__temas-item · Origenes del cafè
+            li.curso__temas-item · Historia
+            li.curso__temas-item · Cata
+            li.curso__temas-item · Otra cosa
+            li.curso__temas-item · Mas cosas
+            li.curso__temas-item · y otras cosas
+            li.curso__temas-item · falopa
+            li.curso__temas-item · sarasa
+          a(href="#").curso__cta Anotarme al Curso
+      //- article.curso__info.curso__fundamentos
+      //-   .curso__data-container
+      //-     .curso__header
+      //-       .curso__icon
+      //-         img(src="./assets/icons/coffee/coffee-bean.svg", alt="")
+      //-       h3.curso__title Fundamentos del Café
+      //-     .curso__description
+      //-       span.curso__type Modalidad: Curso
+      //-       span.curso__length Duración: 4 Clases de 2hs
+      //-     p.curso__intro Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates libero ipsa veniam quam quisquam totam. Rem ut quo dignissimos nisi placeat ipsum ex, recusandae voluptate dolorem. Ut doloribus aliquid voluptate.
+      //-   .curso__temas-container
+      //-     .curso__header--sec
+      //-       .curso__icon
+      //-         img(src="./assets/icons/coffee/barista-01.svg", alt="")
+      //-       h3.curso__title.curso__title--sec Aprenderemos
+      //-     ul.curso__temas-list
+      //-       li.curso__temas-item · Origenes del cafè
+      //-       li.curso__temas-item · Historia
+      //-       li.curso__temas-item · Cata
+      //-       li.curso__temas-item · Otra cosa
+      //-       li.curso__temas-item · Mas cosas
+      //-       li.curso__temas-item · y otras cosas
+      //-       li.curso__temas-item · falopa
+      //-       li.curso__temas-item · sarasa
+      //-     a(href="#").curso__cta Anotarme al Curso

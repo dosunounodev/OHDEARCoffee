@@ -96,6 +96,7 @@ Buttons
 
 
 
+
 // HERO -- CALL TO ACTIONS
 
 // Ctas del Hero
@@ -191,13 +192,17 @@ Buttons
   background-color: $color-extra;
 }
 
+
+
+
+
 // BLOG -- CALL TO ACTION
 // Cta de blog
 
-.blog__link--cta {
-  margin-left: 20px;
+.blog__link--cta, {
   display: inline-block;
-  padding: 10px;
+  margin: 0 20px;
+  padding: 15px 30px;
   font-size: 1.4rem;
   font-weight: 600;
   border-radius: 10px;
@@ -208,5 +213,19 @@ Buttons
     background-color: $color-extra;
     transform: scale(1.1);
     transform-origin: top left;
+  }
+}
+
+.curso__cta {
+  @extend .blog__link--cta;
+  width: 100%;
+  margin: auto 0 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color-secondary;
+  @include transition(0.3s, 0, linear, background-color);
+  &:hover {
+    background-color: $color-extra;
+    transform: none;
   }
 }
