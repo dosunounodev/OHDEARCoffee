@@ -825,6 +825,9 @@ Forms
   width: 100%;
   margin-bottom: 20px;
 }
+.form-guias__field:last-child {
+  margin-bottom: 0;
+}
 
 .form-guias__input {
   width: 100%;
@@ -1777,10 +1780,21 @@ Modals
   }
 }
 
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .modal__guias-title {
+    margin: 0px;
+  }
+}
+
 .modal__guias-subtitle, .modal__curso-infoextra {
   font-size: 1.6rem;
   font-weight: 600;
   color: #88a896;
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .modal__guias-subtitle, .modal__curso-infoextra {
+    margin: 0px;
+  }
 }
 
 .form-guias__container {

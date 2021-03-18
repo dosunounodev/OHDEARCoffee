@@ -128,10 +128,19 @@ Modals
 
 // GUIAS
 
+.modal__guias-title {
+  @media screen and (max-width:700px) and (orientation: landscape) {
+    margin: 0px;
+  }
+}
+
 .modal__guias-subtitle {
   font-size: 1.6rem;
   font-weight: 600;
   color: $color-primary;
+  @media screen and (max-width:700px) and (orientation: landscape) {
+    margin: 0px;
+  }
 }
 
 .form-guias__container {
