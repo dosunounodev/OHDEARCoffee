@@ -1,11 +1,47 @@
 section#contacto.section__contacto
   .contacto__container
-    +sectionTitle('Contacto', 'Dejame tu mensaje. Encontrame en redes. Suscribite al newsletter')
-    h3 Esto es un h3
-    p Lorem ipsum dolor sit, 
-      small amet consectetur
-      |  adipisicing elit. Assumenda 
-      strong reiciendis obcaecati
-      |  sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!
-    
+    h2 Contacto
+    span.contacto__more ¡Dejame tu mensaje!
+    a(href="#").contacto__more--link o un mail: info@ohdearcoffee
+    .contacto__medios-container
+      .contacto__form-container
+        form#form-contact.form-contact
+          .form-contact__field
+            input(type="text" id="contact-name" placeholder="Tu Nombre" required).form-contact__input
+          .form-contact__field
+            input(type="mail" id="contact-mail" placeholder="Tu Mail" required).form-contact__input
+          .form-contact__field
+            select(name="teconoci" id="contact-conoci" required).form-contact__select
+              option(value="conoci-instagram") Te conocí en Instagram
+              option(value="conoci-pinterest") Te conocí en Pinterest
+              option(value="conoci-facebook") Te conocí en Facebook
+              option(value="conoci-motofeca") Te conocí en Motofeca
+              option(value="conoci-otrositio") Te conocí en Otro sitio...
+            span.custom-arrow
+          .form-contact__field
+            textarea(id="contact-msj" placeholder="Dejame tu mensaje" required).form-contact__msj
+          .form-contact__field
+            input(type="submit" id="contact-submit" value="Enviar!").form-contact__submit
+      .contacto__redes-container
+        h3.redes__titulo Encontrame en las redes:
+        .redes__item-container
+          .redes__item-icon
+            a(href="https://www.instagram.com/ohdearcoffee/" target="blank")
+              i(class="fab fa-instagram")
+          .redes__item-user
+            a(href="#" target="blank") instagram: 
+              span @ohdearcoffee
+        .redes__item-container
+          .redes__item-icon
+            a(href="https://www.pinterest.at/ohdearcoffee_/_created/" target="blank")
+              i(class="fab fa-pinterest")
+          .redes__item-user
+            a(href="#" target="blank") pinterest: 
+              span @ohdearcoffee_
+        .redes__item-container
+          .redes__item-icon
+            a(href="https://www.facebook.com/ohdearcoffee" target="blank")
+              i(class="fab fa-facebook")
+          .redes__item-user
+            a(href="#" target="blank") facebook: 
+              span @ohdearcoffee

@@ -55,7 +55,6 @@
                 <li class="list__socials-item"><a href="https://www.instagram.com/ohdearcoffee/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li class="list__socials-item"><a href="https://www.pinterest.at/ohdearcoffee_" target="_blank"><i class="fab fa-pinterest"></i></a></li>
                 <li class="list__socials-item"><a href="https://www.facebook.com/ohdearcoffee" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li class="list__socials-item"><a href="#newslatter" id="btn-list-newsletter">Suscribirse</a></li>
               </ul>
             </div>
             <div class="nav__menu-btn" id="nav__menu-btn">
@@ -215,10 +214,49 @@
       </section>
       <section class="section__contacto" id="contacto">
         <div class="contacto__container">
-          <h2>Contacto</h2><small>Dejame tu mensaje. Encontrame en redes. Suscribite al newsletter</small>
-          <h3>Esto es un h3</h3>
-          <p>Lorem ipsum dolor sit, <small>amet consectetur</small> adipisicing elit. Assumenda <strong>reiciendis obcaecati</strong> sed rerum temporibus ipsum voluptate nostrum eum quibusdam, voluptates dicta. Saepe aspernatur facere in neque? Temporibus quae officiis nulla.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur labore magnam dolore exercitationem facere optio enim molestiae error accusamus alias sit non doloribus temporibus, distinctio, explicabo maxime! Earum, pariatur autem!</p>
+          <h2>Contacto</h2><span class="contacto__more">¡Dejame tu mensaje!</span><a class="contacto__more--link" href="#">o un mail: info@ohdearcoffee</a>
+          <div class="contacto__medios-container">
+            <div class="contacto__form-container">
+              <form class="form-contact" id="form-contact">
+                <div class="form-contact__field">
+                  <input class="form-contact__input" type="text" id="contact-name" placeholder="Tu Nombre" required>
+                </div>
+                <div class="form-contact__field">
+                  <input class="form-contact__input" type="mail" id="contact-mail" placeholder="Tu Mail" required>
+                </div>
+                <div class="form-contact__field">
+                  <select class="form-contact__select" name="teconoci" id="contact-conoci" required>
+                    <option value="conoci-instagram">Te conocí en Instagram</option>
+                    <option value="conoci-pinterest">Te conocí en Pinterest</option>
+                    <option value="conoci-facebook">Te conocí en Facebook</option>
+                    <option value="conoci-motofeca">Te conocí en Motofeca</option>
+                    <option value="conoci-otrositio">Te conocí en Otro sitio...</option>
+                  </select><span class="custom-arrow"></span>
+                </div>
+                <div class="form-contact__field">
+                  <textarea class="form-contact__msj" id="contact-msj" placeholder="Dejame tu mensaje" required></textarea>
+                </div>
+                <div class="form-contact__field">
+                  <input class="form-contact__submit" type="submit" id="contact-submit" value="Enviar!">
+                </div>
+              </form>
+            </div>
+            <div class="contacto__redes-container">
+              <h3 class="redes__titulo">Encontrame en las redes:</h3>
+              <div class="redes__item-container">
+                <div class="redes__item-icon"><a href="https://www.instagram.com/ohdearcoffee/" target="blank"><i class="fab fa-instagram"></i></a></div>
+                <div class="redes__item-user"><a href="#" target="blank">instagram: <span>@ohdearcoffee</span></a></div>
+              </div>
+              <div class="redes__item-container">
+                <div class="redes__item-icon"><a href="https://www.pinterest.at/ohdearcoffee_/_created/" target="blank"><i class="fab fa-pinterest"></i></a></div>
+                <div class="redes__item-user"><a href="#" target="blank">pinterest: <span>@ohdearcoffee_</span></a></div>
+              </div>
+              <div class="redes__item-container">
+                <div class="redes__item-icon"><a href="https://www.facebook.com/ohdearcoffee" target="blank"><i class="fab fa-facebook"></i></a></div>
+                <div class="redes__item-user"><a href="#" target="blank">facebook: <span>@ohdearcoffee</span></a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -244,14 +282,14 @@
           <h2>Suscribete al newsletter</h2>
           <p>Y recibe todas las novedades</p>
           <form action="" id="footer-newsletter">
-            <div class="form__field">
-              <input class="form__input" type="text" placeholder="Tu Nombre" id="footer-nombre" required><span>no puede estar vacio</span>
+            <div class="form-footer__field">
+              <input class="form-footer__input" type="text" placeholder="Tu Nombre" id="footer-nombre" required><span>no puede estar vacio</span>
             </div>
-            <div class="form__field">
-              <input class="form__input" type="email" placeholder="Tu Mail" id="footer-mail" required><span>el mail ingresado es invalido</span>
+            <div class="form-footer__field">
+              <input class="form-footer__input" type="email" placeholder="Tu Mail" id="footer-mail" required><span>el mail ingresado es invalido</span>
             </div>
-            <div class="form__field"> 
-              <input class="form__submit" type="submit" value="Enviar" id="footer-enviar">
+            <div class="form-footer__field"> 
+              <input class="form-footer__submit" type="submit" value="Enviar!" id="footer-enviar">
             </div>
           </form>
         </div>
