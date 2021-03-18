@@ -1,0 +1,64 @@
+section.modals#modals
+  .close-all#close-all
+    span cerrar
+
+
+  .modal__guias#modal-guias.hide
+    h2.modal__guias-title La guia es 100%
+      span gratis!
+    p.modal__guias-subtitle Solo tenes que registrarte:
+    .form-guias__container
+      form(action="").form-guias#form-guias
+        .form-guias__field
+          input(type="text" placeholder="Tu Nombre" id="form-guias-nombre" required).form-guias__input
+        .form-guias__field
+          input(type="email" placeholder="Tu Mail" id="form-guias-mail" required).form-guias__input
+        .form-guias__field 
+          input(type="submit" value="Enviar!" id="form-guias-enviar" class="form-guias__submit")
+  
+
+  .modal__cursos#modal-cursos
+    .modal__curso-icon-container.small-iconxs
+      img(src="./assets/icons/coffee/barista-01.svg", alt="").modal__curso-icon
+    h2.modal__curso-title Info de Cursos
+    .faq-container
+      .faq-item
+        p.faq-question Pregunta numero 1 random?
+        p.faq-answer Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi
+      .faq-item
+        p.faq-question Pregunta numero 2 random?
+        p.faq-answer.none Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi
+      .faq-item
+        p.faq-question Pregunta numero 3 random?
+        p.faq-answer.none Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi
+      .faq-item
+        p.faq-question Pregunta numero 4 random?
+        p.faq-answer.none Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi
+    .modal__cursos-moreinfo
+      p.modal__cursos-moreinfo--text Si tenes alguna duda:
+      p.modal__cursos-moreinfo--mail info@ohdearcoffee.com
+      p.modal__cursos-moreinfo--rotate Gira tu dispositivo para ver preguntas y respuestas!
+
+
+  .modal__cursos--curso1#modal-curso1.hide
+    .modal__curso-icon-container
+      img(src="./assets/icons/coffee/tool-kettle-extra.svg", alt="").modal__curso-icon
+    h2.modal__curso-title Taller de Filtrados
+    p.modal__curso-price Precio Final:
+      span $600
+      span (5u$d)
+    a(href="http://mercadolibre.com" target="blank").shopbtn.shop--mp pagar con mercadopago 
+    a(href="http://paypal.com" target="blank").shopbtn.shop--pp pagar con paypal 
+    p.modal__curso-infoextra Más Info > Click acá:
+
+
+  .modal__cursos--curso2#modal-curso2.hide
+    .modal__curso-icon-container.small-icon
+      img(src="./assets/icons/coffee/coffee-bean.svg", alt="").modal__curso-icon
+    h2.modal__curso-title Curso de Fundamentos de Café
+    p.modal__curso-price Precio Final:
+      span $1200
+      span (10u$d)
+    a(href="http://mercadolibre.com" target="blank").shopbtn.shop--mp pagar con mercadopago 
+    a(href="http://paypal.com" target="blank").shopbtn.shop--pp pagar con paypal 
+    p.modal__curso-infoextra Más Info > Click acá:

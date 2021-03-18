@@ -143,7 +143,7 @@
       </section>
       <section class="section__cursos" id="cursos">
         <div class="cursos__container">
-          <h2>Cursos</h2><span class="cursos__more">Workshops & Masterclass de Café</span><a class="cursos__more--link" href="#">Anotate haciendo click acá</a>
+          <h2>Cursos</h2><span class="cursos__more">Workshops & Masterclass de Café</span><a class="cursos__more--link" href="#cursos" id="cursos-action">Más info haciendo click acá</a>
           <div class="cursos__todos-container">
             <article class="curso__info curso__filtrados">
               <div class="curso__data-container">
@@ -168,7 +168,7 @@
                   <li class="curso__temas-item">· V60</li>
                   <li class="curso__temas-item">· Prensa Francesa</li>
                   <li class="curso__temas-item">· Y otros...</li>
-                </ul><a class="curso__cta" href="#">Anotarme al Taller</a>
+                </ul><a class="curso__cta" href="#cursos" id="curso1-action">Anotarme al Taller</a>
               </div>
             </article>
             <article class="curso__info curso__fundamentos">
@@ -194,7 +194,7 @@
                   <li class="curso__temas-item">· y otras cosas</li>
                   <li class="curso__temas-item">· falopa</li>
                   <li class="curso__temas-item">· sarasa</li>
-                </ul><a class="curso__cta" href="#">Anotarme al Curso</a>
+                </ul><a class="curso__cta" href="#cursos" id="curso2-action">Anotarme al Curso</a>
               </div>
             </article>
           </div>
@@ -208,7 +208,7 @@
           </div>
           <div class="guias__icons"><img src="./assets/icons/coffee/tool-kettle.svg" alt=""><img src="./assets/icons/coffee/barista-01.svg" alt=""><img src="./assets/icons/coffee/tool-grinder.svg" alt=""><img src="./assets/icons/coffee/coffee-fruit.svg" alt=""><img src="./assets/icons/coffee/coffee-bag.svg" alt=""><img src="./assets/icons/coffee/art-01.svg" alt=""></div>
           <div class="guias__footer">
-            <p class="guias__text">Guía gratis para amantes del café:</p><a class="guias__cta" href="#"> <span>descargar guia</span></a>
+            <p class="guias__text">Guía gratis para amantes del café:</p><a class="guias__cta" href="#guias" id="guias-action"><span>descargar guia</span></a>
           </div>
         </div>
       </section>
@@ -217,15 +217,15 @@
           <h2>Contacto</h2><span class="contacto__more">¡Dejame tu mensaje!</span><a class="contacto__more--link" href="#">o un mail: info@ohdearcoffee</a>
           <div class="contacto__medios-container">
             <div class="contacto__form-container">
-              <form class="form-contact" id="form-contact">
+              <form class="form-contact" action="" id="form-contact">
                 <div class="form-contact__field">
-                  <input class="form-contact__input" type="text" id="contact-name" placeholder="Tu Nombre" required>
+                  <input class="form-contact__input" type="text" id="form-contact-nombre" placeholder="Tu Nombre" required>
                 </div>
                 <div class="form-contact__field">
-                  <input class="form-contact__input" type="mail" id="contact-mail" placeholder="Tu Mail" required>
+                  <input class="form-contact__input" type="mail" id="form-contact-mail" placeholder="Tu Mail" required>
                 </div>
                 <div class="form-contact__field">
-                  <select class="form-contact__select" name="teconoci" id="contact-conoci" required>
+                  <select class="form-contact__select" name="teconoci" id="form-contact-conoci" required>
                     <option value="conoci-instagram">Te conocí en Instagram</option>
                     <option value="conoci-pinterest">Te conocí en Pinterest</option>
                     <option value="conoci-facebook">Te conocí en Facebook</option>
@@ -281,15 +281,15 @@
         <div class="footer__newsletter">
           <h2>Suscribete al newsletter</h2>
           <p>Y recibe todas las novedades</p>
-          <form action="" id="footer-newsletter">
+          <form class="form-footer" action="" id="form-footer">
             <div class="form-footer__field">
-              <input class="form-footer__input" type="text" placeholder="Tu Nombre" id="footer-nombre" required><span>no puede estar vacio</span>
+              <input class="form-footer__input" type="text" placeholder="Tu Nombre" id="form-footer-nombre" required>
             </div>
             <div class="form-footer__field">
-              <input class="form-footer__input" type="email" placeholder="Tu Mail" id="footer-mail" required><span>el mail ingresado es invalido</span>
+              <input class="form-footer__input" type="email" placeholder="Tu Mail" id="form-footer-mail" required>
             </div>
             <div class="form-footer__field"> 
-              <input class="form-footer__submit" type="submit" value="Enviar!" id="footer-enviar">
+              <input class="form-footer__submit" type="submit" value="Enviar!" id="form-footer-enviar">
             </div>
           </form>
         </div>
@@ -302,6 +302,65 @@
         </div>
       </div>
     </footer>
+    <section class="modals" id="modals">
+      <div class="close-all" id="close-all"><span>cerrar</span></div>
+      <div class="modal__guias hide" id="modal-guias">
+        <h2 class="modal__guias-title">La guia es 100%<span>gratis!</span></h2>
+        <p class="modal__guias-subtitle">Solo tenes que registrarte:</p>
+        <div class="form-guias__container">
+          <form class="form-guias" action="" id="form-guias">
+            <div class="form-guias__field">
+              <input class="form-guias__input" type="text" placeholder="Tu Nombre" id="form-guias-nombre" required>
+            </div>
+            <div class="form-guias__field">
+              <input class="form-guias__input" type="email" placeholder="Tu Mail" id="form-guias-mail" required>
+            </div>
+            <div class="form-guias__field"> 
+              <input class="form-guias__submit" type="submit" value="Enviar!" id="form-guias-enviar">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal__cursos" id="modal-cursos">
+        <div class="modal__curso-icon-container small-iconxs"><img class="modal__curso-icon" src="./assets/icons/coffee/barista-01.svg" alt=""></div>
+        <h2 class="modal__curso-title">Info de Cursos</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <p class="faq-question">Pregunta numero 1 random?</p>
+            <p class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Pregunta numero 2 random?</p>
+            <p class="faq-answer none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Pregunta numero 3 random?</p>
+            <p class="faq-answer none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">Pregunta numero 4 random?</p>
+            <p class="faq-answer none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nemo molestias mi</p>
+          </div>
+        </div>
+        <div class="modal__cursos-moreinfo">
+          <p class="modal__cursos-moreinfo--text">Si tenes alguna duda:</p>
+          <p class="modal__cursos-moreinfo--mail">info@ohdearcoffee.com</p>
+          <p class="modal__cursos-moreinfo--rotate">Gira tu dispositivo para ver preguntas y respuestas!</p>
+        </div>
+      </div>
+      <div class="modal__cursos--curso1 hide" id="modal-curso1">
+        <div class="modal__curso-icon-container"><img class="modal__curso-icon" src="./assets/icons/coffee/tool-kettle-extra.svg" alt=""></div>
+        <h2 class="modal__curso-title">Taller de Filtrados</h2>
+        <p class="modal__curso-price">Precio Final:<span>$600</span><span>(5u$d)</span></p><a class="shopbtn shop--mp" href="http://mercadolibre.com" target="blank">pagar con mercadopago </a><a class="shopbtn shop--pp" href="http://paypal.com" target="blank">pagar con paypal </a>
+        <p class="modal__curso-infoextra">Más Info > Click acá:</p>
+      </div>
+      <div class="modal__cursos--curso2 hide" id="modal-curso2">
+        <div class="modal__curso-icon-container small-icon"><img class="modal__curso-icon" src="./assets/icons/coffee/coffee-bean.svg" alt=""></div>
+        <h2 class="modal__curso-title">Curso de Fundamentos de Café</h2>
+        <p class="modal__curso-price">Precio Final:<span>$1200</span><span>(10u$d)</span></p><a class="shopbtn shop--mp" href="http://mercadolibre.com" target="blank">pagar con mercadopago </a><a class="shopbtn shop--pp" href="http://paypal.com" target="blank">pagar con paypal </a>
+        <p class="modal__curso-infoextra">Más Info > Click acá:</p>
+      </div>
+    </section>
     <script src="./js/scripts.js"> </script>
   </body>
 </html>

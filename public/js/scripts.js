@@ -5,26 +5,100 @@ const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
 const footersocials = document.getElementById('footersocials')
 
-// ICONOS (** los 3 del navbar)
+// MODALS A MOSTRAR/ESCONDER
+const modals = document.getElementById('modals')
+const modalGuias = document.getElementById('modal-guias')
+const modalCursos = document.getElementById('modal-cursos')
+const modalCurso1 = document.getElementById('modal-curso1')
+const modalCurso2 = document.getElementById('modal-curso2')
+
+
+// ICONOS/Btns 
+// ** los 3 del navbar 
 const navMenuBtn = document.getElementById('nav__menu-btn')
 const navLogoContainer = document.getElementById('nav__logo-container')
+// ** el close de los modal
+const closeModals = document.getElementById('close-all')
+// ** los popup triggers
+const guiasAction = document.getElementById('guias-action')
+const cursosAction = document.getElementById('cursos-action')
+const curso1Action = document.getElementById('curso1-action')
+const curso2Action = document.getElementById('curso2-action')
 
-// Toggle Menu -> Para links de menu list
+
+// Toggle Menu -> Para el boton hamburguesa
+// ** Muestra el menu LIST y esconde el menu BAR
+navMenuBtn.addEventListener('click', toggleMenuList)
+
+// Close Menu -> Para links de menu list
+// ** Cierra el menu LIST
 navMenuList.addEventListener('click', (e) => {
   if((e.target.nodeName === 'LI') || (e.target.classList.contains('list__links-item'))){
-    toggleMenuList()
+    closeMenuList()
   }
 })
 
-// Toggle Menu -> Para el boton hamburguesa
-navMenuBtn.addEventListener('click', toggleMenuList)
-
-// Esconder el menu al tocar iconos/logos de la parte superior izquierda
+// Close Menu -> Para logos de la parte superior izquierda
+// ** Cierra el menu LIST
 navLogoContainer.addEventListener('click', (e) => {
   if(e.target.classList.contains('nav__logo-img')) {
     closeMenuList()
   }
 })
+
+// Cerrar todos los modals
+closeModals.addEventListener('click', ()=> closeAllModals())
+
+// Abrir el popup GUIAS
+guiasAction.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalGuias.classList.remove('hide')
+})
+
+// Abrir el popup CURSOS
+cursosAction.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCursos.classList.remove('hide')
+})
+// Switchear entre curso especifico y CURSOS
+modals.addEventListener('click', (e) => {
+  if(e.target.classList.contains('modal__curso-infoextra')) {
+    modalCurso1.classList.add('hide')
+    modalCurso2.classList.add('hide')
+    modalCursos.classList.remove('hide')
+  // Switchear entre faqs...
+  } else if (e.target.classList.contains('faq-question')) {
+    let estaRespuesta = e.target.nextElementSibling
+      if(estaRespuesta.classList.contains('none')) {
+      esconderRespuestas()
+      estaRespuesta.classList.toggle('none')
+    } else {
+      estaRespuesta.classList.add('none')
+    }
+  }
+})
+
+function esconderRespuestas() {
+  let respuestas = modalCursos.querySelectorAll('.faq-answer')
+  respuestas.forEach(element => {
+    element.classList.add('none')
+  })
+  console.log('escondiendo respuestas')
+}
+
+// Abrir el popup CURSO 1
+curso1Action.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCurso1.classList.remove('hide')
+})
+
+// Abrir el popup CURSO 2
+curso2Action.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCurso2.classList.remove('hide')
+})
+
+
 
 
 // TOGGLE MENU
@@ -77,6 +151,19 @@ function closeMenuList() {
   if(menuActivo) {
     esconderMenuList()
   }
+}
+
+
+
+// CLOSE ALL MODALS
+// Cierra todos los modals (agrega opacity 0)
+
+function closeAllModals() {
+  modals.classList.add('hide')
+  modalGuias.classList.add('hide')
+  modalCursos.classList.add('hide')
+  modalCurso1.classList.add('hide')
+  modalCurso2.classList.add('hide')
 }
 
 

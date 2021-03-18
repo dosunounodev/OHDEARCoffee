@@ -5,13 +5,13 @@ section#contacto.section__contacto
     a(href="#").contacto__more--link o un mail: info@ohdearcoffee
     .contacto__medios-container
       .contacto__form-container
-        form#form-contact.form-contact
+        form(action="").form-contact#form-contact
           .form-contact__field
-            input(type="text" id="contact-name" placeholder="Tu Nombre" required).form-contact__input
+            input(type="text" id="form-contact-nombre" placeholder="Tu Nombre" required).form-contact__input
           .form-contact__field
-            input(type="mail" id="contact-mail" placeholder="Tu Mail" required).form-contact__input
+            input(type="mail" id="form-contact-mail" placeholder="Tu Mail" required).form-contact__input
           .form-contact__field
-            select(name="teconoci" id="contact-conoci" required).form-contact__select
+            select(name="teconoci" id="form-contact-conoci" required).form-contact__select
               option(value="conoci-instagram") Te conocí en Instagram
               option(value="conoci-pinterest") Te conocí en Pinterest
               option(value="conoci-facebook") Te conocí en Facebook

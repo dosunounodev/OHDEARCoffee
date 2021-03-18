@@ -658,6 +658,70 @@ Carrousels
 /*! -------------------------
 Forms
 -------------------------- */
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-contact__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-contact__input, .form-contact__msj,
+.form-contact__select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #88a896;
+  border-radius: 10px;
+  background-color: #F9F8F6;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #88a896;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.form-contact__input::placeholder, .form-contact__msj::placeholder,
+.form-contact__select::placeholder {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #a63519;
+}
+
+.form-contact__select {
+  cursor: pointer;
+}
+.form-contact__select:hover + .custom-arrow {
+  border-top-color: #a63519;
+}
+
+.custom-arrow {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid #f6954c;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  pointer-events: none;
+  will-change: border-top-color;
+  transition-property: border-top-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+
+.form-contact__msj {
+  width: 100%;
+  height: 90px;
+  resize: none;
+}
+
 .footer__newsletter {
   order: 2;
   display: flex;
@@ -729,8 +793,7 @@ Forms
   display: block;
 }
 
-.form-footer__submit,
-.form-contact__submit {
+.form-footer__submit, .form-guias__submit, .form-contact__submit {
   width: 100%;
   height: 40px;
   color: white;
@@ -746,10 +809,38 @@ Forms
   transition-timing-function: linear;
 }
 @media (hover: hover) and (pointer: fine) {
-  .form-footer__submit:hover,
-.form-contact__submit:hover {
+  .form-footer__submit:hover, .form-guias__submit:hover, .form-contact__submit:hover {
     background-color: #BED8C9;
   }
+}
+
+.form-guias {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-guias__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-guias__input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #88a896;
+  border-radius: 10px;
+  background-color: #F9F8F6;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #88a896;
+}
+.form-guias__input::placeholder {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #a63519;
 }
 
 /*! -------------------------
@@ -1540,6 +1631,343 @@ Footer
 }
 
 /*! -------------------------
+Modals
+-------------------------- */
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  will-change: opacity;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+
+.close-all {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.close-all span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.close-all span:hover {
+  color: #a63519;
+}
+@media screen and (min-width: 768px) {
+  .close-all {
+    top: 60px;
+    right: 60px;
+  }
+  .close-all span {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .close-all span {
+    font-size: 3.2rem;
+  }
+}
+
+.modal__guias,
+.modal__cursos,
+.modal__cursos--curso1,
+.modal__cursos--curso2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  margin: 20px;
+  margin-top: 60px;
+  background-color: #F9F8F6;
+  background-image: url("../assets/bgs/mobile.png");
+  border-radius: 20px;
+  will-change: opacity;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+@media screen and (min-width: 768px) {
+  .modal__guias,
+.modal__cursos,
+.modal__cursos--curso1,
+.modal__cursos--curso2 {
+    width: calc(100% - 300px);
+    height: calc(100vh - 200px);
+    margin: 100px 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal__guias,
+.modal__cursos,
+.modal__cursos--curso1,
+.modal__cursos--curso2 {
+    width: calc(100% - 500px);
+    margin: 100px 250px;
+  }
+}
+
+.modal__curso-icon-container {
+  width: 50%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .modal__curso-icon-container {
+    display: none;
+  }
+}
+
+.small-icon {
+  width: 35%;
+}
+@media screen and (min-width: 540px) {
+  .small-icon {
+    width: 50%;
+  }
+}
+
+.small-iconxs {
+  width: 50px;
+}
+
+.modal__curso-icon {
+  display: block;
+}
+
+.modal__guias-title,
+.modal__curso-title {
+  margin: 0 10px 10px;
+  text-align: center;
+}
+.modal__guias-title span,
+.modal__curso-title span {
+  display: block;
+  text-transform: uppercase;
+  color: #a63519;
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .modal__guias-title span,
+.modal__curso-title span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.modal__guias-subtitle, .modal__curso-infoextra {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #88a896;
+}
+
+.form-guias__container {
+  width: calc(100% - 40px);
+  max-width: 400px;
+}
+
+.modal__curso-price {
+  font-size: 1.4rem;
+}
+.modal__curso-price span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+.modal__curso-price span:nth-child(2) {
+  font-size: 1.2rem;
+  color: #a63519;
+}
+@media screen and (min-width: 768px) {
+  .modal__curso-price {
+    font-size: 2.2rem;
+  }
+  .modal__curso-price span {
+    font-size: 2.4rem;
+  }
+  .modal__curso-price span:nth-child(2) {
+    font-size: 2rem;
+  }
+}
+
+.shopbtn {
+  width: calc(100% - 40px);
+  max-width: 300px;
+  padding: 10px 30px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F9F8F6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+@media screen and (min-width: 768px) {
+  .shopbtn {
+    font-size: 3rem;
+  }
+}
+
+.shop--mp {
+  background-color: #f6954c;
+}
+.shop--mp:hover {
+  background-color: #88a896;
+}
+
+.shop--pp {
+  background-color: #88a896;
+}
+.shop--pp:hover {
+  background-color: #f6954c;
+}
+
+.modal__curso-infoextra {
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+  margin-bottom: 0;
+  text-decoration: underline;
+  color: #a63519;
+  cursor: pointer;
+}
+.modal__curso-infoextra:hover {
+  color: #f6954c;
+}
+
+.modal__cursos-moreinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(136, 168, 150, 0.5);
+}
+.modal__cursos-moreinfo p {
+  margin: 0;
+  order: 2;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .modal__cursos-moreinfo p {
+    font-size: 2rem;
+  }
+}
+.modal__cursos-moreinfo p:nth-child(2) {
+  order: 3;
+  font-size: 1.8rem;
+  color: #a63519;
+}
+@media screen and (min-width: 768px) {
+  .modal__cursos-moreinfo p:nth-child(2) {
+    font-size: 2.4rem;
+  }
+}
+.modal__cursos-moreinfo .modal__cursos-moreinfo--rotate {
+  display: none;
+  order: 1;
+  max-width: 20ch;
+  margin: 20px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #a63519;
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .modal__cursos-moreinfo .modal__cursos-moreinfo--rotate {
+    display: block;
+  }
+}
+
+.faq-container {
+  width: calc(100% - 40px);
+  margin: 10px 0;
+}
+.faq-container .faq-item {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid #88a896;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.faq-container .faq-item p {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: 0;
+  padding: 10px;
+}
+@media screen and (min-width: 360px) {
+  .faq-container .faq-item p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .faq-container {
+    display: none;
+  }
+}
+
+.faq-question {
+  width: 100%;
+  padding: 5px 10px;
+  font-weight: 600;
+  color: #a63519;
+  background-color: rgba(136, 168, 150, 0.2);
+}
+
+.faq-answer {
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: rgba(136, 168, 150, 0.6);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.none {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*! -------------------------
 Index
 -------------------------- */
 /*! -------------------------
@@ -2307,70 +2735,6 @@ Contacto
   .contacto__form-container {
     margin-bottom: 0;
   }
-}
-
-.form-contact {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-contact__field {
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.form-contact__input, .form-contact__msj,
-.form-contact__select {
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  border: 2px solid #88a896;
-  border-radius: 10px;
-  background-color: #F9F8F6;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #88a896;
-  -webkit-appearance: none;
-          appearance: none;
-}
-.form-contact__input::placeholder, .form-contact__msj::placeholder,
-.form-contact__select::placeholder {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #a63519;
-}
-
-.form-contact__select {
-  cursor: pointer;
-}
-.form-contact__select:hover + .custom-arrow {
-  border-top-color: #a63519;
-}
-
-.custom-arrow {
-  content: "";
-  position: absolute;
-  top: calc(50% - 6px);
-  right: 20px;
-  width: 20px;
-  height: 20px;
-  border-top: 10px solid #f6954c;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  pointer-events: none;
-  will-change: border-top-color;
-  transition-property: border-top-color;
-  transition-duration: 0.3s;
-  transition-delay: 0;
-  transition-timing-function: linear;
-}
-
-.form-contact__msj {
-  width: 100%;
-  height: 90px;
-  resize: none;
 }
 
 .contacto__redes-container {

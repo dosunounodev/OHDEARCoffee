@@ -16,15 +16,13 @@ footer.footer#footer
     .footer__newsletter
       h2 Suscribete al newsletter
       p Y recibe todas las novedades
-      form(action="" id="footer-newsletter")
+      form(action="").form-footer#form-footer
         .form-footer__field
-          input(type="text" placeholder="Tu Nombre" id="footer-nombre" required).form-footer__input
-          span no puede estar vacio
+          input(type="text" placeholder="Tu Nombre" id="form-footer-nombre" required).form-footer__input
         .form-footer__field
-          input(type="email" placeholder="Tu Mail" id="footer-mail" required).form-footer__input
-          span el mail ingresado es invalido
+          input(type="email" placeholder="Tu Mail" id="form-footer-mail" required).form-footer__input
         .form-footer__field 
-          input(type="submit" value="Enviar!" id="footer-enviar" class="form-footer__submit")
+          input(type="submit" value="Enviar!" id="form-footer-enviar").form-footer__submit
   .footer-copy
     .footer-copy__container
       p &copy 2021 - 

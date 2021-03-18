@@ -5,6 +5,77 @@ Forms
 @use "../abstract" as *;
 
 
+// CONTACT FORM
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-contact__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px
+}
+
+.form-contact__input,
+.form-contact__select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+  background-color: $color-bg;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color-primary;
+  &::placeholder {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-extra;
+  }
+  appearance: none;
+}
+
+.form-contact__select {
+  cursor: pointer;
+  &:hover + .custom-arrow {
+    border-top-color: $color-extra ;
+  }
+}
+
+.custom-arrow {
+  content: '';
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid $color-secondary;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  pointer-events: none;
+  @include transition(.3s, 0, linear, border-top-color)
+}
+
+.form-contact__msj {
+  @extend .form-contact__input;
+  width: 100%;
+  height: 90px;
+  resize: none
+}
+
+.form-contact__submit {
+  @extend .form-footer__submit;
+}
+
+
+
+
+
+// NEWSLETTER FORM
+
 .footer__newsletter {
   order: 2;
   display: flex;
@@ -75,9 +146,7 @@ Forms
   display: block;
 }
 
-
-@at-root .form-footer__submit,
-.form-contact__submit {
+@at-root .form-footer__submit {
   width: 100%;
   height: 40px;
   color: white;
@@ -94,4 +163,42 @@ Forms
       background-color: $color-primary-off;
     }
   }
+}
+
+
+
+
+// GUIAS FORM
+
+.form-guias {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-guias__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px
+}
+
+.form-guias__input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+  background-color: $color-bg;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color-primary;
+  &::placeholder {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-extra;
+  }
+}
+
+.form-guias__submit {
+  @extend .form-footer__submit;
 }

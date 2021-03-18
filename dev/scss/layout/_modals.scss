@@ -1,0 +1,304 @@
+/*! -------------------------
+Modals
+-------------------------- */
+
+@use "../abstract" as *;
+@use "../base" as *;
+
+
+// OVERLAY DE FONDO
+
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(#000, .90);
+  @include transition(1s,0,linear,opacity);
+}
+
+
+// BTN CERRAR
+
+.close-all {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    @include transition(.3s,0,linear,color);
+    &:hover {
+      color: $color-extra;
+    }
+  }
+  @include tablet {
+    top: 60px;
+    right: 60px;
+    span {
+      font-size: 2.4rem;
+    }
+  }
+  @include laptop {
+    span {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+
+// TODOS LOS POP-UP (VENTANA BLANCA)
+
+.modal__guias,
+.modal__cursos,
+.modal__cursos--curso1,
+.modal__cursos--curso2 {
+  @include flex(column, center, center);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  margin: 20px;
+  margin-top: 60px;
+  background-color: $color-bg;
+  background-image: url('../assets/bgs/mobile.png');
+  border-radius: 20px;
+  @include transition(.3s,0,linear,opacity);
+  @include tablet {
+    width: calc(100% - 300px);
+    height: calc(100vh - 200px);
+    margin: 100px 150px;
+  }
+  @include laptop {
+    width: calc(100% - 500px);
+    margin: 100px 250px;
+  }
+}
+
+
+// ICONOS DE MODAL
+
+.modal__curso-icon-container {
+  width: 50%;
+  max-width: 200px;
+  margin-bottom: 10px;
+  @media screen and (max-width:700px) and (orientation: landscape) {
+    display: none;
+  }
+}
+.small-icon {
+  width: 35%;
+  @include landscape {
+    width: 50%;
+  }
+}
+.small-iconxs {
+  width: 50px
+}
+
+.modal__curso-icon {
+  display: block;
+}
+
+// TITULOS DE MODAL
+
+.modal__guias-title,
+.modal__curso-title {
+  margin: 0 10px 10px;
+  text-align: center;
+  span {
+    display: block;
+    text-transform: uppercase;
+    color: $color-extra;
+    @media screen and (max-width:700px) and (orientation: landscape) {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+// GUIAS
+
+.modal__guias-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color-primary;
+}
+
+.form-guias__container {
+  width: calc(100% - 40px);
+  max-width: 400px;
+}
+
+// CURSO ESPECIFICO
+
+.modal__curso-price {
+  font-size: 1.4rem;
+  span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    &:nth-child(2) {
+      font-size: 1.2rem;
+      color: $color-extra;
+    }
+  }
+  @include tablet {
+    font-size: 2.2rem;
+    span {
+      font-size: 2.4rem;
+      &:nth-child(2) {
+        font-size: 2.0rem;
+      }
+    }
+  }
+}
+
+.shopbtn {
+  width: calc(100% - 40px);
+  max-width: 300px;
+  padding: 10px 30px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-bg;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  @include transition(.3s,0,linear,background-color);
+  @include tablet {
+    font-size: 3.0rem
+  }
+}
+
+.shop--mp {
+  background-color: $color-secondary;
+  &:hover{
+    background-color: $color-primary;
+  }
+}
+.shop--pp {
+  background-color: $color-primary;
+  &:hover{
+    background-color: $color-secondary;
+  }
+}
+
+.modal__curso-infoextra {
+  @extend .modal__guias-subtitle;
+  @include transition(.3s,0,linear,color);
+  margin-bottom: 0;
+  text-decoration: underline;
+  color: $color-extra;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+
+// CURSOS EN GENERAL
+
+.modal__cursos-moreinfo {
+  @include flex-center(column);
+  width: calc(100% - 40px);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba($color-primary, 0.5);
+  p {
+    margin: 0;
+    order: 2;
+    font-size: 1.6rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 2.0rem;
+    }
+    &:nth-child(2) {
+      order: 3;
+      font-size: 1.8rem;
+      color: $color-extra;
+      @include tablet {
+        font-size: 2.4rem;
+      }
+    }
+  }
+  .modal__cursos-moreinfo--rotate {
+    display: none;
+    @media screen and (max-width:700px) and (orientation: landscape) {
+      display: block;
+    }
+    order: 1;
+    max-width: 20ch;
+    margin: 20px 0 20px;
+    text-align: center;
+    font-size: 2.0rem;
+    color: $color-extra;
+  }
+}
+
+
+
+.faq-container {
+  width: calc(100% - 40px);
+  margin: 10px 0;
+  .faq-item {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid $color-primary;
+    border-radius: 10px;
+    overflow: hidden;
+    p {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin: 0;
+      padding: 10px;
+      @media screen and (min-width: 360px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media screen and (max-width:700px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
+.faq-question {
+  width: 100%;
+  padding: 5px 10px;
+  font-weight: 600;
+  color: $color-extra;
+  background-color: rgba($color: $color-primary, $alpha: .2);
+}
+
+.faq-answer {
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: rgba($color: $color-primary, $alpha: .6);
+}
+
+
+// HIDE & NONE HELPERs
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.none {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
