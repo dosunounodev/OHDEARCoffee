@@ -26,8 +26,8 @@ Modals
 
 .close-all {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   z-index: 140;
   span {
     font-size: 1.8rem;
@@ -41,8 +41,6 @@ Modals
     }
   }
   @include tablet {
-    top: 60px;
-    right: 60px;
     span {
       font-size: 2.4rem;
     }
@@ -67,25 +65,15 @@ Modals
   left: 0;
   z-index: 120;
   width: calc(100% - 40px);
-  // height: 100%;
   height: calc(100vh - 40px);
   margin: 20px;
-  // margin-top: 60px;
   padding: 20px;
   background-color: $color-bg;
   background-image: url('../assets/bgs/mobile.png');
   border-radius: 20px;
   @include transition(.3s,0,linear,opacity);
   @include tablet {
-    // width: calc(100% - 300px);
-    // height: calc(100vh - 200px);
-    // margin: 100px 150px;
     padding: 50px;
-  }
-  @include laptop {
-    // width: calc(100% - 500px);
-    // margin: 100px 250px;
-    padding: 100px;
   }
 }
 
@@ -185,6 +173,7 @@ Modals
 }
 
 .shopbtn {
+  @include flex-center(row);
   width: calc(100% - 40px);
   max-width: 300px;
   padding: 10px 30px;

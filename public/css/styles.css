@@ -1657,8 +1657,8 @@ Modals
 
 .close-all {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   z-index: 140;
 }
 .close-all span {
@@ -1677,10 +1677,6 @@ Modals
   color: #f6954c;
 }
 @media screen and (min-width: 768px) {
-  .close-all {
-    top: 60px;
-    right: 60px;
-  }
   .close-all span {
     font-size: 2.4rem;
   }
@@ -1722,14 +1718,6 @@ Modals
 .modal__cursos--curso1,
 .modal__cursos--curso2 {
     padding: 50px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .modal__guias,
-.modal__cursos,
-.modal__cursos--curso1,
-.modal__cursos--curso2 {
-    padding: 100px;
   }
 }
 
@@ -1834,6 +1822,10 @@ Modals
 }
 
 .shopbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: calc(100% - 40px);
   max-width: 300px;
   padding: 10px 30px;
