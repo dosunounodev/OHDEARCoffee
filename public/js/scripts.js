@@ -198,7 +198,41 @@ bioContent.addEventListener('click', (e) => {
 // ********* FORMULARIOS
 // ****************************************
 
-// formulario footer newsletter
+// Sets de Errores y Exito
+
+function setError(input, msj, inputIdentificador, formularioIdentificador) {
+  let inputField = input.parentElement
+  let spanAlerta = inputField.querySelector('.form__alert')
+  spanAlerta.classList.add('form__alert--active')
+  spanAlerta.textContent = msj
+  formularioIdentificador.push(`Error en input ${inputIdentificador}`)
+}
+
+function setSuccess(input) {
+  let inputField = input.parentElement
+  let spanAlerta = inputField.querySelector('.form__alert')
+  spanAlerta.classList.remove('form__alert--active')
+}
+
+// Validador de mail
+
+const MAIL_FORMAT = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+function mailInvalido(mail) {
+  if (mail.match(MAIL_FORMAT)) {
+    return false
+  } else {
+    return true
+  }
+}
+
+
+
+
+
+// ****************************************
+// ********* FORMULARIO NEWSLETTER
+// ****************************************
 
 const FORM_FOOTER = document.getElementById('form-footer')
 const FORM_FOOTER_NAME = document.getElementById('form-footer-name')
@@ -216,15 +250,15 @@ function checkFieldsFooter() {
   let inputMail = FORM_FOOTER_MAIL
   erroresFooter = []
   if(inputName.value.trim() === '') {
-    setError(inputName, 'No puede estar vacio', 'footer-name', erroresFooter)
+    setError(inputName, 'No me dijiste tu nombre!', 'footer-name', erroresFooter)
     } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'No puede tener menos de 3 letras', 'footer-name', erroresFooter)
+        setError(inputName, 'Dime un nombre de más letras!', 'footer-name', erroresFooter)
   } else setSuccess(inputName)
 
   if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No puede estar vacio', 'footer-mail', erroresFooter)
+    setError(inputMail, 'No te olvides de poner un mail', 'footer-mail', erroresFooter)
   } else if (mailInvalido(inputMail.value.trim())) {
-    setError(inputMail, 'El mail ingresado no es valido')
+    setError(inputMail, 'OOPS!! El mail ingresado no es valido')
   } else setSuccess(inputMail)
 
   console.log(erroresFooter)
@@ -234,7 +268,9 @@ function checkFieldsFooter() {
 
 
 
-// formulario guias pop-up
+// ****************************************
+// ********* FORMULARIO GUIAS
+// ****************************************
 
 const FORM_GUIAS = document.getElementById('form-guias')
 const FORM_GUIAS_NAME = document.getElementById('form-guias-name')
@@ -252,15 +288,15 @@ function checkFieldsGuias() {
   let inputMail = FORM_GUIAS_MAIL
   erroresGuias = []
   if(inputName.value.trim() === '') {
-    setError(inputName, 'No puede estar vacio', 'guias-name', erroresGuias)
+    setError(inputName, 'No me dijiste tu nombre!', 'guias-name', erroresGuias)
     } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'No puede tener menos de 3 letras', 'guias-name', erroresGuias)
+        setError(inputName, 'Dime un nombre de más letras!', 'guias-name', erroresGuias)
   } else setSuccess(inputName)
 
   if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No puede estar vacio', 'guias-mail', erroresGuias)
+    setError(inputMail, 'No te olvides de poner un mail', 'guias-mail', erroresGuias)
   } else if (mailInvalido(inputMail.value.trim())) {
-    setError(inputMail, 'El mail ingresado no es valido')
+    setError(inputMail, 'OOPS!! El mail ingresado no es valido')
   } else setSuccess(inputMail)
 
   console.log(erroresGuias)
@@ -270,7 +306,9 @@ function checkFieldsGuias() {
 
 
 
-// formulario contacto principal
+// ****************************************
+// ********* FORMULARIO CONTACTO
+// ****************************************
 
 const FORM_CONTACTO = document.getElementById('form-contacto')
 const FORM_CONTACTO_NAME = document.getElementById('form-contacto-name')
@@ -290,62 +328,20 @@ function checkFieldsContacto() {
   let inputMsj = FORM_CONTACTO_MSJ
   erroresContacto = []
   if(inputName.value.trim() === '') {
-    setError(inputName, 'No puede estar vacio', 'contacto-name', erroresContacto)
+    setError(inputName, 'No me dijiste tu nombre!', 'contacto-name', erroresContacto)
     } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'No puede tener menos de 3 letras', 'contacto-name', erroresContacto)
+        setError(inputName, 'Dime un nombre de más letras!', 'contacto-name', erroresContacto)
   } else setSuccess(inputName)
 
   if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No puede estar vacio', 'contacto-mail', erroresContacto)
+    setError(inputMail, 'No te olvides de poner un mail', 'contacto-mail', erroresContacto)
     } else if (mailInvalido(inputMail.value.trim())) {
-        setError(inputMail, 'El mail ingresado no es valido')
+        setError(inputMail, 'OOPS!! El mail ingresado no es valido')
   } else setSuccess(inputMail)
 
   if(inputMsj.value.trim() === '') {
-    setError(inputMsj, 'No puede estar vacio', 'contacto-msj', erroresContacto)
+    setError(inputMsj, 'No olvides dejar tu mensaje!', 'contacto-msj', erroresContacto)
     } else setSuccess(inputMsj)
 
   console.log(erroresContacto)
 }
-
-
-
-
-
-function setError(input, msj, inputIdentificador, formularioIdentificador) {
-  let inputField = input.parentElement
-  let spanAlerta = inputField.querySelector('.form__alert')
-  spanAlerta.classList.add('form__alert--active')
-  spanAlerta.textContent = msj
-  formularioIdentificador.push(`Error en input ${inputIdentificador}`)
-}
-
-function setSuccess(input) {
-  let inputField = input.parentElement
-  let spanAlerta = inputField.querySelector('.form__alert')
-  spanAlerta.classList.remove('form__alert--active')
-}
-
-
-
-const MAIL_FORMAT = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-function mailInvalido(mail) {
-  if (mail.match(MAIL_FORMAT)) {
-    return false
-  } else {
-    return true
-  }
-}
-
-
-
-
-
-// ****************************************
-// ********* FORMULARIO GUIAS
-// ****************************************
-
-// ****************************************
-// ********* FORMULARIO CONTACTO
-// ****************************************
