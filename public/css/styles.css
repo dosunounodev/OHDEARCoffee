@@ -1827,7 +1827,7 @@ Modals
   }
 }
 
-.pagar {
+.modal__curso-paycontainer {
   display: flex;
   width: 100%;
   justify-content: center;
