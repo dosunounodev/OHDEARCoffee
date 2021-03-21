@@ -241,13 +241,11 @@ let erroresFooter = []
 
 FORM_FOOTER.addEventListener('submit', (e) => {
   e.preventDefault()
-  checkFieldsFooter()
+  checkFieldsFooter(FORM_FOOTER_NAME, FORM_FOOTER_MAIL)
   erroresFooter.length > 0 ? console.log('hay un error en el formulario footer') : FORM_FOOTER.submit()
 })
 
-function checkFieldsFooter() {
-  let inputName = FORM_FOOTER_NAME
-  let inputMail = FORM_FOOTER_MAIL
+function checkFieldsFooter(inputName, inputMail) {
   erroresFooter = []
   if(inputName.value.trim() === '') {
     setError(inputName, 'No me dijiste tu nombre!', 'footer-name', erroresFooter)
