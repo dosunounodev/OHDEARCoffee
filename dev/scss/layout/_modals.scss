@@ -28,15 +28,16 @@ Modals
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 140;
   span {
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: white;
+    color: $color-extra;
     cursor: pointer;
     @include transition(.3s,0,linear,color);
     &:hover {
-      color: $color-extra;
+      color: $color-secondary;
     }
   }
   @include tablet {
@@ -66,21 +67,25 @@ Modals
   left: 0;
   z-index: 120;
   width: calc(100% - 40px);
-  height: calc(100vh - 80px);
+  // height: 100%;
+  height: calc(100vh - 40px);
   margin: 20px;
-  margin-top: 60px;
+  // margin-top: 60px;
+  padding: 20px;
   background-color: $color-bg;
   background-image: url('../assets/bgs/mobile.png');
   border-radius: 20px;
   @include transition(.3s,0,linear,opacity);
   @include tablet {
-    width: calc(100% - 300px);
-    height: calc(100vh - 200px);
-    margin: 100px 150px;
+    // width: calc(100% - 300px);
+    // height: calc(100vh - 200px);
+    // margin: 100px 150px;
+    padding: 50px;
   }
   @include laptop {
-    width: calc(100% - 500px);
-    margin: 100px 250px;
+    // width: calc(100% - 500px);
+    // margin: 100px 250px;
+    padding: 100px;
   }
 }
 
@@ -173,6 +178,12 @@ Modals
   }
 }
 
+.pagar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .shopbtn {
   width: calc(100% - 40px);
   max-width: 300px;
@@ -192,12 +203,14 @@ Modals
 }
 
 .shop--mp {
+  margin-right: 10px;
   background-color: $color-secondary;
   &:hover{
     background-color: $color-primary;
   }
 }
 .shop--pp {
+  margin-left: 10px;
   background-color: $color-primary;
   &:hover{
     background-color: $color-secondary;
@@ -289,6 +302,7 @@ Modals
   font-weight: 600;
   color: $color-extra;
   background-color: rgba($color: $color-primary, $alpha: .2);
+  cursor: pointer;
 }
 
 .faq-answer {

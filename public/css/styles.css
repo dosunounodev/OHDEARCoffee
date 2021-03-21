@@ -1659,12 +1659,13 @@ Modals
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 140;
 }
 .close-all span {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: white;
+  color: #a63519;
   cursor: pointer;
   will-change: color;
   transition-property: color;
@@ -1673,7 +1674,7 @@ Modals
   transition-timing-function: linear;
 }
 .close-all span:hover {
-  color: #a63519;
+  color: #f6954c;
 }
 @media screen and (min-width: 768px) {
   .close-all {
@@ -1703,9 +1704,9 @@ Modals
   left: 0;
   z-index: 120;
   width: calc(100% - 40px);
-  height: calc(100vh - 80px);
+  height: calc(100vh - 40px);
   margin: 20px;
-  margin-top: 60px;
+  padding: 20px;
   background-color: #F9F8F6;
   background-image: url("../assets/bgs/mobile.png");
   border-radius: 20px;
@@ -1720,9 +1721,7 @@ Modals
 .modal__cursos,
 .modal__cursos--curso1,
 .modal__cursos--curso2 {
-    width: calc(100% - 300px);
-    height: calc(100vh - 200px);
-    margin: 100px 150px;
+    padding: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1730,8 +1729,7 @@ Modals
 .modal__cursos,
 .modal__cursos--curso1,
 .modal__cursos--curso2 {
-    width: calc(100% - 500px);
-    margin: 100px 250px;
+    padding: 100px;
   }
 }
 
@@ -1829,6 +1827,12 @@ Modals
   }
 }
 
+.pagar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .shopbtn {
   width: calc(100% - 40px);
   max-width: 300px;
@@ -1854,6 +1858,7 @@ Modals
 }
 
 .shop--mp {
+  margin-right: 10px;
   background-color: #f6954c;
 }
 .shop--mp:hover {
@@ -1861,6 +1866,7 @@ Modals
 }
 
 .shop--pp {
+  margin-left: 10px;
   background-color: #88a896;
 }
 .shop--pp:hover {
@@ -1963,6 +1969,7 @@ Modals
   font-weight: 600;
   color: #a63519;
   background-color: rgba(136, 168, 150, 0.2);
+  cursor: pointer;
 }
 
 .faq-answer {
