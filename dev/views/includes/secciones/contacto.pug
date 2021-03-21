@@ -5,13 +5,15 @@ section#contacto.section__contacto
     a(href="#").contacto__more--link o un mail: info@ohdearcoffee
     .contacto__medios-container
       .contacto__form-container
-        form(action="").form-contact#form-contact
+        form(action="").form-contact#form-contacto
           .form-contact__field
-            input(type="text" id="form-contact-nombre" placeholder="Tu Nombre" required).form-contact__input
+            input(type="text" placeholder="Tu Nombre").form-contact__input#form-contacto-name
+            span.form__alert Acá va un texto de alerta
           .form-contact__field
-            input(type="mail" id="form-contact-mail" placeholder="Tu Mail" required).form-contact__input
+            input(type="mail" placeholder="Tu Mail").form-contact__input#form-contacto-mail
+            span.form__alert Acá va un texto de alerta
           .form-contact__field
-            select(name="teconoci" id="form-contact-conoci" required).form-contact__select
+            select(name="teconoci").form-contact__select
               option(value="conoci-instagram") Te conocí en Instagram
               option(value="conoci-pinterest") Te conocí en Pinterest
               option(value="conoci-facebook") Te conocí en Facebook
@@ -19,9 +21,10 @@ section#contacto.section__contacto
               option(value="conoci-otrositio") Te conocí en Otro sitio...
             span.custom-arrow
           .form-contact__field
-            textarea(id="contact-msj" placeholder="Dejame tu mensaje" required).form-contact__msj
+            textarea(placeholder="Dejame tu mensaje").form-contact__msj#form-contacto-msj
+            span.form__alert Acá va un texto de alerta
           .form-contact__field
-            input(type="submit" id="contact-submit" value="Enviar!").form-contact__submit
+            input(type="submit" value="Enviar!").form-contact__submit
       .contacto__redes-container
         h3.redes__titulo Encontrame en las redes:
         .redes__item-container

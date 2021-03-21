@@ -748,17 +748,6 @@ Forms
     font-size: 2rem;
   }
 }
-.footer__newsletter form span {
-  display: none;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  padding: 5px 20px;
-  border-radius: 5px;
-  background-color: #a63519;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
 @media screen and (min-width: 700px) {
   .footer__newsletter {
     margin-bottom: 0px;
@@ -787,10 +776,6 @@ Forms
 .form-footer__input::placeholder {
   font-size: inherit;
   color: #a63519;
-}
-
-.alertaerror {
-  display: block;
 }
 
 .form-footer__submit, .form-guias__submit, .form-contact__submit {
@@ -844,6 +829,23 @@ Forms
   font-size: 1.6rem;
   font-weight: 600;
   color: #a63519;
+}
+
+.form__alert {
+  display: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #F9F8F6;
+  border-radius: 5px;
+  background-color: #a63519;
+}
+
+.form__alert--active {
+  display: block;
 }
 
 /*! -------------------------

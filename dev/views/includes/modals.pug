@@ -10,11 +10,13 @@ section.modals#modals.hide
     .form-guias__container
       form(action="").form-guias#form-guias
         .form-guias__field
-          input(type="text" placeholder="Tu Nombre" id="form-guias-nombre" required).form-guias__input
+          input(type="/text" placeholder="Tu Nombre").form-guias__input#form-guias-name
+          span.form__alert Acá va un texto de alerta
         .form-guias__field
-          input(type="email" placeholder="Tu Mail" id="form-guias-mail" required).form-guias__input
+          input(type="email" placeholder="Tu Mail").form-guias__input#form-guias-mail
+          span.form__alert Acá va un texto de alerta
         .form-guias__field 
-          input(type="submit" value="Enviar!" id="form-guias-enviar" class="form-guias__submit")
+          input(type="submit" value="Enviar!").form-guias__submit
   
 
   .modal__cursos#modal-cursos.hide

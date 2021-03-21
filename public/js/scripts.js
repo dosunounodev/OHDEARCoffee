@@ -1,123 +1,46 @@
-// ********* MOSTRAR / OCULTAR MENUS
+// ****************************************
+// ********* MENUS
+// ****************************************
 
 // MENUS A MOSTRAR/ESCONDER
 const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
 const footersocials = document.getElementById('footersocials')
 
-// MODALS A MOSTRAR/ESCONDER
-const modals = document.getElementById('modals')
-const modalGuias = document.getElementById('modal-guias')
-const modalCursos = document.getElementById('modal-cursos')
-const modalCurso1 = document.getElementById('modal-curso1')
-const modalCurso2 = document.getElementById('modal-curso2')
-
-
-// ICONOS/Btns 
-// ** los 3 del navbar 
+// ** Botones del navbar (icons x2 + burger)
 const navMenuBtn = document.getElementById('nav__menu-btn')
 const navLogoContainer = document.getElementById('nav__logo-container')
-// ** el close de los modal
-const closeModals = document.getElementById('close-all')
-// ** los popup triggers
-const guiasAction = document.getElementById('guias-action')
-const cursosAction = document.getElementById('cursos-action')
-const curso1Action = document.getElementById('curso1-action')
-const curso2Action = document.getElementById('curso2-action')
 
+// Burger Icon ** Toggle menu LIST y menu BAR
+navMenuBtn.addEventListener('click', toggleMenuListBar)
 
-// Toggle Menu -> Para el boton hamburguesa
-// ** Muestra el menu LIST y esconde el menu BAR
-navMenuBtn.addEventListener('click', toggleMenuList)
-
-// Close Menu -> Para links de menu list
-// ** Cierra el menu LIST
+// Links de menu list ** Cierra el menu LIST
 navMenuList.addEventListener('click', (e) => {
   if((e.target.nodeName === 'LI') || (e.target.classList.contains('list__links-item'))){
     closeMenuList()
   }
 })
 
-// Close Menu -> Para logos de la parte superior izquierda
-// ** Cierra el menu LIST
+// Logos del navbar ** Cierra el menu LIST
 navLogoContainer.addEventListener('click', (e) => {
   if(e.target.classList.contains('nav__logo-img')) {
     closeMenuList()
   }
 })
 
-// Cerrar todos los modals
-closeModals.addEventListener('click', ()=> closeAllModals())
-
-// Abrir el popup GUIAS
-guiasAction.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalGuias.classList.remove('hide')
-})
-
-// Abrir el popup CURSOS
-cursosAction.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalCursos.classList.remove('hide')
-})
-// Switchear entre curso especifico y CURSOS
-modals.addEventListener('click', (e) => {
-  if(e.target.classList.contains('modal__curso-infoextra')) {
-    modalCurso1.classList.add('hide')
-    modalCurso2.classList.add('hide')
-    modalCursos.classList.remove('hide')
-  // Switchear entre faqs...
-  } else if (e.target.classList.contains('faq-question')) {
-    let estaRespuesta = e.target.nextElementSibling
-      if(estaRespuesta.classList.contains('none')) {
-      esconderRespuestas()
-      estaRespuesta.classList.toggle('none')
-    } else {
-      estaRespuesta.classList.add('none')
-    }
-  }
-})
-
-function esconderRespuestas() {
-  let respuestas = modalCursos.querySelectorAll('.faq-answer')
-  respuestas.forEach(element => {
-    element.classList.add('none')
-  })
-  console.log('escondiendo respuestas')
-}
-
-// Abrir el popup CURSO 1
-curso1Action.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalCurso1.classList.remove('hide')
-})
-
-// Abrir el popup CURSO 2
-curso2Action.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalCurso2.classList.remove('hide')
-})
-
-
-
-
-// TOGGLE MENU
-// Si el menu esta activo (abierto) lo esconde
-// Si el menu esta inactivo (cerrado) lo muestra
-
-function toggleMenuList() {
-  (menuActivo) ? esconderMenuList() : mostrarMenuList()
-}
-
 // ** Menu inactivo x default (escondido al abrir el website)
 let menuActivo = false
+
+// TOGLE MENU LIST & BAR
+function toggleMenuListBar() {
+  (menuActivo) ? esconderMenuList() : mostrarMenuList()
+}
 
 // ** Esconder
 // ** Cambia estado de Icono menu
 // ** Muestra la barra de links superior
 // ** Muestra la barra de socials en footer
 // ** Esconde la lista de links (menu)
-
 function esconderMenuList() {
   navMenuBtn.classList.remove('menu-active')
   navMenuBar.classList.remove('hide')
@@ -131,7 +54,6 @@ function esconderMenuList() {
 // ** Esconde la barra de links superior
 // ** Esconde la barra de socials en footer
 // ** Muestra la lista de links (menu)
-
 function mostrarMenuList() {
   navMenuBtn.classList.add('menu-active')
   navMenuBar.classList.add('hide')
@@ -140,13 +62,11 @@ function mostrarMenuList() {
   menuActivo = true
 }
 
-
 // CLOSE MENU
 // Si el menu esta activo (abierto) lo esconde
 // ** Para botones/iconos que estan siempre visibles
 // ** No queremos que abran el menu al clickearlos
 // ** Solo deben cerrarlo si son clickeados con el menu abierto
-
 function closeMenuList() {
   if(menuActivo) {
     esconderMenuList()
@@ -155,9 +75,33 @@ function closeMenuList() {
 
 
 
-// CLOSE ALL MODALS
-// Cierra todos los modals (agrega opacity 0)
 
+
+// ****************************************
+// ********* MODALS
+// ****************************************
+
+// MODALS A MOSTRAR/ESCONDER
+const modals = document.getElementById('modals')
+const modalGuias = document.getElementById('modal-guias')
+const modalCursos = document.getElementById('modal-cursos')
+const modalCurso1 = document.getElementById('modal-curso1')
+const modalCurso2 = document.getElementById('modal-curso2')
+
+// ** Close de los modal
+const closeModals = document.getElementById('close-all')
+
+// ** Modal triggers
+const guiasAction = document.getElementById('guias-action')
+const cursosAction = document.getElementById('cursos-action')
+const curso1Action = document.getElementById('curso1-action')
+const curso2Action = document.getElementById('curso2-action')
+
+// Close btn en modals
+// ** Cierra todos los modals
+closeModals.addEventListener('click', ()=> closeAllModals())
+
+// Cierra todos los modals (agrega opacity 0)
 function closeAllModals() {
   modals.classList.add('hide')
   modalGuias.classList.add('hide')
@@ -166,13 +110,68 @@ function closeAllModals() {
   modalCurso2.classList.add('hide')
 }
 
+// Abrir el popup GUIAS
+guiasAction.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalGuias.classList.remove('hide')
+})
+
+// Abrir el popup CURSOS
+cursosAction.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCursos.classList.remove('hide')
+})
+
+// Abrir el popup CURSO 1
+curso1Action.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCurso1.classList.remove('hide')
+})
+
+// Abrir el popup CURSO 2
+curso2Action.addEventListener('click', ()=> {
+  modals.classList.remove('hide')
+  modalCurso2.classList.remove('hide')
+})
+
+// Switchear entre curso especifico y CURSOS
+modals.addEventListener('click', (e) => {
+  if(e.target.classList.contains('modal__curso-infoextra')) {
+    modalCurso1.classList.add('hide')
+    modalCurso2.classList.add('hide')
+    modalCursos.classList.remove('hide')
+
+  // Switchear entre faqs...
+  // Acordeon de Cursos
+  } else if (e.target.classList.contains('faq-question')) {
+    let estaRespuesta = e.target.nextElementSibling
+      if(estaRespuesta.classList.contains('none')) {
+      esconderRespuestas()
+      estaRespuesta.classList.toggle('none')
+    } else {
+      estaRespuesta.classList.add('none')
+    }
+  }
+})
+
+// Esconder la respuesta al clickear
+// Esconder las otras respuestas al clickear en una
+function esconderRespuestas() {
+  let respuestas = modalCursos.querySelectorAll('.faq-answer')
+  respuestas.forEach(element => {
+    element.classList.add('none')
+  })
+  console.log('escondiendo respuestas')
+}
 
 
 
 
 
+// ****************************************
+// ********* BIO HIDERS
+// ****************************************
 
-// BIO HIDERS
 // Alterna entre texto 2 y 3 ; 4 y 5
 
 const bioContent = document.querySelector('.bio__content')
@@ -192,9 +191,161 @@ bioContent.addEventListener('click', (e) => {
 }) 
 
 
-// formulario
 
-const NEWS_FOOTER = document.getElementById('footer-newsletter')
-const NEWS_FOOTER_NOMBRE = document.getElementById('footer-nombre')
-const NEWS_FOOTER_MAIL = document.getElementById('footer-mail')
-const NEWS_FOOTER_ENVIAR = document.getElementById('footer-enviar')
+
+
+// ****************************************
+// ********* FORMULARIOS
+// ****************************************
+
+// formulario footer newsletter
+
+const FORM_FOOTER = document.getElementById('form-footer')
+const FORM_FOOTER_NAME = document.getElementById('form-footer-name')
+const FORM_FOOTER_MAIL = document.getElementById('form-footer-mail')
+let erroresFooter = []
+
+FORM_FOOTER.addEventListener('submit', (e) => {
+  e.preventDefault()
+  checkFieldsFooter()
+  erroresFooter.length > 0 ? console.log('hay un error en el formulario footer') : FORM_FOOTER.submit()
+})
+
+function checkFieldsFooter() {
+  let inputName = FORM_FOOTER_NAME
+  let inputMail = FORM_FOOTER_MAIL
+  erroresFooter = []
+  if(inputName.value.trim() === '') {
+    setError(inputName, 'No puede estar vacio', 'footer-name', erroresFooter)
+    } else if (inputName.value.trim().length < 3) {
+        setError(inputName, 'No puede tener menos de 3 letras', 'footer-name', erroresFooter)
+  } else setSuccess(inputName)
+
+  if(inputMail.value.trim() === '') {
+    setError(inputMail, 'No puede estar vacio', 'footer-mail', erroresFooter)
+  } else if (mailInvalido(inputMail.value.trim())) {
+    setError(inputMail, 'El mail ingresado no es valido')
+  } else setSuccess(inputMail)
+
+  console.log(erroresFooter)
+}
+
+
+
+
+
+// formulario guias pop-up
+
+const FORM_GUIAS = document.getElementById('form-guias')
+const FORM_GUIAS_NAME = document.getElementById('form-guias-name')
+const FORM_GUIAS_MAIL = document.getElementById('form-guias-mail')
+let erroresGuias = []
+
+FORM_GUIAS.addEventListener('submit', (e) => {
+  e.preventDefault()
+  checkFieldsGuias()
+  erroresGuias.length > 0 ? console.log('hay un error en el formulario guias') : FORM_GUIAS.submit()
+})
+
+function checkFieldsGuias() {
+  let inputName = FORM_GUIAS_NAME
+  let inputMail = FORM_GUIAS_MAIL
+  erroresGuias = []
+  if(inputName.value.trim() === '') {
+    setError(inputName, 'No puede estar vacio', 'guias-name', erroresGuias)
+    } else if (inputName.value.trim().length < 3) {
+        setError(inputName, 'No puede tener menos de 3 letras', 'guias-name', erroresGuias)
+  } else setSuccess(inputName)
+
+  if(inputMail.value.trim() === '') {
+    setError(inputMail, 'No puede estar vacio', 'guias-mail', erroresGuias)
+  } else if (mailInvalido(inputMail.value.trim())) {
+    setError(inputMail, 'El mail ingresado no es valido')
+  } else setSuccess(inputMail)
+
+  console.log(erroresGuias)
+}
+
+
+
+
+
+// formulario contacto principal
+
+const FORM_CONTACTO = document.getElementById('form-contacto')
+const FORM_CONTACTO_NAME = document.getElementById('form-contacto-name')
+const FORM_CONTACTO_MAIL = document.getElementById('form-contacto-mail')
+const FORM_CONTACTO_MSJ = document.getElementById('form-contacto-msj')
+let erroresContacto = []
+
+FORM_CONTACTO.addEventListener('submit', (e) => {
+  e.preventDefault()
+  checkFieldsContacto()
+  erroresContacto.length > 0 ? console.log('hay un error en el formulario contacto') : FORM_CONTACTO.submit()
+})
+
+function checkFieldsContacto() {
+  let inputName = FORM_CONTACTO_NAME
+  let inputMail = FORM_CONTACTO_MAIL
+  let inputMsj = FORM_CONTACTO_MSJ
+  erroresContacto = []
+  if(inputName.value.trim() === '') {
+    setError(inputName, 'No puede estar vacio', 'contacto-name', erroresContacto)
+    } else if (inputName.value.trim().length < 3) {
+        setError(inputName, 'No puede tener menos de 3 letras', 'contacto-name', erroresContacto)
+  } else setSuccess(inputName)
+
+  if(inputMail.value.trim() === '') {
+    setError(inputMail, 'No puede estar vacio', 'contacto-mail', erroresContacto)
+    } else if (mailInvalido(inputMail.value.trim())) {
+        setError(inputMail, 'El mail ingresado no es valido')
+  } else setSuccess(inputMail)
+
+  if(inputMsj.value.trim() === '') {
+    setError(inputMsj, 'No puede estar vacio', 'contacto-msj', erroresContacto)
+    } else setSuccess(inputMsj)
+
+  console.log(erroresContacto)
+}
+
+
+
+
+
+function setError(input, msj, inputIdentificador, formularioIdentificador) {
+  let inputField = input.parentElement
+  let spanAlerta = inputField.querySelector('.form__alert')
+  spanAlerta.classList.add('form__alert--active')
+  spanAlerta.textContent = msj
+  formularioIdentificador.push(`Error en input ${inputIdentificador}`)
+}
+
+function setSuccess(input) {
+  let inputField = input.parentElement
+  let spanAlerta = inputField.querySelector('.form__alert')
+  spanAlerta.classList.remove('form__alert--active')
+}
+
+
+
+const MAIL_FORMAT = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+function mailInvalido(mail) {
+  if (mail.match(MAIL_FORMAT)) {
+    return false
+  } else {
+    return true
+  }
+}
+
+
+
+
+
+// ****************************************
+// ********* FORMULARIO GUIAS
+// ****************************************
+
+// ****************************************
+// ********* FORMULARIO CONTACTO
+// ****************************************

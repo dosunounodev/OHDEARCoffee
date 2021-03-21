@@ -100,19 +100,6 @@ Forms
     }
   }
 
-  form {
-    span {
-      display: none;
-      margin-top: 5px;
-      margin-bottom: 20px;
-      padding: 5px 20px;
-      border-radius: 5px;
-      background-color: $color-extra;
-      font-size: 1.4rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  }
   @media screen and (min-width:700px) {
     margin-bottom: 0px;
     order: 4;
@@ -140,10 +127,6 @@ Forms
     font-size: inherit;
     color: $color-extra;
   }
-}
-
-.alertaerror {
-  display: block;
 }
 
 @at-root .form-footer__submit {
@@ -204,4 +187,33 @@ Forms
 
 .form-guias__submit {
   @extend .form-footer__submit;
+}
+
+
+
+
+
+
+
+
+
+
+
+// ALERTAS FORM
+
+.form__alert  {
+  display: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-bg;
+  border-radius: 5px;
+  background-color: $color-extra;
+}
+
+.form__alert--active {
+  display: block;
 }
