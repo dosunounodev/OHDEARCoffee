@@ -2457,6 +2457,9 @@ Recetas
     justify-content: space-between;
   }
 }
+.recetas__container .recetas__title, .guias__container .recetas__title {
+  font-family: "odc-avenir-400", sans-serif;
+}
 
 .recetas__header {
   display: flex;
@@ -2606,7 +2609,7 @@ Cursos
   justify-content: initial;
   align-items: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .curso__header, .curso__header--sec {
@@ -2672,7 +2675,7 @@ Cursos
   flex-direction: column;
   width: 100%;
   padding: 0 20px 20px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .curso__header--sec {
@@ -2704,6 +2707,7 @@ Guias
 }
 
 .guias__container .guias__title {
+  font-family: "odc-avenir-400", sans-serif;
   color: #a63519;
   margin-bottom: 20px;
 }

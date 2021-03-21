@@ -17,6 +17,9 @@ Recetas
     flex-direction: row;
     justify-content: space-between
   }
+  .recetas__title {
+    font-family: $font-primary;
+  }
 }
 
 .recetas__header {

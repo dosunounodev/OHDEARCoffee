@@ -123,16 +123,16 @@ cursosAction.addEventListener('click', ()=> {
 })
 
 // Abrir el popup CURSO 1
-curso1Action.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalCurso1.classList.remove('hide')
-})
+// curso1Action.addEventListener('click', ()=> {
+//   modals.classList.remove('hide')
+//   modalCurso1.classList.remove('hide')
+// })
 
 // Abrir el popup CURSO 2
-curso2Action.addEventListener('click', ()=> {
-  modals.classList.remove('hide')
-  modalCurso2.classList.remove('hide')
-})
+// curso2Action.addEventListener('click', ()=> {
+//   modals.classList.remove('hide')
+//   modalCurso2.classList.remove('hide')
+// })
 
 // Switchear entre curso especifico y CURSOS
 modals.addEventListener('click', (e) => {
@@ -231,42 +231,6 @@ function mailInvalido(mail) {
 
 
 // ****************************************
-// ********* FORMULARIO NEWSLETTER
-// ****************************************
-
-const FORM_FOOTER = document.getElementById('form-footer')
-const FORM_FOOTER_NAME = document.getElementById('form-footer-name')
-const FORM_FOOTER_MAIL = document.getElementById('form-footer-mail')
-let erroresFooter = []
-
-FORM_FOOTER.addEventListener('submit', (e) => {
-  e.preventDefault()
-  checkFieldsFooter(FORM_FOOTER_NAME, FORM_FOOTER_MAIL)
-  erroresFooter.length > 0 ? console.log('hay un error en el formulario footer') : FORM_FOOTER.submit()
-})
-
-function checkFieldsFooter(inputName, inputMail) {
-  erroresFooter = []
-  if(inputName.value.trim() === '') {
-    setError(inputName, 'No me dijiste tu nombre!', 'footer-name', erroresFooter)
-    } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'Dime un nombre de más letras!', 'footer-name', erroresFooter)
-  } else setSuccess(inputName)
-
-  if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No te olvides de poner un mail', 'footer-mail', erroresFooter)
-  } else if (mailInvalido(inputMail.value.trim())) {
-    setError(inputMail, 'OOPS!! El mail ingresado no es valido')
-  } else setSuccess(inputMail)
-
-  console.log(erroresFooter)
-}
-
-
-
-
-
-// ****************************************
 // ********* FORMULARIO GUIAS
 // ****************************************
 
@@ -286,13 +250,13 @@ function checkFieldsGuias() {
   let inputMail = FORM_GUIAS_MAIL
   erroresGuias = []
   if(inputName.value.trim() === '') {
-    setError(inputName, 'No me dijiste tu nombre!', 'guias-name', erroresGuias)
-    } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'Dime un nombre de más letras!', 'guias-name', erroresGuias)
+    setError(inputName, 'No olvides colocar tu nombre', 'guias-name', erroresGuias)
+    } else if (inputName.value.trim().length < 2) {
+        setError(inputName, 'Dime un nombre de más letras', 'guias-name', erroresGuias)
   } else setSuccess(inputName)
 
   if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No te olvides de poner un mail', 'guias-mail', erroresGuias)
+    setError(inputMail, 'No olvides poner un mail', 'guias-mail', erroresGuias)
   } else if (mailInvalido(inputMail.value.trim())) {
     setError(inputMail, 'OOPS!! El mail ingresado no es valido')
   } else setSuccess(inputMail)
@@ -326,20 +290,56 @@ function checkFieldsContacto() {
   let inputMsj = FORM_CONTACTO_MSJ
   erroresContacto = []
   if(inputName.value.trim() === '') {
-    setError(inputName, 'No me dijiste tu nombre!', 'contacto-name', erroresContacto)
+    setError(inputName, 'No olvides colocar tu nombre', 'contacto-name', erroresContacto)
     } else if (inputName.value.trim().length < 3) {
-        setError(inputName, 'Dime un nombre de más letras!', 'contacto-name', erroresContacto)
+        setError(inputName, 'Dime un nombre de más letras', 'contacto-name', erroresContacto)
   } else setSuccess(inputName)
 
   if(inputMail.value.trim() === '') {
-    setError(inputMail, 'No te olvides de poner un mail', 'contacto-mail', erroresContacto)
+    setError(inputMail, 'No olvides poner un mail', 'contacto-mail', erroresContacto)
     } else if (mailInvalido(inputMail.value.trim())) {
         setError(inputMail, 'OOPS!! El mail ingresado no es valido')
   } else setSuccess(inputMail)
 
   if(inputMsj.value.trim() === '') {
-    setError(inputMsj, 'No olvides dejar tu mensaje!', 'contacto-msj', erroresContacto)
+    setError(inputMsj, 'No olvides dejar tu mensaje', 'contacto-msj', erroresContacto)
     } else setSuccess(inputMsj)
 
   console.log(erroresContacto)
+}
+
+
+
+
+
+// ****************************************
+// ********* FORMULARIO NEWSLETTER
+// ****************************************
+
+const FORM_FOOTER = document.getElementById('form-footer')
+const FORM_FOOTER_NAME = document.getElementById('form-footer-name')
+const FORM_FOOTER_MAIL = document.getElementById('form-footer-mail')
+let erroresFooter = []
+
+FORM_FOOTER.addEventListener('submit', (e) => {
+  e.preventDefault()
+  checkFieldsFooter(FORM_FOOTER_NAME, FORM_FOOTER_MAIL)
+  erroresFooter.length > 0 ? console.log('hay un error en el formulario footer') : FORM_FOOTER.submit()
+})
+
+function checkFieldsFooter(inputName, inputMail) {
+  erroresFooter = []
+  if(inputName.value.trim() === '') {
+    setError(inputName, 'No olvides colocar tu nombre', 'footer-name', erroresFooter)
+    } else if (inputName.value.trim().length < 3) {
+        setError(inputName, 'Dime un nombre de más letras', 'footer-name', erroresFooter)
+  } else setSuccess(inputName)
+
+  if(inputMail.value.trim() === '') {
+    setError(inputMail, 'No olvides poner un mail', 'footer-mail', erroresFooter)
+  } else if (mailInvalido(inputMail.value.trim())) {
+    setError(inputMail, 'OOPS!! El mail ingresado no es valido')
+  } else setSuccess(inputMail)
+
+  console.log(erroresFooter)
 }
