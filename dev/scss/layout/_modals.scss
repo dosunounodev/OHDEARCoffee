@@ -287,12 +287,14 @@ Modals
 }
 
 .faq-question {
+  position: relative;
   width: 100%;
   padding: 5px 10px;
   font-weight: 600;
   color: $color-extra;
   background-color: rgba($color: $color-primary, $alpha: .2);
   cursor: pointer;
+  z-index: 100;
 }
 
 .faq-answer {
@@ -300,8 +302,9 @@ Modals
   width: 100%;
   font-weight: 400;
   line-height: 1.4;
-  background-color: rgba($color: $color-primary, $alpha: .6);
-  @include transition(.3s,0,linear,transform,opacity)
+  background-color: rgba($color: $color-primary, $alpha: .5);
+  @include transition(.3s,0,linear,transform,opacity);
+  z-index: 50;
 }
 
 
@@ -315,7 +318,7 @@ Modals
 .none {
   // display: none;
   position: absolute;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
   opacity: 0;
   pointer-events: none;
 }
