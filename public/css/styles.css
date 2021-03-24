@@ -1932,6 +1932,7 @@ Modals
   margin: 10px 0;
 }
 .faq-container .faq-item {
+  position: relative;
   width: 100%;
   margin-bottom: 10px;
   border: 2px solid #88a896;
@@ -1965,10 +1966,16 @@ Modals
 }
 
 .faq-answer {
+  position: relative;
   width: 100%;
   font-weight: 400;
   line-height: 1.4;
   background-color: rgba(136, 168, 150, 0.6);
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
 }
 
 .hide {
@@ -1977,7 +1984,8 @@ Modals
 }
 
 .none {
-  display: none;
+  position: absolute;
+  transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }

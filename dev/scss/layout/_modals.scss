@@ -265,6 +265,7 @@ Modals
   width: calc(100% - 40px);
   margin: 10px 0;
   .faq-item {
+    position: relative;
     width: 100%;
     margin-bottom: 10px;
     border: 2px solid $color-primary;
@@ -295,10 +296,12 @@ Modals
 }
 
 .faq-answer {
+  position: relative;
   width: 100%;
   font-weight: 400;
   line-height: 1.4;
   background-color: rgba($color: $color-primary, $alpha: .6);
+  @include transition(.3s,0,linear,transform,opacity)
 }
 
 
@@ -310,7 +313,9 @@ Modals
 }
 
 .none {
-  display: none;
+  // display: none;
+  position: absolute;
+  transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
