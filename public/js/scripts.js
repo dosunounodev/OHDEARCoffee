@@ -218,13 +218,22 @@ function setSuccess(input) {
 
 const MAIL_FORMAT = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
+// function mailInvalido(mail) {
+//   if (mail.match(MAIL_FORMAT)) {
+//     return false
+//   } else {
+//     return true
+//   }
+// }
+
 function mailInvalido(mail) {
-  if (mail.match(MAIL_FORMAT)) {
+  if (MAIL_FORMAT.test(mail)) {
     return false
   } else {
     return true
   }
 }
+
 
 
 
@@ -291,7 +300,7 @@ function checkFieldsContacto() {
   erroresContacto = []
   if(inputName.value.trim() === '') {
     setError(inputName, 'No olvides colocar tu nombre', 'contacto-name', erroresContacto)
-    } else if (inputName.value.trim().length < 3) {
+    } else if (inputName.value.trim().length < 2) {
         setError(inputName, 'Dime un nombre de más letras', 'contacto-name', erroresContacto)
   } else setSuccess(inputName)
 
@@ -331,7 +340,7 @@ function checkFieldsFooter(inputName, inputMail) {
   erroresFooter = []
   if(inputName.value.trim() === '') {
     setError(inputName, 'No olvides colocar tu nombre', 'footer-name', erroresFooter)
-    } else if (inputName.value.trim().length < 3) {
+    } else if (inputName.value.trim().length < 2) {
         setError(inputName, 'Dime un nombre de más letras', 'footer-name', erroresFooter)
   } else setSuccess(inputName)
 
