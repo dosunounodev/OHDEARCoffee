@@ -221,24 +221,29 @@ Modals
 
 // CURSOS EN GENERAL
 
+.modal__cursos .modal__curso-title {
+  font-size: 2.4rem
+}
+
 .modal__cursos-moreinfo {
   @include flex-center(column);
-  width: calc(100% - 40px);
-  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 5px 10px;
   border-radius: 10px;
   color: white;
   background-color: rgba($color-primary, 0.5);
   p {
     margin: 0;
     order: 2;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     @include tablet {
       font-size: 2.0rem;
     }
     &:nth-child(2) {
       order: 3;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: $color-extra;
       @include tablet {
         font-size: 2.4rem;
@@ -262,7 +267,8 @@ Modals
 
 
 .faq-container {
-  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 600px;
   margin: 10px 0;
   .faq-item {
     position: relative;
