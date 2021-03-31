@@ -16,12 +16,16 @@ footer.footer#footer
     .footer__newsletter
       h2 Suscribete al newsletter
       p Y recibe todas las novedades
-      form(action="").form-footer#form-footer
+      form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST").form-footer#form-footer
+        input(type="hidden" name="_next" value="http://ohdearcoffee.com/index.html#footer")
+        input(type="hidden" name="_captcha" value="false")
+        input(type="hidden" name="_subject" value="Nueva suscripcion al newsletter OHDEARCOFFEE.com")
+        input(type="text" name="_honey" style="display:none")
         .form-footer__field
-          input(type="text" placeholder="Tu Nombre").form-footer__input#form-footer-name
+          input(type="text" name="name" placeholder="Tu Nombre").form-footer__input#form-footer-name
           span.form__alert Acá va un texto de alerta
         .form-footer__field
-          input(type="email" placeholder="Tu Mail").form-footer__input#form-footer-mail
+          input(type="email" name="email"  placeholder="Tu Mail").form-footer__input#form-footer-mail
           span.form__alert Acá va un texto de alerta
         .form-footer__field 
           input(type="submit" value="Enviar").form-footer__submit
@@ -36,3 +40,10 @@ footer.footer#footer
       p Icons by: 
         span
           a(href="https://www.flaticon.com/authors/ddara" target="blank") dDara
+
+
+                  form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST")#form-contact.form-contact
+          input(type="hidden" name="_next" value="http://127.0.0.1:5500/src/public/index.html")
+          input(type="hidden" name="_captcha" value="false")
+          input(type="hidden" name="_subject" value="Nuevo mensaje de contacto en barberoftoday.com")
+          input(type="text" name="_honey" style="display:none")

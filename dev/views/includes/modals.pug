@@ -8,12 +8,16 @@ section.modals#modals.hide
       span ¡gratis!
     p.modal__guias-subtitle Solo tienes que registrarte:
     .form-guias__container
-      form(action="").form-guias#form-guias
+      form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST" target="_blank").form-guias#form-guias
+        input(type="hidden" name="_next" value="http://ohdearcoffee.com/guia.pdf")
+        input(type="hidden" name="_captcha" value="false")
+        input(type="hidden" name="_subject" value="Nueva descarga de guia en OHDEARCOFFEE.com")
+        input(type="text" name="_honey" style="display:none")
         .form-guias__field
-          input(type="/text" placeholder="Tu Nombre").form-guias__input#form-guias-name
+          input(type="/text" name="name" placeholder="Tu Nombre").form-guias__input#form-guias-name
           span.form__alert Acá va un texto de alerta
         .form-guias__field
-          input(type="email" placeholder="Tu Mail").form-guias__input#form-guias-mail
+          input(type="email" name="email"  placeholder="Tu Mail").form-guias__input#form-guias-mail
           span.form__alert Acá va un texto de alerta
         .form-guias__field 
           input(type="submit" value="Enviar").form-guias__submit

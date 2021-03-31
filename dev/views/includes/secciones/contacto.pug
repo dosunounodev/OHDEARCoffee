@@ -5,12 +5,16 @@ section#contacto.section__contacto
     a(href="#").contacto__more--link o un mail: info@ohdearcoffee.com
     .contacto__medios-container
       .contacto__form-container
-        form(action="").form-contact#form-contacto
+        form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST").form-contact#form-contacto
+          input(type="hidden" name="_next" value="http://ohdearcoffee.com/index.html#contacto")
+          input(type="hidden" name="_captcha" value="false")
+          input(type="hidden" name="_subject" value="Nuevo mensaje de contacto en OHDEARCOFFEE.com")
+          input(type="text" name="_honey" style="display:none")
           .form-contact__field
-            input(type="text" placeholder="Tu Nombre").form-contact__input#form-contacto-name
+            input(type="text" name="name" placeholder="Tu Nombre").form-contact__input#form-contacto-name
             span.form__alert Acá va un texto de alerta
           .form-contact__field
-            input(type="mail" placeholder="Tu Mail").form-contact__input#form-contacto-mail
+            input(type="mail" name="email"  placeholder="Tu Mail").form-contact__input#form-contacto-mail
             span.form__alert Acá va un texto de alerta
           .form-contact__field
             select(name="teconoci").form-contact__select
@@ -20,7 +24,7 @@ section#contacto.section__contacto
               option(value="conoci-otrositio") Te conocí en Otro sitio...
             span.custom-arrow
           .form-contact__field
-            textarea(placeholder="Deja tu mensaje").form-contact__msj#form-contacto-msj
+            textarea(name="msj" placeholder="Deja tu mensaje").form-contact__msj#form-contacto-msj
             span.form__alert Acá va un texto de alerta
           .form-contact__field
             input(type="submit" value="Enviar").form-contact__submit

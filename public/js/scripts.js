@@ -218,14 +218,6 @@ function setSuccess(input) {
 
 const MAIL_FORMAT = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-// function mailInvalido(mail) {
-//   if (mail.match(MAIL_FORMAT)) {
-//     return false
-//   } else {
-//     return true
-//   }
-// }
-
 function mailInvalido(mail) {
   if (MAIL_FORMAT.test(mail)) {
     return false
@@ -251,7 +243,13 @@ let erroresGuias = []
 FORM_GUIAS.addEventListener('submit', (e) => {
   e.preventDefault()
   checkFieldsGuias()
-  erroresGuias.length > 0 ? console.log('hay un error en el formulario guias') : FORM_GUIAS.submit()
+  if(erroresGuias.length > 0) {
+  console.log('hay un error en el formulario guias')
+  } else {
+    FORM_GUIAS.submit()
+    closeAllModals()
+  }
+  
 })
 
 function checkFieldsGuias() {

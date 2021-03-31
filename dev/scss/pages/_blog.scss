@@ -41,6 +41,7 @@ Blog
     font-size: 1.8rem;
     font-weight: 600;
     color: $color-extra;
+    text-align: center;
     @include transition(0.3s, 0, linear, color, transform);
     &:hover {
       color: $color-primary;

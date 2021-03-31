@@ -2339,6 +2339,7 @@ Blog
   font-size: 1.8rem;
   font-weight: 600;
   color: #a63519;
+  text-align: center;
   will-change: color, transform;
   transition-property: color, transform;
   transition-duration: 0.3s;
