@@ -350,3 +350,20 @@ function checkFieldsFooter(inputName, inputMail) {
 
   console.log(erroresFooter)
 }
+
+
+
+
+// ****************************************
+// ********* CAMBIO DE TITULO INACTIVO
+// ****************************************
+
+document.addEventListener("visibilitychange", function() {
+  if (document.visibilityState === 'visible') {
+    document.title= `OH DEAR Coffee - Recetas, Guias, Cursos y Pasión por el Café`;
+  } else {
+    document.title= `VUELVE, HAY CAFÉ`;
+  }
+});
+
+// console.log(document.title)
