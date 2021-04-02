@@ -1595,17 +1595,18 @@ Footer
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   margin: 0;
   padding: 20px 0;
 }
 @media screen and (min-width: 540px) {
   .footer-copy__container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-items: center;
   }
 }
 .footer-copy__container p {
+  width: 100%;
+  text-align: center;
   margin: 0 20px;
   padding: 0;
   font-size: 1.4rem;
