@@ -14,7 +14,7 @@ Recetas
   @include flex(column, initial, center);
   padding: 20px 0;
   height: 100%;
-  max-height: 100%;
+  max-height: 653px;
   @include laptop {
     flex-direction: row;
     justify-content: space-between
@@ -43,7 +43,7 @@ Recetas
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
-  max-height: 100%;
+  max-height: 360px;
   max-width: 340px;
   margin-top: 20px;
   @include laptop {
