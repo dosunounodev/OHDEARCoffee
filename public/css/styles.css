@@ -2578,6 +2578,7 @@ Recetas
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 100%;
   max-width: 340px;
   margin-top: 20px;
 }
