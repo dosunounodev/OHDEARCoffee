@@ -4,6 +4,21 @@ section#blog.section__blog
     span.blog__more PD: Esto es solo un spoiler...
     a(href="http://blog.ohdearcoffee.com" target="_blank").blog__more--link Mira el blog completo acá 
     .blog__articles-container
-      +artsBlog('Nalo-Nala, el gatitx baristx', 'Mascotas', '16/08/2021', './assets/images/fotosblog/01.jpg', 'Cuando mi mamá @ohdearcoffee me adoptó le dijeron que era Nala, pero en realidad soy Nalo... Un gatito amante del café')
-      +artsBlog('Tostando Ando', 'Coffee Roaster', '24/07/2021', './assets/images/fotosblog/02.jpg', 'Malena Pichot es pro-aborto, Amalia Granata es pro-vida, y Chichi Peralta es pro-cura seducirme muy, despacioooooo')
-      +artsBlog('Art Attack', 'Técnicas', '12/04/2021', './assets/images/fotosblog/03.jpg', 'Esto es un art attack... Esto es un art attack... Esto es un art attack... Bienvenidos a art attack de OHDEAR Coffee, este el articulo que te demuestra que no necesitas ser un experto para ser un gran artista, asi que... al ataque!')
+      template#template-blogpost
+        <article class="blog-post">
+          <div class="post-images-container">
+            <div class="post-img-container">
+              a(href="" target="_blank")
+                img(src="", alt="") 
+            </div>
+          </div>
+          <h3 class="post-title"><a href="#" target="_blank">aca va el titulo</a></h3>
+          <div class="post-data">
+            <div class="author-name">autor</div>
+            <div class="post-date">fecha/21/21</div>
+          </div>
+          <div class="post-resume">
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum soluta quis accusamus praesentium perspiciatis nemo natus neque quam nam ex, nobis voluptas repellat est quisquam, saepe, nisi eos beatae error!
+          </div>
+          <a class="read-more rm-fp" href="#" target="_blank">SEGUIR LEYENDO</a>
+        </article>

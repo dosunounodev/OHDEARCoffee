@@ -2366,93 +2366,168 @@ Blog
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
-.blog__article {
-  flex: 1 1 290px;
-  max-width: 100%;
-  height: 100%;
-  margin: 0 15px 40px;
-  border: 2px solid #a63519;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: white;
-}
-.blog__article a {
-  text-decoration: none;
-}
-@media screen and (min-width: 1024px) {
-  .blog__article:nth-child(2) .blog__img-container {
-    height: 500px;
-  }
-}
-.blog__article:nth-child(3) {
-  margin-bottom: 0;
-}
-@media screen and (min-width: 1024px) {
-  .blog__article:nth-child(3) .blog__img-container {
-    height: 400px;
-  }
+.blog__articles-container article {
+  width: calc(50% - 40px);
+  margin: 20px;
+  flex: 1 0 300px;
 }
 
-.blog__img-container {
+.post-images-container {
+  position: relative;
   width: 100%;
-  height: 300px;
-  overflow: hidden;
+  margin-top: 0px;
 }
-.blog__img-container a {
-  padding: 0;
+
+.post-img-container {
+  width: 100%;
+  height: 400px;
 }
-.blog__img-container img {
+
+.post-img-container img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  will-change: transform;
-  transition-property: transform;
-  transition-duration: 0.5s;
-  transition-delay: 0;
-  transition-timing-function: linear;
-}
-.blog__img-container img:hover {
-  transform: scale(1.4);
+  border-radius: 20px;
 }
 
-.blog__category {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 1.4rem;
+img[class*=wp-image] {
+  border-radius: 20px !important;
+}
+
+.author-avatar {
+  position: absolute;
+  bottom: -40px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #F9F8F6;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-title {
+  margin-top: 40px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
   color: #a63519;
 }
 
-.blog__title {
-  margin-top: 10px;
-  margin-left: 20px;
-  color: #f6954c;
+.post-title a {
+  color: #a63519;
   will-change: color;
   transition-property: color;
   transition-duration: 0.3s;
   transition-delay: 0;
   transition-timing-function: linear;
 }
-.blog__title:hover {
+
+.post-title a:hover {
   color: #88a896;
 }
 
-.blog__resume {
-  max-width: 40ch;
-  margin: 20px;
-  font-size: 1.6rem;
+.post-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
 }
 
-.blog__date {
-  margin: 20px;
+@media screen and (min-width: 680px) {
+  .post-data {
+    flex-direction: row;
+  }
+}
+.author-name {
+  margin: 0 5px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f6954c;
+  text-align: center;
+}
+
+.post-date {
+  margin: 0 5px;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #B4B3B3;
+  color: #88a896;
+  text-align: center;
+}
+
+.post-category,
+.post-category a {
+  margin: 0 5px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f6954c;
+  text-align: center;
+}
+
+.post-category a:hover {
+  color: #a63519;
+}
+
+.post-tags {
+  margin: 0 5px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.post-resume {
+  max-width: 60ch;
+  margin: 40px auto 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.read-more {
+  display: block;
+  width: 250px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F9F8F6;
+  background-color: #88a896;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+
+.read-more:hover {
+  color: #a63519;
+  background-color: #f6954c;
+}
+
+.rm-fp {
+  margin-bottom: 40px;
+}
+
+article:last-child .rm-fp {
+  margin-bottom: 0px;
 }
 
 /*! -------------------------

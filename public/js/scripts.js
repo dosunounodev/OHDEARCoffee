@@ -354,6 +354,7 @@ function checkFieldsFooter(inputName, inputMail) {
 
 
 
+
 // ****************************************
 // ********* CAMBIO DE TITULO INACTIVO
 // ****************************************
@@ -366,4 +367,32 @@ document.addEventListener("visibilitychange", function() {
   }
 });
 
-// console.log(document.title)
+
+
+
+
+// ****************************************
+// ********* FETCH A WORDPRESS
+// ****************************************
+
+const template = document.getElementById('template-blogpost').content
+const blogpostcontainer = document.querySelector('.blog__articles-container')
+const fragment = document.createDocumentFragment()
+
+fetch('http://ohdearcoffee.com/wordpress/wp-json/wp/v2/posts?_embed')
+.then(res=> res.json())
+.then(json => {
+  for (let i = 0; i< 2; i++) {
+    let clone = template.cloneNode(true)
+    clone.querySelector('.post-img-container a img').setAttribute('src', json[i]['_embedded']['wp:featuredmedia'][0].source_url)
+    clone.querySelector('.post-img-container a').setAttribute('href', json[i].link)
+    clone.querySelector('.post-title a').textContent = json[i].title.rendered
+    clone.querySelector('.post-title a').setAttribute('href', json[i].link)
+    clone.querySelector('.author-name').textContent = json[i]['_embedded'].author[0].name
+    clone.querySelector('.post-date').textContent = json[i].date.substring(0,10)
+    clone.querySelector('.post-resume p').textContent = json[i].excerpt.rendered.slice(3, -5)
+    clone.querySelector('.read-more').setAttribute('href', json[i].link)
+    fragment.append(clone)
+  }
+  blogpostcontainer.append(fragment)
+})
