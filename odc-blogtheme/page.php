@@ -31,7 +31,8 @@
               </div>
               
               
-              <a class="read-more" href="<?php the_permalink(); ?>">SEGUIR LEYENDO</a>
+              <a class="read-more rm-fp" href="<?php the_permalink(); ?>">SEGUIR LEYENDO</a>
+            <div style="margin-bottom: 80px" class="comments-div"></div>
             </article>
         <?php endwhile; 
       endif; 

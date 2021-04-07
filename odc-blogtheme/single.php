@@ -38,7 +38,7 @@
       endif; 
       ?>
       <div class="comments-div"></div>
-      <a class="read-more" href="http://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
+      <a class="read-more" href="https://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
 
   </div>
   <?php get_template_part('aside' ); ?>
