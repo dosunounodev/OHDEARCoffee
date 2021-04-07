@@ -1,0 +1,14 @@
+/* 
+Theme name: OH DEAR COFFEE Blog Theme
+Version: 1.0
+Description: Wordpress Blog Theme for Ohdearcoffee.com
+Author: Martin Fernandez - dosunounodev
+Authon URI: https://github.com/dosunounodev
+License: GNU General Public Licence v2 or later
+License: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
