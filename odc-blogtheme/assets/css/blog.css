@@ -244,9 +244,6 @@ a:hover {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  background-image: url('http://ohdearcoffee.com/assets/bgs/tabletplus.png');
-  background-size: cover;
-  background-position: center 50px;
 }
 
 .hero-img-container {
