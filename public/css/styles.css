@@ -2607,7 +2607,7 @@ Recetas
 }
 .recetas__icons img, .guias__icons img {
   width: 100px;
-  height: auto;
+  height: 100px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1366px) {
