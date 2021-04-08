@@ -104,3 +104,62 @@ h2 + small {
 h2, small {
   margin-bottom: 10px;
 }
+
+
+// ERROR 404 
+
+.error404-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .read-more {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+  }
+}
+
+.error404-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  margin: 0;
+  font-size: 6.0rem;
+  text-align: center;
+  color: #a63519;
+}
+
+.error404-title span {
+  font-size: 9.0rem;
+  text-align: center;
+  color: #f6954c;
+}
+
+.error404-subtitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 4.0rem;
+  text-align: center;
+  color: #a63519;
+}
+
+.error404-img-wrapper {
+  width: 50%;
+  min-width: 250px;
+  max-width: 500px;
+  max-height: 450px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.error404-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
