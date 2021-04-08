@@ -2,6 +2,15 @@
 // ********* MENUS
 // ****************************************
 
+const linkBlog = document.querySelectorAll(`a[href^='#blog']`)
+linkBlog.forEach(link => {
+  link.setAttribute('target', '_blank')
+  link.setAttribute('href', 'https://ohdearcoffee.com/blog')
+})
+// console.log(linkBlog)
+
+// document.addEventListener('click', e => console.log(e.target))
+
 // MENUS A MOSTRAR/ESCONDER
 const navMenuBar = document.getElementById('nav__menu-bar')
 const navMenuList = document.getElementById('nav__menu-lists')
