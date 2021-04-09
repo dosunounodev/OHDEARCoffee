@@ -40,6 +40,17 @@
         <div class="comments-div"></div>
         <a class="read-more" href="https://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
         <?php endwhile; 
+
+        else :
+
+          ?>
+        <div style="margin-top: 80px" class="error404-img-wrapper">
+          <img src="<?php echo get_template_directory_uri()?>/assets/images/404.jpg" alt="">
+        </div>
+        <h3 class="error404-subtitle">No encontramos nada</h3>
+        <a class="read-more" href="https://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
+      
+      <?php
       endif; 
       ?>
 
