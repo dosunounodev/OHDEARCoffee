@@ -37,7 +37,18 @@
             <div style="margin-bottom: 80px" class="comments-div"></div>
             </article>
         <?php endwhile; 
-      endif; 
+
+          else :
+
+            ?>
+          <div style="margin-top: 80px" class="error404-img-wrapper">
+            <img src="<?php echo get_template_directory_uri()?>/assets/images/404.jpg" alt="">
+          </div>
+          <h3 class="error404-subtitle">No encontramos nada</h3>
+          <a class="read-more" href="https://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
+
+          <?php
+          endif;  
       ?>
       <a class="read-more" href="https://www.ohdearcoffee.com/blog/">VOLVER AL BLOG</a>
 
