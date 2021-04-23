@@ -1,12 +1,12 @@
-# Oh Dear Coffee
+# OHDEARCoffee ☕️
 
 A responsive minimalist website & blog.
 
-## Techs
+## Techs 🧑‍💻
 
 Pug, Sass, Js Vanilla, Wordpress & php
 
-### Deploy
+### Deploy 🚀
 
 https://ohdearcoffee.com/
 &
