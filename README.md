@@ -4,7 +4,7 @@ A responsive minimalist website & blog.
 
 ## Techs 🧑‍💻
 
-Pug, Sass, Js Vanilla, Wordpress & php
+Pug, Sass, Js Vanilla, Wordpress & PHP
 
 ### Deploy 🚀
 
