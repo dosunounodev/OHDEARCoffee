@@ -13,3 +13,5 @@ https://ohdearcoffee.com/
 https://ohdearcoffee.com/blog
 
 ![ohdearcoffe1](/githubscreenshots/odc1.png?raw=true "ohdearcoffe1")
+![ohdearcoffe2](/githubscreenshots/odc2.png?raw=true "ohdearcoffe2")
+![ohdearcoffe3](/githubscreenshots/blog.png?raw=true "blog")
