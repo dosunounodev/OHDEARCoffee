@@ -1,5 +1,5 @@
 # OHDEARCoffee ☕️
-A minimalist responsive website (and a blog) about: recipe, s guides and coffee courses.
+A minimalist responsive website (and a blog) about: recipes, guides and coffee courses.
 
 ## Techs 🧑‍💻
 Pug, Sass, Js Vanilla, Wordpress & PHP
