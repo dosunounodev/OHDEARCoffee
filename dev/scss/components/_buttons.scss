@@ -4,7 +4,6 @@ Buttons
 
 @use "../abstract" as *;
 
-
 // NAVBAR -- MENU BURGER BUTTON
 // Visible en todos los dispositivos
 
@@ -25,7 +24,7 @@ Buttons
 }
 
 .menu-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   width: 30px;
@@ -41,7 +40,7 @@ Buttons
 }
 
 .menu-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 10px;
   width: 30px;
@@ -51,11 +50,10 @@ Buttons
 
   .nav__menu-btn:hover & {
     @media (hover: hover) and (pointer: fine) {
-      background-color: $color-secondary;      
+      background-color: $color-secondary;
     }
   }
 }
-
 
 // Estado cuando esta activo
 // ** nav__menu-btn es referencia al boton (contenedor)
@@ -76,7 +74,6 @@ Buttons
   transform: translateY(-10px);
 }
 
-
 // Efecto hover cuando esta activo
 // ** Cruz se vuelve naranja y crece
 
@@ -84,18 +81,14 @@ Buttons
   @media (hover: hover) and (pointer: fine) {
     .menu-btn {
       background-color: $color-secondary;
-      transform: rotate(45deg) scale(1.2)
+      transform: rotate(45deg) scale(1.2);
     }
-  
+
     .menu-btn::after {
       background-color: $color-secondary;
     }
   }
 }
-
-
-
-
 
 // HERO -- CALL TO ACTIONS
 
@@ -120,7 +113,7 @@ Buttons
     text-align: center;
     text-transform: uppercase;
     color: inherit;
-    @include tablet{
+    @include tablet {
       font-size: 1.8rem;
       line-height: 1.8;
     }
@@ -160,10 +153,6 @@ Buttons
   }
 }
 
-
-
-
-
 // RECETAS -- CALL TO ACTION
 // Cta de recetas
 
@@ -191,10 +180,6 @@ Buttons
 .guias__cta {
   background-color: $color-extra;
 }
-
-
-
-
 
 // BLOG -- CALL TO ACTION
 // Cta de blog

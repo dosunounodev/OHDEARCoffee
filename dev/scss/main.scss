@@ -2,14 +2,12 @@
 // Main
 // -------------------------- */
 
-
 // A B S T R A C T
 //
 // Helpers y utilidades abstractos
 // (no generan código)
 
 @use './abstract';
-
 
 // B A S E
 //
@@ -26,14 +24,12 @@
 
 @use './components';
 
-
 // L A Y O U T
 //
 // Bloques del layout
 // (son independientes)
 
 @use './layout';
-
 
 // P A G E S
 //
@@ -42,14 +38,12 @@
 
 @use './pages';
 
-
 // T H E M E S
 //
 // Temas para cada usuario
 // (son independientes)
 
 @use './themes';
-
 
 // V E E D O R S
 //
