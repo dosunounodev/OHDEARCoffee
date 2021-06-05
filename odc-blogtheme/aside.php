@@ -15,27 +15,27 @@
 
       <div class="aside-frame frame-site">
         <h2><i class="fas fa-desktop"></i> Visita mi sitio...</h2>
-        <p>Te espero en mi website <a href="https://ohdearcoffee.com" target="_blank">ohdearcoffee.com</a> donde podrás ver mis cursos, guías y mucho más</p>
+        <p>Te espero en mi website <a href="https://ohdearcoffee.com" target="_blank">ohdearcoffee.com</a> donde podrás ver mi guía gratuita y más sobre mí</p>
       </div>
 
       <div class="aside-frame frame-cats">
         <ul>
           <li><img src="<?php echo get_template_directory_uri()?>/assets/icons/icon-fruit.svg" alt="">
-          <a href="https://ohdearcoffee.com/wordpress/category/cultivo-y-procesos/">
+          <a href="https://ohdearcoffee.com/blog/category/cultivo-y-procesos/">
           Cultivos y Procesos</a></li>
-          <li><a href="https://ohdearcoffee.com/wordpress/category/tueste/">
+          <li><a href="https://ohdearcoffee.com/blog/category/tueste/">
           Tueste</a>
           <img src="<?php echo get_template_directory_uri()?>/assets/icons/icon-coffee.svg" alt="">
           </li>
           <li><img src="<?php echo get_template_directory_uri()?>/assets/icons/icon-barista.svg" alt="">
-          <a href="https://ohdearcoffee.com/wordpress/category/barista/">
+          <a href="https://ohdearcoffee.com/blog/category/barista/">
           Barista</a></li>
-          <li><a href="https://ohdearcoffee.com/wordpress/category/recetas/">
+          <li><a href="https://ohdearcoffee.com/blog/category/recetas/">
           Recetas</a>
           <img src="<?php echo get_template_directory_uri()?>/assets/icons/icon-v60.svg" alt="">
           </li>
           <li><img src="<?php echo get_template_directory_uri()?>/assets/icons/icon-takeaway.svg" alt="">
-          <a href="https://ohdearcoffee.com/wordpress/category/cafeterias/">
+          <a href="https://ohdearcoffee.com/blog/category/cafeterias/">
           Cafeterías</a></li>
         </ul>
       </div>

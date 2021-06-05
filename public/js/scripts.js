@@ -402,7 +402,7 @@ const template = document.getElementById('template-blogpost').content;
 const blogpostcontainer = document.querySelector('.blog__articles-container');
 const fragment = document.createDocumentFragment();
 
-fetch('https://ohdearcoffee.com/wordpress/wp-json/wp/v2/posts?_embed')
+fetch('https://ohdearcoffee.com/blog/wp-json/wp/v2/posts?_embed')
   .then((res) => res.json())
   .then((json) => {
     for (let i = 0; i < 2; i++) {
