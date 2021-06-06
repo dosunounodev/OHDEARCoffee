@@ -405,7 +405,7 @@ const fragment = document.createDocumentFragment();
 fetch('https://ohdearcoffee.com/blog/wp-json/wp/v2/posts?_embed')
   .then((res) => res.json())
   .then((json) => {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 1; i++) {
       let clone = template.cloneNode(true);
       clone
         .querySelector('.post-img-container a img')
